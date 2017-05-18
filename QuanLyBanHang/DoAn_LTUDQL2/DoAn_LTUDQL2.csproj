@@ -41,8 +41,20 @@
     <Reference Include="DevExpress.XtraBars.v16.2" />
     <Reference Include="DevExpress.Sparkline.v16.2.Core" />
     <Reference Include="DevExpress.XtraEditors.v16.2" />
+    <Reference Include="DevExpress.XtraLayout.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -53,6 +65,54 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BanHang.cs">
+      <DependentUpon>DoAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BoPhan.cs">
+      <DependentUpon>DoAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CHiTietBanHang.cs">
+      <DependentUpon>DoAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTietMuaHang.cs">
+      <DependentUpon>DoAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DoAnModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DoAnModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DoAnModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DoAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DoAnModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DoAnModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DonViTinh.cs">
+      <DependentUpon>DoAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HangHoa.cs">
+      <DependentUpon>DoAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KhachHang.cs">
+      <DependentUpon>DoAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KhoHang.cs">
+      <DependentUpon>DoAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KhuVuc.cs">
+      <DependentUpon>DoAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoaiKH.cs">
+      <DependentUpon>DoAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoaiTien.cs">
+      <DependentUpon>DoAnModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="MainView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,8 +120,29 @@
       <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
     <Compile Include="MainViewModel.cs" />
+    <Compile Include="MuaHang.cs">
+      <DependentUpon>DoAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVien.cs">
+      <DependentUpon>DoAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NhaPhanPhoi.cs">
+      <DependentUpon>DoAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NhatKiHeThong.cs">
+      <DependentUpon>DoAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NhomHangHoa.cs">
+      <DependentUpon>DoAnModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TaiKhoanNguoiDung.cs">
+      <DependentUpon>DoAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ThuTien.cs">
+      <DependentUpon>DoAnModel.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
     </EmbeddedResource>
@@ -76,6 +157,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EntityDeploy Include="DoAnModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DoAnModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="App.Config" />
+    <None Include="DoAnModel.edmx.diagram">
+      <DependentUpon>DoAnModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -157,6 +247,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Asset\register.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DoAnModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DoAnModel.Context.cs</LastGenOutput>
+      <DependentUpon>DoAnModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="DoAnModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DoAnModel.edmx</DependentUpon>
+      <LastGenOutput>DoAnModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

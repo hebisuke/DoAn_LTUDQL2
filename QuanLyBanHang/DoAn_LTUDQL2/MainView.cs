@@ -22,5 +22,6 @@ namespace DoAn_LTUDQL2
         {
             var fluent = mvvmContext1.OfType<MainViewModel>();
         }
+        
     }
 }
