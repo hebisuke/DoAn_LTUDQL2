@@ -69,6 +69,8 @@
             this.btn_DangKy = new DevExpress.XtraBars.BarButtonItem();
             this.btn_CapNhat = new DevExpress.XtraBars.BarButtonItem();
             this.btn_ThongTinTroGiup = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_Demo1 = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_Demo2 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -85,13 +87,12 @@
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.mvvmContext1 = new DevExpress.Utils.MVVM.MVVMContext(this.components);
-            this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl1
@@ -136,15 +137,18 @@
             this.btn_LienHe,
             this.btn_DangKy,
             this.btn_CapNhat,
-            this.btn_ThongTinTroGiup});
+            this.btn_ThongTinTroGiup,
+            this.btn_Demo1,
+            this.btn_Demo2});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 44;
+            this.ribbonControl1.MaxItemId = 46;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
             this.ribbonPage2,
             this.ribbonPage3,
-            this.ribbonPage4});
+            this.ribbonPage4,
+            this.ribbonPage5});
             this.ribbonControl1.QuickToolbarItemLinks.Add(this.barButtonItem11);
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
             this.ribbonControl1.Size = new System.Drawing.Size(1270, 143);
@@ -213,6 +217,7 @@
             this.btn_SaoLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_SaoLuu.ImageOptions.Image")));
             this.btn_SaoLuu.Name = "btn_SaoLuu";
             this.btn_SaoLuu.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_SaoLuu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_SaoLuu_ItemClick);
             // 
             // btn_PhucHoi
             // 
@@ -452,6 +457,24 @@
             this.btn_ThongTinTroGiup.Name = "btn_ThongTinTroGiup";
             this.btn_ThongTinTroGiup.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
+            // btn_Demo1
+            // 
+            this.btn_Demo1.Caption = "Demo1";
+            this.btn_Demo1.Id = 44;
+            this.btn_Demo1.ImageOptions.Image = global::DoAn_LTUDQL2.Properties.Resources.user_secret;
+            this.btn_Demo1.Name = "btn_Demo1";
+            this.btn_Demo1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_Demo1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Demo1_ItemClick);
+            // 
+            // btn_Demo2
+            // 
+            this.btn_Demo2.Caption = "Demo2";
+            this.btn_Demo2.Id = 45;
+            this.btn_Demo2.ImageOptions.Image = global::DoAn_LTUDQL2.Properties.Resources.user_profile_edit;
+            this.btn_Demo2.Name = "btn_Demo2";
+            this.btn_Demo2.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_Demo2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Demo2_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -585,29 +608,38 @@
             this.ribbonPageGroup12.Name = "ribbonPageGroup12";
             this.ribbonPageGroup12.Text = "Thông Tin";
             // 
+            // ribbonPage5
+            // 
+            this.ribbonPage5.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup13});
+            this.ribbonPage5.Name = "ribbonPage5";
+            this.ribbonPage5.Text = "Demo";
+            // 
+            // ribbonPageGroup13
+            // 
+            this.ribbonPageGroup13.ItemLinks.Add(this.btn_Demo1);
+            this.ribbonPageGroup13.ItemLinks.Add(this.btn_Demo2);
+            this.ribbonPageGroup13.Name = "ribbonPageGroup13";
+            this.ribbonPageGroup13.Text = "ribbonPageGroup13";
+            // 
             // mvvmContext1
             // 
             this.mvvmContext1.ContainerControl = this;
             this.mvvmContext1.ViewModelType = typeof(DoAn_LTUDQL2.MainViewModel);
             // 
-            // layoutControl1
+            // tabControl1
             // 
-            this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl1.Location = new System.Drawing.Point(0, 143);
-            this.layoutControl1.Name = "layoutControl1";
-            this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(1270, 572);
-            this.layoutControl1.TabIndex = 1;
-            this.layoutControl1.Text = "layoutControl1";
-            // 
-            // layoutControlGroup1
-            // 
-            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup1.GroupBordersVisible = false;
-            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1270, 572);
-            this.layoutControlGroup1.TextVisible = false;
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
+            this.tabControl1.Location = new System.Drawing.Point(0, 143);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.ShowToolTips = true;
+            this.tabControl1.Size = new System.Drawing.Size(1270, 572);
+            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tabControl1.TabIndex = 7;
+            this.tabControl1.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl1_DrawItem);
+            this.tabControl1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tabControl1_MouseDown);
             // 
             // MainView
             // 
@@ -615,7 +647,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1270, 715);
-            this.Controls.Add(this.layoutControl1);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.ribbonControl1);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
             this.Name = "MainView";
@@ -624,8 +656,6 @@
             this.Text = "MainView";
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -689,8 +719,11 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup12;
         private DevExpress.XtraBars.BarButtonItem btn_CapNhat;
         private DevExpress.XtraBars.BarButtonItem btn_ThongTinTroGiup;
-        private DevExpress.XtraLayout.LayoutControl layoutControl1;
-        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private System.Windows.Forms.TabControl tabControl1;
+        private DevExpress.XtraBars.BarButtonItem btn_Demo1;
+        private DevExpress.XtraBars.BarButtonItem btn_Demo2;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage5;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup13;
     }
 }
 
