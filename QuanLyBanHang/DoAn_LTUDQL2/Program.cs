@@ -20,7 +20,7 @@ namespace DoAn_LTUDQL2
 
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
-            Application.Run(new MainView());
+            Application.Run(new fLogin());
         }
     }
 }

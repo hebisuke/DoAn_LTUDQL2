@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
+using System.Threading;
 namespace DoAn_LTUDQL2
 {
     public partial class MainView : DevExpress.XtraBars.Ribbon.RibbonForm
@@ -14,9 +14,17 @@ namespace DoAn_LTUDQL2
         
         public MainView()
         {
+            Thread t = new Thread(new ThreadStart(SplashScreen));
+            t.Start();
+            Thread.Sleep(5000);
             InitializeComponent();
+            t.Abort();
             if (!mvvmContext1.IsDesignMode)
                 InitializeBindings();
+        }
+        private void SplashScreen()
+        {
+            Application.Run(new SplashScreen1());
         }
 
         void InitializeBindings()
