@@ -36,6 +36,9 @@
     <Reference Include="Accessibility" />
     <Reference Include="DevExpress.BonusSkins.v16.2" />
     <Reference Include="DevExpress.Data.v16.2" />
+    <Reference Include="DevExpress.Images.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
     <Reference Include="DevExpress.Mvvm.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v16.2.Core" />
     <Reference Include="DevExpress.Utils.v16.2" />
@@ -105,6 +108,12 @@
     <Compile Include="DonViTinh.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="frm_DoiMK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_DoiMK.Designer.cs">
+      <DependentUpon>frm_DoiMK.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +174,18 @@
     <Compile Include="ThuTien.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="uctr_NguoiDung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uctr_NguoiDung.Designer.cs">
+      <DependentUpon>uctr_NguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uctr_NhatKi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uctr_NhatKi.Designer.cs">
+      <DependentUpon>uctr_NhatKi.cs</DependentUpon>
+    </Compile>
     <Compile Include="uctr_PhucHoi.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -176,6 +197,12 @@
     </Compile>
     <Compile Include="uctr_SaoLuu.Designer.cs">
       <DependentUpon>uctr_SaoLuu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uctr_VaiTroQuyenHan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uctr_VaiTroQuyenHan.Designer.cs">
+      <DependentUpon>uctr_VaiTroQuyenHan.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControl1.cs">
       <SubType>UserControl</SubType>
@@ -189,6 +216,9 @@
     <Compile Include="UserControl2.Designer.cs">
       <DependentUpon>UserControl2.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frm_DoiMK.resx">
+      <DependentUpon>frm_DoiMK.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_Login.resx">
       <DependentUpon>frm_Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -214,6 +244,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="uctr_SaoLuu.resx">
       <DependentUpon>uctr_SaoLuu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uctr_VaiTroQuyenHan.resx">
+      <DependentUpon>uctr_VaiTroQuyenHan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>

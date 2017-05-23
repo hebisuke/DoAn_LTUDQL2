@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="QLBanHangModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="QLBanHangModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="BanHang">
           <Key>
             <PropertyRef Name="MaPhieuBanHang" />
@@ -91,12 +91,12 @@
           <Property Name="MaKhuVuc" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="DiaChi" Type="nvarchar" MaxLength="450" />
           <Property Name="MST" Type="nchar" MaxLength="10" />
-          <Property Name="DTBan" Type="nchar" MaxLength="10" />
-          <Property Name="DTDD" Type="nchar" MaxLength="11" />
-          <Property Name="Fax" Type="nchar" MaxLength="10" />
+          <Property Name="DTBan" Type="nchar" MaxLength="20" />
+          <Property Name="DTDD" Type="nchar" MaxLength="20" />
+          <Property Name="Fax" Type="nchar" MaxLength="20" />
           <Property Name="Email" Type="nchar" MaxLength="50" />
-          <Property Name="Website" Type="nchar" MaxLength="50" />
-          <Property Name="STK" Type="nchar" MaxLength="15" />
+          <Property Name="Website" Type="nchar" MaxLength="100" />
+          <Property Name="STK" Type="nchar" MaxLength="25" />
           <Property Name="NganHang" Type="nvarchar" MaxLength="50" />
           <Property Name="GioiHanNo" Type="nchar" MaxLength="15" />
           <Property Name="NoHienTai" Type="nchar" MaxLength="15" />
@@ -726,8 +726,7 @@ warning 6013: The table/view 'QLBanHang.dbo.ThongTinToChucCaNhan' does not have 
             <End Role="ThuTien" EntitySet="ThuTien" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="QLBanHangModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -835,12 +834,12 @@ warning 6013: The table/view 'QLBanHang.dbo.ThongTinToChucCaNhan' does not have 
           <Property Name="MaKhuVuc" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="DiaChi" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
           <Property Name="MST" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="DTBan" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="DTDD" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
-          <Property Name="Fax" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="DTBan" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="DTDD" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="Fax" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
-          <Property Name="Website" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
-          <Property Name="STK" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+          <Property Name="Website" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="STK" Type="String" MaxLength="25" FixedLength="true" Unicode="true" />
           <Property Name="NganHang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="GioiHanNo" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
           <Property Name="NoHienTai" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />

@@ -185,6 +185,7 @@
             this.btn_VaiTroQuyenHan.ImageOptions.Image = global::DoAn_LTUDQL2.Properties.Resources.user_secret;
             this.btn_VaiTroQuyenHan.Name = "btn_VaiTroQuyenHan";
             this.btn_VaiTroQuyenHan.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_VaiTroQuyenHan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_VaiTroQuyenHan_ItemClick);
             // 
             // btn_NguoiDung
             // 
@@ -193,6 +194,7 @@
             this.btn_NguoiDung.ImageOptions.Image = global::DoAn_LTUDQL2.Properties.Resources.user_profile_edit;
             this.btn_NguoiDung.Name = "btn_NguoiDung";
             this.btn_NguoiDung.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_NguoiDung.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_NguoiDung_ItemClick);
             // 
             // btn_DoiMatKhau
             // 
@@ -201,6 +203,7 @@
             this.btn_DoiMatKhau.ImageOptions.Image = global::DoAn_LTUDQL2.Properties.Resources.key;
             this.btn_DoiMatKhau.Name = "btn_DoiMatKhau";
             this.btn_DoiMatKhau.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_DoiMatKhau.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_DoiMatKhau_ItemClick);
             // 
             // btn_NhatKyHeThong
             // 
@@ -209,6 +212,7 @@
             this.btn_NhatKyHeThong.ImageOptions.Image = global::DoAn_LTUDQL2.Properties.Resources.edit;
             this.btn_NhatKyHeThong.Name = "btn_NhatKyHeThong";
             this.btn_NhatKyHeThong.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_NhatKyHeThong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_NhatKyHeThong_ItemClick);
             // 
             // btn_SaoLuu
             // 

@@ -35,7 +35,7 @@ namespace DoAn_LTUDQL2
         private void tabControl1_DrawItem(object sender, DrawItemEventArgs e)
         {
             //This code will render a "x" mark at the end of the Tab caption. 
-            e.Graphics.DrawString("X", e.Font, Brushes.Red, e.Bounds.Right - 15, e.Bounds.Top + 4);
+            e.Graphics.DrawString("✖", e.Font, Brushes.Red, e.Bounds.Right - 15, e.Bounds.Top + 4);
             e.Graphics.DrawString(this.tabControl1.TabPages[e.Index].Text, e.Font, Brushes.Black, e.Bounds.Left + 12, e.Bounds.Top + 4);
             e.DrawFocusRectangle();
         }
@@ -142,6 +142,72 @@ namespace DoAn_LTUDQL2
             myTabPage.Text = "Phục Hồi";
             tabControl1.TabPages.Add(myTabPage);
             tabControl1.SelectTab(tabControl1.TabPages["uctr_PhucHoi"]);
+        }
+
+        private void btn_VaiTroQuyenHan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            foreach (Control ctrl in tabControl1.Controls)
+            {
+                if (ctrl.Name == "uctr_VaiTroQuyenHan")
+                {
+                    tabControl1.SelectTab(tabControl1.TabPages["uctr_VaiTroQuyenHan"]);
+                    return;
+                }
+            }
+            uctr_VaiTroQuyenHan VaiTro = new uctr_VaiTroQuyenHan();
+            VaiTro.Dock = DockStyle.Fill;
+            TabPage myTabPage = new TabPage();//Create new tabpage
+            myTabPage.Controls.Add(VaiTro);
+            myTabPage.Name = "uctr_VaiTroQuyenHan";
+            myTabPage.Text = "Vai Trò";
+            tabControl1.TabPages.Add(myTabPage);
+            tabControl1.SelectTab(tabControl1.TabPages["uctr_VaiTroQuyenHan"]);
+        }
+
+        private void btn_NguoiDung_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            foreach (Control ctrl in tabControl1.Controls)
+            {
+                if (ctrl.Name == "uctr_NguoiDung")
+                {
+                    tabControl1.SelectTab(tabControl1.TabPages["uctr_NguoiDung"]);
+                    return;
+                }
+            }
+            uctr_NguoiDung NguoiDung = new uctr_NguoiDung();
+            NguoiDung.Dock = DockStyle.Fill;
+            TabPage myTabPage = new TabPage();//Create new tabpage
+            myTabPage.Controls.Add(NguoiDung);
+            myTabPage.Name = "uctr_NguoiDung";
+            myTabPage.Text = "Người Dùng";
+            tabControl1.TabPages.Add(myTabPage);
+            tabControl1.SelectTab(tabControl1.TabPages["uctr_NguoiDung"]);
+        }
+
+        private void btn_DoiMatKhau_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frm_DoiMK DMK = new frm_DoiMK();
+            DMK.ShowDialog();
+        }
+
+        private void btn_NhatKyHeThong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            foreach (Control ctrl in tabControl1.Controls)
+            {
+                if (ctrl.Name == "uctr_NhatKi")
+                {
+                    tabControl1.SelectTab(tabControl1.TabPages["uctr_NhatKi"]);
+                    return;
+                }
+            }
+            uctr_NhatKi NguoiDung = new uctr_NhatKi();
+            NguoiDung.Dock = DockStyle.Fill;
+            TabPage myTabPage = new TabPage();//Create new tabpage
+            myTabPage.Controls.Add(NguoiDung);
+            myTabPage.Name = "uctr_NhatKi";
+            myTabPage.Text = "Người Dùng";
+            tabControl1.TabPages.Add(myTabPage);
+            tabControl1.SelectTab(tabControl1.TabPages["uctr_NhatKi"]);
         }
     }
 }
