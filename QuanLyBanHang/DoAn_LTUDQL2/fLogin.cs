@@ -63,7 +63,8 @@ namespace DoAn_LTUDQL2
                 MainView m = new MainView();
                 this.Hide();
                 m.ShowDialog();
-                this.Show();
+               
+                //this.Show();
             }
         }
 
@@ -74,7 +75,7 @@ namespace DoAn_LTUDQL2
 
         private void fLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Bạn Chưa Đăng Nhập Bạn Thật Sự Muốn Thoát!", "Thông Báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+            if (MessageBox.Show("Bạn Thật Sự Muốn Thoát!", "Thông Báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
             {
                 e.Cancel = true;
             }

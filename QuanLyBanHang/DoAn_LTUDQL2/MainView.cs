@@ -124,6 +124,24 @@ namespace DoAn_LTUDQL2
             tabControl1.SelectTab(tabControl1.TabPages["uctr_SaoLuu"]);
         }
 
-       
+        private void btn_PhucHoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            foreach(Control ctrl in tabControl1.Controls)
+            {
+                if (ctrl.Name == "uctr_PhucHoi")
+                {
+                    tabControl1.SelectTab(tabControl1.TabPages["uctr_PhucHoi"]);
+                    return;
+                }
+            }
+            uctr_PhucHoi PhucHoi = new uctr_PhucHoi();
+            PhucHoi.Dock = DockStyle.Fill;
+            TabPage myTabPage = new TabPage();//Create new tabpage
+            myTabPage.Controls.Add(PhucHoi);
+            myTabPage.Name = "uctr_PhucHoi";
+            myTabPage.Text = "Phục Hồi";
+            tabControl1.TabPages.Add(myTabPage);
+            tabControl1.SelectTab(tabControl1.TabPages["uctr_PhucHoi"]);
+        }
     }
 }
