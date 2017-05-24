@@ -21,5 +21,21 @@ namespace DoAn_LTUDQL2
         {
 
         }
+
+        private void simpleButton21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgv_QuyenHan_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btn_ThemTKND_Click(object sender, EventArgs e)
+        {
+            frm_ThemTKND abc = new frm_ThemTKND();
+            abc.ShowDialog();
+        }
     }
 }

@@ -28,10 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.dgv_DSNhatKi = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_DSNhatKi)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dgv_DSNhatKi
+            // 
+            this.dgv_DSNhatKi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_DSNhatKi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_DSNhatKi.Location = new System.Drawing.Point(0, 0);
+            this.dgv_DSNhatKi.Name = "dgv_DSNhatKi";
+            this.dgv_DSNhatKi.Size = new System.Drawing.Size(742, 427);
+            this.dgv_DSNhatKi.TabIndex = 0;
+            // 
+            // uctr_NhatKi
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.dgv_DSNhatKi);
+            this.Name = "uctr_NhatKi";
+            this.Size = new System.Drawing.Size(742, 427);
+            this.Load += new System.EventHandler(this.uctr_NhatKi_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_DSNhatKi)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView dgv_DSNhatKi;
     }
 }

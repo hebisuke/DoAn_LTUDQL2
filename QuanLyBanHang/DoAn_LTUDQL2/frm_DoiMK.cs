@@ -29,8 +29,17 @@ namespace DoAn_LTUDQL2
             {
                 if (txt_MKMoi.Text == txt_ReMKMoi.Text)
                 {
+                    TaiKhoanNguoiDung TK = (from x in db.TaiKhoanNguoiDungs
+                                            where x.MatKhau == txt_MKCu.Text
+                                            select x).First();
+                    if (TK.MatKhau == null)
+                    { TK.MatKhau = txt_MKMoi.Text;
+                        db.SaveChanges();
+                        MessageBox.Show("Đổi Mật Khẩu Thành Công", "Thành Công!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else 
+                        MessageBox.Show("Mật khẩu cũ chưa chính xác", "Báo lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     //update;
-                    MessageBox.Show("Đổi Mật Khẩu Thành Công", "Thành Công!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else MessageBox.Show("Mật Khẩu nhập lại không giống với Mật Khẩu mới", "Báo lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

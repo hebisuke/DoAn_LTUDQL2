@@ -18,7 +18,6 @@ namespace DoAn_LTUDQL2
         public BanHang()
         {
             this.CHiTietBanHangs = new HashSet<CHiTietBanHang>();
-            this.NhatKiHeThongs = new HashSet<NhatKiHeThong>();
             this.ThuTiens = new HashSet<ThuTien>();
         }
     
@@ -36,8 +35,6 @@ namespace DoAn_LTUDQL2
         public virtual NhanVien NhanVien { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CHiTietBanHang> CHiTietBanHangs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<NhatKiHeThong> NhatKiHeThongs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ThuTien> ThuTiens { get; set; }
     }

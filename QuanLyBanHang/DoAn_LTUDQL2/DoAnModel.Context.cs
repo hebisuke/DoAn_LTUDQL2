@@ -42,6 +42,7 @@ namespace DoAn_LTUDQL2
         public virtual DbSet<NhatKiHeThong> NhatKiHeThongs { get; set; }
         public virtual DbSet<NhomHangHoa> NhomHangHoas { get; set; }
         public virtual DbSet<TaiKhoanNguoiDung> TaiKhoanNguoiDungs { get; set; }
+        public virtual DbSet<ThongTinToChucCaNhan> ThongTinToChucCaNhans { get; set; }
         public virtual DbSet<ThuTien> ThuTiens { get; set; }
     }
 }

@@ -20,6 +20,7 @@ namespace DoAn_LTUDQL2
         public Nullable<int> MaVaiTro { get; set; }
         public string DienGiai { get; set; }
         public Nullable<int> TinhTrangQL { get; set; }
+        public string TenTaiKhoan { get; set; }
     
         public virtual NhanVien NhanVien { get; set; }
     }

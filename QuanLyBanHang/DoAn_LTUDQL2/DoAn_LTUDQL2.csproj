@@ -47,6 +47,7 @@
     <Reference Include="DevExpress.XtraEditors.v16.2" />
     <Reference Include="DevExpress.XtraPrinting.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -64,10 +65,12 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Design" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -120,6 +123,12 @@
     <Compile Include="frm_Login.Designer.cs">
       <DependentUpon>frm_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_ThemTKND.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ThemTKND.Designer.cs">
+      <DependentUpon>frm_ThemTKND.cs</DependentUpon>
+    </Compile>
     <Compile Include="HangHoa.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
@@ -171,14 +180,11 @@
     <Compile Include="TaiKhoanNguoiDung.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="ThuTien.cs">
+    <Compile Include="ThongTinToChucCaNhan.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="uctr_NguoiDung.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="uctr_NguoiDung.Designer.cs">
-      <DependentUpon>uctr_NguoiDung.cs</DependentUpon>
+    <Compile Include="ThuTien.cs">
+      <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
     <Compile Include="uctr_NhatKi.cs">
       <SubType>UserControl</SubType>
@@ -222,6 +228,9 @@
     <EmbeddedResource Include="frm_Login.resx">
       <DependentUpon>frm_Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_ThemTKND.resx">
+      <DependentUpon>frm_ThemTKND.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
     </EmbeddedResource>
@@ -238,6 +247,9 @@
     </Compile>
     <EmbeddedResource Include="SplashScreen1.resx">
       <DependentUpon>SplashScreen1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uctr_NhatKi.resx">
+      <DependentUpon>uctr_NhatKi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uctr_PhucHoi.resx">
       <DependentUpon>uctr_PhucHoi.cs</DependentUpon>

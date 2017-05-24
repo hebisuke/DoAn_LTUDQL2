@@ -35,7 +35,6 @@
             this.btn_DangXuat = new DevExpress.XtraBars.BarButtonItem();
             this.btn_ThongTin = new DevExpress.XtraBars.BarButtonItem();
             this.btn_VaiTroQuyenHan = new DevExpress.XtraBars.BarButtonItem();
-            this.btn_NguoiDung = new DevExpress.XtraBars.BarButtonItem();
             this.btn_DoiMatKhau = new DevExpress.XtraBars.BarButtonItem();
             this.btn_NhatKyHeThong = new DevExpress.XtraBars.BarButtonItem();
             this.btn_SaoLuu = new DevExpress.XtraBars.BarButtonItem();
@@ -104,7 +103,6 @@
             this.btn_DangXuat,
             this.btn_ThongTin,
             this.btn_VaiTroQuyenHan,
-            this.btn_NguoiDung,
             this.btn_DoiMatKhau,
             this.btn_NhatKyHeThong,
             this.btn_SaoLuu,
@@ -186,15 +184,6 @@
             this.btn_VaiTroQuyenHan.Name = "btn_VaiTroQuyenHan";
             this.btn_VaiTroQuyenHan.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.btn_VaiTroQuyenHan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_VaiTroQuyenHan_ItemClick);
-            // 
-            // btn_NguoiDung
-            // 
-            this.btn_NguoiDung.Caption = "Người Dùng";
-            this.btn_NguoiDung.Id = 7;
-            this.btn_NguoiDung.ImageOptions.Image = global::DoAn_LTUDQL2.Properties.Resources.user_profile_edit;
-            this.btn_NguoiDung.Name = "btn_NguoiDung";
-            this.btn_NguoiDung.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.btn_NguoiDung.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_NguoiDung_ItemClick);
             // 
             // btn_DoiMatKhau
             // 
@@ -500,7 +489,6 @@
             // ribbonPageGroup3
             // 
             this.ribbonPageGroup3.ItemLinks.Add(this.btn_VaiTroQuyenHan);
-            this.ribbonPageGroup3.ItemLinks.Add(this.btn_NguoiDung);
             this.ribbonPageGroup3.ItemLinks.Add(this.btn_DoiMatKhau);
             this.ribbonPageGroup3.ItemLinks.Add(this.btn_NhatKyHeThong);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
@@ -679,7 +667,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
-        private DevExpress.XtraBars.BarButtonItem btn_NguoiDung;
         private DevExpress.XtraBars.BarButtonItem btn_DoiMatKhau;
         private DevExpress.XtraBars.BarButtonItem btn_NhatKyHeThong;
         private DevExpress.XtraBars.BarButtonItem btn_SaoLuu;

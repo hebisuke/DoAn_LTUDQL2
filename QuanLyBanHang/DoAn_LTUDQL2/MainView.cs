@@ -164,26 +164,6 @@ namespace DoAn_LTUDQL2
             tabControl1.SelectTab(tabControl1.TabPages["uctr_VaiTroQuyenHan"]);
         }
 
-        private void btn_NguoiDung_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            foreach (Control ctrl in tabControl1.Controls)
-            {
-                if (ctrl.Name == "uctr_NguoiDung")
-                {
-                    tabControl1.SelectTab(tabControl1.TabPages["uctr_NguoiDung"]);
-                    return;
-                }
-            }
-            uctr_NguoiDung NguoiDung = new uctr_NguoiDung();
-            NguoiDung.Dock = DockStyle.Fill;
-            TabPage myTabPage = new TabPage();//Create new tabpage
-            myTabPage.Controls.Add(NguoiDung);
-            myTabPage.Name = "uctr_NguoiDung";
-            myTabPage.Text = "Người Dùng";
-            tabControl1.TabPages.Add(myTabPage);
-            tabControl1.SelectTab(tabControl1.TabPages["uctr_NguoiDung"]);
-        }
-
         private void btn_DoiMatKhau_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             frm_DoiMK DMK = new frm_DoiMK();
@@ -205,7 +185,7 @@ namespace DoAn_LTUDQL2
             TabPage myTabPage = new TabPage();//Create new tabpage
             myTabPage.Controls.Add(NguoiDung);
             myTabPage.Name = "uctr_NhatKi";
-            myTabPage.Text = "Người Dùng";
+            myTabPage.Text = "Nhật Kí";
             tabControl1.TabPages.Add(myTabPage);
             tabControl1.SelectTab(tabControl1.TabPages["uctr_NhatKi"]);
         }

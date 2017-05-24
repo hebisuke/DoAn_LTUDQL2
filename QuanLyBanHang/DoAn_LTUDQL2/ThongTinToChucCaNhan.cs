@@ -12,15 +12,18 @@ namespace DoAn_LTUDQL2
     using System;
     using System.Collections.Generic;
     
-    public partial class NhatKiHeThong
+    public partial class ThongTinToChucCaNhan
     {
-        public int id { get; set; }
-        public string MaNV { get; set; }
-        public string MayTinh { get; set; }
-        public Nullable<System.DateTime> ThoiGian { get; set; }
-        public string TenChucNang { get; set; }
-        public string HanhDong { get; set; }
-    
-        public virtual NhanVien NhanVien { get; set; }
+        public string TenDonVi { get; set; }
+        public string DiaCHi { get; set; }
+        public string DTBan { get; set; }
+        public string DTDD { get; set; }
+        public string Fax { get; set; }
+        public string Website { get; set; }
+        public string Email { get; set; }
+        public string LinhVuc { get; set; }
+        public string MST { get; set; }
+        public string GPKD { get; set; }
+        public int Ma { get; set; }
     }
 }

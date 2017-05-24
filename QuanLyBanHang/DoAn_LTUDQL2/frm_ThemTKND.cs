@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DoAn_LTUDQL2
 {
-    public partial class uctr_NguoiDung : UserControl
+    public partial class frm_ThemTKND : Form
     {
-        public uctr_NguoiDung()
+        public frm_ThemTKND()
         {
             InitializeComponent();
         }
