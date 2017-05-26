@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace DoAn_LTUDQL2
 {
-    public partial class frm_DoiMK : Form
+    public partial class frm_DoiMK : DevExpress.XtraEditors.XtraForm
     {
         QLBanHangEntities db = new QLBanHangEntities();
         public frm_DoiMK()

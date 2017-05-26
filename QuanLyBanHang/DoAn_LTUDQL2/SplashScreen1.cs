@@ -42,5 +42,10 @@ namespace DoAn_LTUDQL2
                 timer1.Stop();
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

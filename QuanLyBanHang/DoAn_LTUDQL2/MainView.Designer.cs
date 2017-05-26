@@ -89,9 +89,10 @@
             this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.mvvmContext1 = new DevExpress.Utils.MVVM.MVVMContext(this.components);
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl1
@@ -175,6 +176,7 @@
             this.btn_ThongTin.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_ThongTin.ImageOptions.LargeImage")));
             this.btn_ThongTin.Name = "btn_ThongTin";
             this.btn_ThongTin.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_ThongTin.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_ThongTin_ItemClick);
             // 
             // btn_VaiTroQuyenHan
             // 
@@ -183,7 +185,6 @@
             this.btn_VaiTroQuyenHan.ImageOptions.Image = global::DoAn_LTUDQL2.Properties.Resources.user_secret;
             this.btn_VaiTroQuyenHan.Name = "btn_VaiTroQuyenHan";
             this.btn_VaiTroQuyenHan.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.btn_VaiTroQuyenHan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_VaiTroQuyenHan_ItemClick);
             // 
             // btn_DoiMatKhau
             // 
@@ -201,7 +202,6 @@
             this.btn_NhatKyHeThong.ImageOptions.Image = global::DoAn_LTUDQL2.Properties.Resources.edit;
             this.btn_NhatKyHeThong.Name = "btn_NhatKyHeThong";
             this.btn_NhatKyHeThong.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.btn_NhatKyHeThong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_NhatKyHeThong_ItemClick);
             // 
             // btn_SaoLuu
             // 
@@ -210,7 +210,6 @@
             this.btn_SaoLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_SaoLuu.ImageOptions.Image")));
             this.btn_SaoLuu.Name = "btn_SaoLuu";
             this.btn_SaoLuu.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.btn_SaoLuu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_SaoLuu_ItemClick);
             // 
             // btn_PhucHoi
             // 
@@ -219,7 +218,6 @@
             this.btn_PhucHoi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_PhucHoi.ImageOptions.Image")));
             this.btn_PhucHoi.Name = "btn_PhucHoi";
             this.btn_PhucHoi.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.btn_PhucHoi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_PhucHoi_ItemClick);
             // 
             // btn_ChuyenKe
             // 
@@ -242,6 +240,7 @@
             this.btn_KhuVuc.ImageOptions.Image = global::DoAn_LTUDQL2.Properties.Resources.area;
             this.btn_KhuVuc.Name = "btn_KhuVuc";
             this.btn_KhuVuc.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_KhuVuc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_KhuVuc_ItemClick);
             // 
             // btn_KhachHang
             // 
@@ -250,6 +249,7 @@
             this.btn_KhachHang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_KhachHang.ImageOptions.Image")));
             this.btn_KhachHang.Name = "btn_KhachHang";
             this.btn_KhachHang.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_KhachHang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_KhachHang_ItemClick);
             // 
             // btn_NhaPhanPhoi
             // 
@@ -458,7 +458,6 @@
             this.btn_Demo1.ImageOptions.Image = global::DoAn_LTUDQL2.Properties.Resources.user_secret;
             this.btn_Demo1.Name = "btn_Demo1";
             this.btn_Demo1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.btn_Demo1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Demo1_ItemClick);
             // 
             // btn_Demo2
             // 
@@ -467,7 +466,6 @@
             this.btn_Demo2.ImageOptions.Image = global::DoAn_LTUDQL2.Properties.Resources.user_profile_edit;
             this.btn_Demo2.Name = "btn_Demo2";
             this.btn_Demo2.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.btn_Demo2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Demo2_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -620,19 +618,10 @@
             this.mvvmContext1.ContainerControl = this;
             this.mvvmContext1.ViewModelType = typeof(DoAn_LTUDQL2.MainViewModel);
             // 
-            // tabControl1
+            // xtraTabbedMdiManager1
             // 
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
-            this.tabControl1.Location = new System.Drawing.Point(0, 143);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.ShowToolTips = true;
-            this.tabControl1.Size = new System.Drawing.Size(1270, 572);
-            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tabControl1.TabIndex = 7;
-            this.tabControl1.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl1_DrawItem);
-            this.tabControl1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tabControl1_MouseDown);
+            this.xtraTabbedMdiManager1.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InActiveTabPageAndTabControlHeader;
+            this.xtraTabbedMdiManager1.MdiParent = this;
             // 
             // MainView
             // 
@@ -640,15 +629,17 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1270, 715);
-            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.ribbonControl1);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
+            this.IsMdiContainer = true;
             this.Name = "MainView";
             this.Ribbon = this.ribbonControl1;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainView";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -711,11 +702,11 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup12;
         private DevExpress.XtraBars.BarButtonItem btn_CapNhat;
         private DevExpress.XtraBars.BarButtonItem btn_ThongTinTroGiup;
-        private System.Windows.Forms.TabControl tabControl1;
         private DevExpress.XtraBars.BarButtonItem btn_Demo1;
         private DevExpress.XtraBars.BarButtonItem btn_Demo2;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage5;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup13;
+        private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
     }
 }
 

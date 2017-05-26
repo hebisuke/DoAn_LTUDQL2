@@ -45,6 +45,7 @@
     <Reference Include="DevExpress.XtraBars.v16.2" />
     <Reference Include="DevExpress.Sparkline.v16.2.Core" />
     <Reference Include="DevExpress.XtraEditors.v16.2" />
+    <Reference Include="DevExpress.XtraGrid.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraTreeList.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -117,6 +118,18 @@
     <Compile Include="frm_DoiMK.Designer.cs">
       <DependentUpon>frm_DoiMK.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_KhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_KhachHang.Designer.cs">
+      <DependentUpon>frm_KhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_KhuVuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_KhuVuc.Designer.cs">
+      <DependentUpon>frm_KhuVuc.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +141,12 @@
     </Compile>
     <Compile Include="frm_ThemTKND.Designer.cs">
       <DependentUpon>frm_ThemTKND.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ThongTin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ThongTin.designer.cs">
+      <DependentUpon>frm_ThongTin.cs</DependentUpon>
     </Compile>
     <Compile Include="HangHoa.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
@@ -174,7 +193,7 @@
     <Compile Include="SplashScreen1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SplashScreen1.Designer.cs">
+    <Compile Include="SplashScreen1.designer.cs">
       <DependentUpon>SplashScreen1.cs</DependentUpon>
     </Compile>
     <Compile Include="TaiKhoanNguoiDung.cs">
@@ -186,50 +205,23 @@
     <Compile Include="ThuTien.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="uctr_NhatKi.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="uctr_NhatKi.Designer.cs">
-      <DependentUpon>uctr_NhatKi.cs</DependentUpon>
-    </Compile>
-    <Compile Include="uctr_PhucHoi.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="uctr_PhucHoi.Designer.cs">
-      <DependentUpon>uctr_PhucHoi.cs</DependentUpon>
-    </Compile>
-    <Compile Include="uctr_SaoLuu.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="uctr_SaoLuu.Designer.cs">
-      <DependentUpon>uctr_SaoLuu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="uctr_VaiTroQuyenHan.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="uctr_VaiTroQuyenHan.Designer.cs">
-      <DependentUpon>uctr_VaiTroQuyenHan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControl1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControl2.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl2.Designer.cs">
-      <DependentUpon>UserControl2.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="frm_DoiMK.resx">
       <DependentUpon>frm_DoiMK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_KhachHang.resx">
+      <DependentUpon>frm_KhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_KhuVuc.resx">
+      <DependentUpon>frm_KhuVuc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Login.resx">
       <DependentUpon>frm_Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_ThemTKND.resx">
       <DependentUpon>frm_ThemTKND.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ThongTin.resx">
+      <DependentUpon>frm_ThongTin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
@@ -247,24 +239,6 @@
     </Compile>
     <EmbeddedResource Include="SplashScreen1.resx">
       <DependentUpon>SplashScreen1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="uctr_NhatKi.resx">
-      <DependentUpon>uctr_NhatKi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="uctr_PhucHoi.resx">
-      <DependentUpon>uctr_PhucHoi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="uctr_SaoLuu.resx">
-      <DependentUpon>uctr_SaoLuu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="uctr_VaiTroQuyenHan.resx">
-      <DependentUpon>uctr_VaiTroQuyenHan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl2.resx">
-      <DependentUpon>UserControl2.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="DoAnModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -365,6 +339,7 @@
     <Content Include="Asset\Show Password .png" />
     <Content Include="Asset\true.png" />
     <Content Include="Asset\Untitled.jpg" />
+    <Content Include="Asset\wannacry.jpg" />
     <Content Include="DoAnModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>DoAnModel.Context.cs</LastGenOutput>

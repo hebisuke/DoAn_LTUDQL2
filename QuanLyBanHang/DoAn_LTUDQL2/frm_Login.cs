@@ -91,7 +91,7 @@ namespace DoAn_LTUDQL2
             this.Hide();
             MainView frm_mv = new MainView();
             frm_mv.ShowDialog();
-            this.Close();
+            Application.Exit();
         }
     }
 }
