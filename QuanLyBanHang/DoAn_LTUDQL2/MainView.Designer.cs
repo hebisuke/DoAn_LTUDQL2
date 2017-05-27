@@ -210,6 +210,7 @@
             this.btn_SaoLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_SaoLuu.ImageOptions.Image")));
             this.btn_SaoLuu.Name = "btn_SaoLuu";
             this.btn_SaoLuu.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_SaoLuu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_SaoLuu_ItemClick);
             // 
             // btn_PhucHoi
             // 
@@ -218,6 +219,7 @@
             this.btn_PhucHoi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_PhucHoi.ImageOptions.Image")));
             this.btn_PhucHoi.Name = "btn_PhucHoi";
             this.btn_PhucHoi.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_PhucHoi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_PhucHoi_ItemClick);
             // 
             // btn_ChuyenKe
             // 

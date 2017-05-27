@@ -136,6 +136,18 @@
     <Compile Include="frm_Login.Designer.cs">
       <DependentUpon>frm_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_PhucHoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_PhucHoi.designer.cs">
+      <DependentUpon>frm_PhucHoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SaoLuu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SaoLuu.designer.cs">
+      <DependentUpon>frm_SaoLuu.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_ThemTKND.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,6 +228,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Login.resx">
       <DependentUpon>frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_PhucHoi.resx">
+      <DependentUpon>frm_PhucHoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SaoLuu.resx">
+      <DependentUpon>frm_SaoLuu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_ThemTKND.resx">
       <DependentUpon>frm_ThemTKND.cs</DependentUpon>

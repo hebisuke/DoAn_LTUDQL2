@@ -75,6 +75,20 @@ namespace DoAn_LTUDQL2
             frmThongTin.Show();
         }
 
+        private void btn_SaoLuu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var frmSaoLuu = new frm_SaoLuu();
+            if (ExistForm(frmSaoLuu)) return;
+            frmSaoLuu.ShowDialog();
+        }
+
+        private void btn_PhucHoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var frmPhucHoi = new frm_PhucHoi();
+            if (ExistForm(frmPhucHoi)) return;
+            frmPhucHoi.ShowDialog();
+        }
+
         //------------- Hàm kiểm tra form đã mở chưa, nếu mở thì k mởi nữa, nếu chưa thì mở lên-------
 
 
