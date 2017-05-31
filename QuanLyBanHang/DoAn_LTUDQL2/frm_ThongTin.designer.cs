@@ -37,7 +37,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_Tendonvi = new System.Windows.Forms.TextBox();
-            this.thongTinToChucCaNhanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txt_DiaChi = new System.Windows.Forms.TextBox();
             this.txtDienThoai = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -56,8 +55,9 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtdtdd = new System.Windows.Forms.TextBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.thongTinToChucCaNhanBindingSource)).BeginInit();
+            this.thongTinToChucCaNhanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.thongTinToChucCaNhanBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnDangKy
@@ -99,7 +99,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(23, 94);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 13);
+            this.label2.Size = new System.Drawing.Size(59, 13);
             this.label2.TabIndex = 27;
             this.label2.Text = "Tên Đơn Vị";
             // 
@@ -117,7 +117,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(23, 148);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 13);
+            this.label4.Size = new System.Drawing.Size(58, 13);
             this.label4.TabIndex = 29;
             this.label4.Text = "Điện Thoại";
             // 
@@ -126,35 +126,33 @@
             this.txt_Tendonvi.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.thongTinToChucCaNhanBindingSource, "TenDonVi", true));
             this.txt_Tendonvi.Location = new System.Drawing.Point(117, 87);
             this.txt_Tendonvi.Name = "txt_Tendonvi";
-            this.txt_Tendonvi.Size = new System.Drawing.Size(387, 20);
+            this.txt_Tendonvi.Size = new System.Drawing.Size(387, 21);
             this.txt_Tendonvi.TabIndex = 30;
-            // 
-            // thongTinToChucCaNhanBindingSource
-            // 
-            this.thongTinToChucCaNhanBindingSource.DataSource = typeof(DoAn_LTUDQL2.ThongTinToChucCaNhan);
             // 
             // txt_DiaChi
             // 
             this.txt_DiaChi.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.thongTinToChucCaNhanBindingSource, "DiaCHi", true));
             this.txt_DiaChi.Location = new System.Drawing.Point(117, 113);
             this.txt_DiaChi.Name = "txt_DiaChi";
-            this.txt_DiaChi.Size = new System.Drawing.Size(387, 20);
+            this.txt_DiaChi.Size = new System.Drawing.Size(387, 21);
             this.txt_DiaChi.TabIndex = 31;
+            this.txt_DiaChi.Text = "227 Nguyễn Văn Cừ Q5 TP.HCM";
             // 
             // txtDienThoai
             // 
             this.txtDienThoai.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.thongTinToChucCaNhanBindingSource, "DTBan", true));
             this.txtDienThoai.Location = new System.Drawing.Point(117, 141);
             this.txtDienThoai.Name = "txtDienThoai";
-            this.txtDienThoai.Size = new System.Drawing.Size(231, 20);
+            this.txtDienThoai.Size = new System.Drawing.Size(231, 21);
             this.txtDienThoai.TabIndex = 32;
+            this.txtDienThoai.Text = "19006008";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(23, 199);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(24, 13);
+            this.label5.Size = new System.Drawing.Size(25, 13);
             this.label5.TabIndex = 33;
             this.label5.Text = "Fax";
             // 
@@ -163,8 +161,9 @@
             this.txtFax.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.thongTinToChucCaNhanBindingSource, "Fax", true));
             this.txtFax.Location = new System.Drawing.Point(117, 192);
             this.txtFax.Name = "txtFax";
-            this.txtFax.Size = new System.Drawing.Size(231, 20);
+            this.txtFax.Size = new System.Drawing.Size(231, 21);
             this.txtFax.TabIndex = 34;
+            this.txtFax.Text = "0838489825";
             // 
             // label6
             // 
@@ -180,15 +179,16 @@
             this.txtweb.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.thongTinToChucCaNhanBindingSource, "Website", true));
             this.txtweb.Location = new System.Drawing.Point(117, 218);
             this.txtweb.Name = "txtweb";
-            this.txtweb.Size = new System.Drawing.Size(231, 20);
+            this.txtweb.Size = new System.Drawing.Size(231, 21);
             this.txtweb.TabIndex = 36;
+            this.txtweb.Text = "www.perfect.com";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(23, 251);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(32, 13);
+            this.label7.Size = new System.Drawing.Size(31, 13);
             this.label7.TabIndex = 37;
             this.label7.Text = "Email";
             // 
@@ -197,15 +197,16 @@
             this.txtEmail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.thongTinToChucCaNhanBindingSource, "Email", true));
             this.txtEmail.Location = new System.Drawing.Point(117, 244);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(231, 20);
+            this.txtEmail.Size = new System.Drawing.Size(231, 21);
             this.txtEmail.TabIndex = 38;
+            this.txtEmail.Text = "sales@perfect.com";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(23, 278);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(52, 13);
+            this.label8.Size = new System.Drawing.Size(47, 13);
             this.label8.TabIndex = 39;
             this.label8.Text = "Lĩnh Vực";
             // 
@@ -214,15 +215,16 @@
             this.txtMaSoThue.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.thongTinToChucCaNhanBindingSource, "MST", true));
             this.txtMaSoThue.Location = new System.Drawing.Point(117, 297);
             this.txtMaSoThue.Name = "txtMaSoThue";
-            this.txtMaSoThue.Size = new System.Drawing.Size(231, 20);
+            this.txtMaSoThue.Size = new System.Drawing.Size(231, 21);
             this.txtMaSoThue.TabIndex = 40;
+            this.txtMaSoThue.Text = " 2802457570";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(23, 304);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(66, 13);
+            this.label9.Size = new System.Drawing.Size(63, 13);
             this.label9.TabIndex = 41;
             this.label9.Text = "Mã Số Thuế";
             // 
@@ -238,13 +240,14 @@
             this.cbLinhVuc.Name = "cbLinhVuc";
             this.cbLinhVuc.Size = new System.Drawing.Size(231, 21);
             this.cbLinhVuc.TabIndex = 42;
+            this.cbLinhVuc.Text = "Thương Mại";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(23, 330);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(37, 13);
+            this.label10.Size = new System.Drawing.Size(33, 13);
             this.label10.TabIndex = 43;
             this.label10.Text = "GPKD";
             // 
@@ -253,8 +256,9 @@
             this.txtGPKD.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.thongTinToChucCaNhanBindingSource, "GPKD", true));
             this.txtGPKD.Location = new System.Drawing.Point(117, 323);
             this.txtGPKD.Name = "txtGPKD";
-            this.txtGPKD.Size = new System.Drawing.Size(387, 20);
+            this.txtGPKD.Size = new System.Drawing.Size(387, 21);
             this.txtGPKD.TabIndex = 44;
+            this.txtGPKD.Text = "123456789";
             // 
             // pictureBox1
             // 
@@ -270,7 +274,7 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(23, 173);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(38, 13);
+            this.label11.Size = new System.Drawing.Size(36, 13);
             this.label11.TabIndex = 46;
             this.label11.Text = "ĐTDĐ";
             // 
@@ -279,8 +283,9 @@
             this.txtdtdd.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.thongTinToChucCaNhanBindingSource, "DTDD", true));
             this.txtdtdd.Location = new System.Drawing.Point(117, 166);
             this.txtdtdd.Name = "txtdtdd";
-            this.txtdtdd.Size = new System.Drawing.Size(231, 20);
+            this.txtdtdd.Size = new System.Drawing.Size(231, 21);
             this.txtdtdd.TabIndex = 47;
+            this.txtdtdd.Text = "0989527499";
             // 
             // imageList1
             // 
@@ -288,11 +293,14 @@
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
+            // thongTinToChucCaNhanBindingSource
+            // 
+            this.thongTinToChucCaNhanBindingSource.DataSource = typeof(DoAn_LTUDQL2.ThongTinToChucCaNhan);
+            // 
             // frm_ThongTin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Ivory;
             this.ClientSize = new System.Drawing.Size(524, 410);
             this.Controls.Add(this.txtdtdd);
             this.Controls.Add(this.label11);
@@ -325,8 +333,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông Tin";
             this.Load += new System.EventHandler(this.frm_ThongTin_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.thongTinToChucCaNhanBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.thongTinToChucCaNhanBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

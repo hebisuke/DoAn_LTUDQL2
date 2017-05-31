@@ -12,6 +12,7 @@ namespace DoAn_LTUDQL2
 {
     public partial class frm_Login : Form
     {
+        QLBanHangEntities ql = new QLBanHangEntities();
         public frm_Login()
         {
             InitializeComponent();
@@ -89,8 +90,19 @@ namespace DoAn_LTUDQL2
 
             //------------  đăng nhập thành công---------------
             this.Hide();
-            MainView frm_mv = new MainView();
-            frm_mv.ShowDialog();
+
+            var myQuery = from Q in ql.ThongTinToChucCaNhans select Q.Ma;
+            if (myQuery != null && myQuery.Count() > 0)
+            {
+                MainView mn = new MainView();
+                mn.ShowDialog();
+            }
+               else
+            {
+                frm_ThongTin tt = new frm_ThongTin();
+                tt.ShowDialog();
+            }
+            this.Close();
             Application.Exit();
         }
     }

@@ -1,6 +1,6 @@
 ﻿namespace DoAn_LTUDQL2
 {
-    partial class frm_KhuVuc
+    partial class frm_BoPhan
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_KhuVuc));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_BoPhan));
+            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
+            this.barDockControl4 = new DevExpress.XtraBars.BarDockControl();
+            this.saveFileDialog2 = new System.Windows.Forms.SaveFileDialog();
+            this.khachHangsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.boPhanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
@@ -44,20 +55,84 @@
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.barCheckItem1 = new DevExpress.XtraBars.BarCheckItem();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.khuVucsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colMaKV = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTenKV = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMaBo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTenBo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGhiChu = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.CKLy = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNhanViens = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colQuanLys = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.gridSplitContainer1 = new DevExpress.XtraGrid.GridSplitContainer();
+            ((System.ComponentModel.ISupportInitialize)(this.khachHangsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boPhanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.khuVucsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer1)).BeginInit();
+            this.gridSplitContainer1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // barButtonItem7
+            // 
+            this.barButtonItem7.Caption = "Thêm";
+            this.barButtonItem7.Id = 0;
+            this.barButtonItem7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.ImageOptions.Image")));
+            this.barButtonItem7.Name = "barButtonItem7";
+            // 
+            // barButtonItem8
+            // 
+            this.barButtonItem8.Caption = "Sửa";
+            this.barButtonItem8.Id = 1;
+            this.barButtonItem8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem8.ImageOptions.Image")));
+            this.barButtonItem8.Name = "barButtonItem8";
+            // 
+            // barButtonItem9
+            // 
+            this.barButtonItem9.Caption = "Xóa";
+            this.barButtonItem9.Id = 2;
+            this.barButtonItem9.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem9.ImageOptions.Image")));
+            this.barButtonItem9.Name = "barButtonItem9";
+            // 
+            // barButtonItem10
+            // 
+            this.barButtonItem10.Caption = "Nạp Lại";
+            this.barButtonItem10.Id = 3;
+            this.barButtonItem10.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.ImageOptions.Image")));
+            this.barButtonItem10.Name = "barButtonItem10";
+            // 
+            // barButtonItem11
+            // 
+            this.barButtonItem11.Caption = "Xuất";
+            this.barButtonItem11.Id = 4;
+            this.barButtonItem11.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem11.ImageOptions.Image")));
+            this.barButtonItem11.Name = "barButtonItem11";
+            // 
+            // barButtonItem12
+            // 
+            this.barButtonItem12.Caption = "Thoát";
+            this.barButtonItem12.Id = 5;
+            this.barButtonItem12.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.ImageOptions.Image")));
+            this.barButtonItem12.Name = "barButtonItem12";
+            // 
+            // barDockControl4
+            // 
+            this.barDockControl4.CausesValidation = false;
+            this.barDockControl4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.barDockControl4.Location = new System.Drawing.Point(1264, 40);
+            this.barDockControl4.Manager = null;
+            this.barDockControl4.Size = new System.Drawing.Size(0, 448);
+            // 
+            // khachHangsBindingSource
+            // 
+            this.khachHangsBindingSource.DataSource = typeof(DoAn_LTUDQL2.KhachHang);
+            // 
+            // boPhanBindingSource
+            // 
+            this.boPhanBindingSource.DataSource = typeof(DoAn_LTUDQL2.BoPhan);
             // 
             // barManager1
             // 
@@ -164,7 +239,7 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 501);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 488);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Size = new System.Drawing.Size(1264, 23);
             // 
@@ -174,7 +249,7 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 40);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 461);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 448);
             // 
             // barDockControlRight
             // 
@@ -182,7 +257,7 @@
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(1264, 40);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 461);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 448);
             // 
             // barCheckItem1
             // 
@@ -190,104 +265,130 @@
             this.barCheckItem1.Id = 3;
             this.barCheckItem1.Name = "barCheckItem1";
             // 
+            // khuVucsBindingSource
+            // 
+            this.khuVucsBindingSource.DataSource = typeof(DoAn_LTUDQL2.KhuVuc);
+            // 
             // gridControl1
             // 
-            this.gridControl1.DataSource = this.khuVucsBindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 40);
+            this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.MenuManager = this.barManager1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(1264, 461);
-            this.gridControl1.TabIndex = 5;
+            this.gridControl1.Size = new System.Drawing.Size(1264, 448);
+            this.gridControl1.TabIndex = 11;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            // 
-            // khuVucsBindingSource
-            // 
-            this.khuVucsBindingSource.DataSource = typeof(DoAn_LTUDQL2.KhuVuc);
             // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colMaKV,
-            this.colTenKV,
+            this.colMaBo,
+            this.colTenBo,
             this.colGhiChu,
-            this.CKLy});
+            this.colNhanViens,
+            this.colQuanLys});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsBehavior.AllowPixelScrolling = DevExpress.Utils.DefaultBoolean.True;
-            this.gridView1.OptionsDetail.EnableMasterViewMode = false;
-            this.gridView1.RowUpdated += new DevExpress.XtraGrid.Views.Base.RowObjectEventHandler(this.gridView1_RowUpdated);
             // 
-            // colMaKV
+            // colMaBo
             // 
-            this.colMaKV.Caption = "Mã Khu Vực";
-            this.colMaKV.FieldName = "MaKV";
-            this.colMaKV.Name = "colMaKV";
-            this.colMaKV.Visible = true;
-            this.colMaKV.VisibleIndex = 0;
-            this.colMaKV.Width = 124;
+            this.colMaBo.FieldName = "Mã Bộ";
+            this.colMaBo.Name = "colMaBo";
+            this.colMaBo.Visible = true;
+            this.colMaBo.VisibleIndex = 0;
+            this.colMaBo.Width = 91;
             // 
-            // colTenKV
+            // colTenBo
             // 
-            this.colTenKV.Caption = "Tên Khu Vực";
-            this.colTenKV.FieldName = "TenKV";
-            this.colTenKV.Name = "colTenKV";
-            this.colTenKV.Visible = true;
-            this.colTenKV.VisibleIndex = 1;
-            this.colTenKV.Width = 318;
+            this.colTenBo.FieldName = "Tên Bộ";
+            this.colTenBo.Name = "colTenBo";
+            this.colTenBo.Visible = true;
+            this.colTenBo.VisibleIndex = 1;
+            this.colTenBo.Width = 240;
             // 
             // colGhiChu
             // 
-            this.colGhiChu.Caption = "Ghi Chú";
-            this.colGhiChu.FieldName = "GhiChu";
+            this.colGhiChu.FieldName = "Ghi Chú ";
             this.colGhiChu.Name = "colGhiChu";
             this.colGhiChu.Visible = true;
             this.colGhiChu.VisibleIndex = 2;
-            this.colGhiChu.Width = 400;
+            this.colGhiChu.Width = 139;
             // 
-            // CKLy
+            // colNhanViens
             // 
-            this.CKLy.Caption = "Còn Quản Lý";
-            this.CKLy.ColumnEdit = this.repositoryItemCheckEdit1;
-            this.CKLy.FieldName = "ConQuanLy";
-            this.CKLy.Name = "CKLy";
-            this.CKLy.Visible = true;
-            this.CKLy.VisibleIndex = 3;
-            this.CKLy.Width = 404;
+            this.colNhanViens.FieldName = "Nhân Viên ";
+            this.colNhanViens.Name = "colNhanViens";
+            this.colNhanViens.Visible = true;
+            this.colNhanViens.VisibleIndex = 3;
+            this.colNhanViens.Width = 439;
+            // 
+            // colQuanLys
+            // 
+            this.colQuanLys.Caption = "Còn Quản Lý";
+            this.colQuanLys.ColumnEdit = this.repositoryItemCheckEdit1;
+            this.colQuanLys.Name = "colQuanLys";
+            this.colQuanLys.Visible = true;
+            this.colQuanLys.VisibleIndex = 4;
+            this.colQuanLys.Width = 337;
             // 
             // repositoryItemCheckEdit1
             // 
             this.repositoryItemCheckEdit1.AutoHeight = false;
-            this.repositoryItemCheckEdit1.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Style6;
             this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
             // 
-            // frm_KhuVuc
+            // gridSplitContainer1
+            // 
+            this.gridSplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridSplitContainer1.Grid = this.gridControl1;
+            this.gridSplitContainer1.Location = new System.Drawing.Point(0, 40);
+            this.gridSplitContainer1.Name = "gridSplitContainer1";
+            this.gridSplitContainer1.Panel1.Controls.Add(this.gridControl1);
+            this.gridSplitContainer1.Size = new System.Drawing.Size(1264, 448);
+            this.gridSplitContainer1.TabIndex = 11;
+            // 
+            // frm_BoPhan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 524);
-            this.Controls.Add(this.gridControl1);
+            this.ClientSize = new System.Drawing.Size(1264, 511);
+            this.Controls.Add(this.gridSplitContainer1);
+            this.Controls.Add(this.barDockControl4);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.Name = "frm_KhuVuc";
-            this.Text = "frm_KhuVuc";
+            this.Name = "frm_BoPhan";
+            this.Text = "frm_BoPhan";
+            ((System.ComponentModel.ISupportInitialize)(this.khachHangsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boPhanBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.khuVucsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer1)).EndInit();
+            this.gridSplitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
+        private DevExpress.XtraBars.BarDockControl barDockControl4;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem8;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem9;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem10;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem11;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem12;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem7;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog2;
+        private System.Windows.Forms.BindingSource boPhanBindingSource;
+        private System.Windows.Forms.BindingSource khachHangsBindingSource;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private DevExpress.XtraBars.BarManager barManager1;
         private DevExpress.XtraBars.Bar bar2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
@@ -302,13 +403,15 @@
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraBars.BarCheckItem barCheckItem1;
+        private System.Windows.Forms.BindingSource khuVucsBindingSource;
+        private DevExpress.XtraGrid.GridSplitContainer gridSplitContainer1;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private System.Windows.Forms.BindingSource khuVucsBindingSource;
-        private DevExpress.XtraGrid.Columns.GridColumn colMaKV;
-        private DevExpress.XtraGrid.Columns.GridColumn colTenKV;
+        private DevExpress.XtraGrid.Columns.GridColumn colMaBo;
+        private DevExpress.XtraGrid.Columns.GridColumn colTenBo;
         private DevExpress.XtraGrid.Columns.GridColumn colGhiChu;
-        private DevExpress.XtraGrid.Columns.GridColumn CKLy;
+        private DevExpress.XtraGrid.Columns.GridColumn colNhanViens;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
+        private DevExpress.XtraGrid.Columns.GridColumn colQuanLys;
     }
 }

@@ -144,6 +144,27 @@ namespace DoAn_LTUDQL2
             frm_NhatKiHeThong.Show();
         }
 
+        private void btn_NhanVien_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btn_BoPhan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frm_BoPhan frm_BoPhan = new frm_BoPhan();
+            if (ExistForm(frm_BoPhan)) return;
+            frm_BoPhan.MdiParent = this;
+            frm_BoPhan.Show();
+        }
+
+        private void btn_NhanVien_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frm_NhanVien1 frm_NV = new frm_NhanVien1();
+            if (ExistForm(frm_NV)) return;
+            frm_NV.MdiParent = this;
+            frm_NV.Show();
+        }
+
         //------------- Hàm kiểm tra form đã mở chưa, nếu mở thì k mởi nữa, nếu chưa thì mở lên-------
 
 

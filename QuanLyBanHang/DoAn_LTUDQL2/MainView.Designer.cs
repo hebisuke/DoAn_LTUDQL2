@@ -320,6 +320,7 @@
             this.btn_BoPhan.ImageOptions.Image = global::DoAn_LTUDQL2.Properties.Resources.Group_Meeting_Light;
             this.btn_BoPhan.Name = "btn_BoPhan";
             this.btn_BoPhan.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_BoPhan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_BoPhan_ItemClick);
             // 
             // btn_NhanVien
             // 
@@ -328,6 +329,7 @@
             this.btn_NhanVien.ImageOptions.Image = global::DoAn_LTUDQL2.Properties.Resources.user_male2;
             this.btn_NhanVien.Name = "btn_NhanVien";
             this.btn_NhanVien.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_NhanVien.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_NhanVien_ItemClick_1);
             // 
             // btn_MuaHang
             // 
