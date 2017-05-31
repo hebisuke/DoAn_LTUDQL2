@@ -152,7 +152,7 @@
             this.ribbonPage5});
             this.ribbonControl1.QuickToolbarItemLinks.Add(this.SkinsLink);
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbonControl1.Size = new System.Drawing.Size(1262, 145);
+            this.ribbonControl1.Size = new System.Drawing.Size(1262, 143);
             // 
             // btn_KetThuc
             // 
@@ -187,6 +187,7 @@
             this.btn_VaiTroQuyenHan.ImageOptions.Image = global::DoAn_LTUDQL2.Properties.Resources.user_secret;
             this.btn_VaiTroQuyenHan.Name = "btn_VaiTroQuyenHan";
             this.btn_VaiTroQuyenHan.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_VaiTroQuyenHan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_VaiTroQuyenHan_ItemClick);
             // 
             // btn_DoiMatKhau
             // 
@@ -204,6 +205,7 @@
             this.btn_NhatKyHeThong.ImageOptions.Image = global::DoAn_LTUDQL2.Properties.Resources.edit;
             this.btn_NhatKyHeThong.Name = "btn_NhatKyHeThong";
             this.btn_NhatKyHeThong.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_NhatKyHeThong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_NhatKyHeThong_ItemClick);
             // 
             // btn_SaoLuu
             // 

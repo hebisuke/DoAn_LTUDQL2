@@ -49,6 +49,7 @@
     <Reference Include="DevExpress.XtraNavBar.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v16.2.Reporting.Extensions, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraScheduler.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraScheduler.v16.2.Core, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraTreeList.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -157,6 +158,12 @@
     <Compile Include="frm_MuaHang.Designer.cs">
       <DependentUpon>frm_MuaHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_NhatKiHeThong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_NhatKiHeThong.Designer.cs">
+      <DependentUpon>frm_NhatKiHeThong.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_PhucHoi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +193,12 @@
     </Compile>
     <Compile Include="frm_TonKho.Designer.cs">
       <DependentUpon>frm_TonKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_VaiTro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_VaiTro.Designer.cs">
+      <DependentUpon>frm_VaiTro.cs</DependentUpon>
     </Compile>
     <Compile Include="HangHoa.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
@@ -265,6 +278,9 @@
     <EmbeddedResource Include="frm_MuaHang.resx">
       <DependentUpon>frm_MuaHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_NhatKiHeThong.resx">
+      <DependentUpon>frm_NhatKiHeThong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_PhucHoi.resx">
       <DependentUpon>frm_PhucHoi.cs</DependentUpon>
     </EmbeddedResource>
@@ -279,6 +295,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_TonKho.resx">
       <DependentUpon>frm_TonKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_VaiTro.resx">
+      <DependentUpon>frm_VaiTro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>

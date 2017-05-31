@@ -36,13 +36,22 @@
     <Reference Include="Accessibility" />
     <Reference Include="DevExpress.BonusSkins.v16.2" />
     <Reference Include="DevExpress.Data.v16.2" />
+    <Reference Include="DevExpress.Images.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
     <Reference Include="DevExpress.Mvvm.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v16.2.Core" />
     <Reference Include="DevExpress.Utils.v16.2" />
     <Reference Include="DevExpress.XtraBars.v16.2" />
     <Reference Include="DevExpress.Sparkline.v16.2.Core" />
     <Reference Include="DevExpress.XtraEditors.v16.2" />
+    <Reference Include="DevExpress.XtraGrid.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v16.2.Core, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -54,13 +63,18 @@
     <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.SqlServer.Smo, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.SqlServer.SmoExtended, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -100,6 +114,90 @@
     </Compile>
     <Compile Include="DonViTinh.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="frm_BanHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_BanHang.Designer.cs">
+      <DependentUpon>frm_BanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ChuyenKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ChuyenKho.Designer.cs">
+      <DependentUpon>frm_ChuyenKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_DoiMK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_DoiMK.Designer.cs">
+      <DependentUpon>frm_DoiMK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_KhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_KhachHang.Designer.cs">
+      <DependentUpon>frm_KhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_KhuVuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_KhuVuc.Designer.cs">
+      <DependentUpon>frm_KhuVuc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Login.Designer.cs">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_MuaHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_MuaHang.Designer.cs">
+      <DependentUpon>frm_MuaHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_NhatKiHeThong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_NhatKiHeThong.Designer.cs">
+      <DependentUpon>frm_NhatKiHeThong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_PhucHoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_PhucHoi.designer.cs">
+      <DependentUpon>frm_PhucHoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SaoLuu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SaoLuu.designer.cs">
+      <DependentUpon>frm_SaoLuu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ThemTKND.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ThemTKND.Designer.cs">
+      <DependentUpon>frm_ThemTKND.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ThongTin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ThongTin.designer.cs">
+      <DependentUpon>frm_ThongTin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_TonKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_TonKho.Designer.cs">
+      <DependentUpon>frm_TonKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_VaiTro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_VaiTro.Designer.cs">
+      <DependentUpon>frm_VaiTro.cs</DependentUpon>
     </Compile>
     <Compile Include="HangHoa.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
@@ -143,36 +241,63 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SplashScreen1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen1.designer.cs">
+      <DependentUpon>SplashScreen1.cs</DependentUpon>
+    </Compile>
     <Compile Include="TaiKhoanNguoiDung.cs">
+      <DependentUpon>DoAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ThongTinToChucCaNhan.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
     <Compile Include="ThuTien.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="uctr_PhucHoi.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="uctr_PhucHoi.Designer.cs">
-      <DependentUpon>uctr_PhucHoi.cs</DependentUpon>
-    </Compile>
-    <Compile Include="uctr_SaoLuu.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="uctr_SaoLuu.Designer.cs">
-      <DependentUpon>uctr_SaoLuu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControl1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControl2.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl2.Designer.cs">
-      <DependentUpon>UserControl2.cs</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="frm_BanHang.resx">
+      <DependentUpon>frm_BanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ChuyenKho.resx">
+      <DependentUpon>frm_ChuyenKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_DoiMK.resx">
+      <DependentUpon>frm_DoiMK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_KhachHang.resx">
+      <DependentUpon>frm_KhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_KhuVuc.resx">
+      <DependentUpon>frm_KhuVuc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Login.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_MuaHang.resx">
+      <DependentUpon>frm_MuaHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_NhatKiHeThong.resx">
+      <DependentUpon>frm_NhatKiHeThong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_PhucHoi.resx">
+      <DependentUpon>frm_PhucHoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SaoLuu.resx">
+      <DependentUpon>frm_SaoLuu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ThemTKND.resx">
+      <DependentUpon>frm_ThemTKND.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ThongTin.resx">
+      <DependentUpon>frm_ThongTin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_TonKho.resx">
+      <DependentUpon>frm_TonKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_VaiTro.resx">
+      <DependentUpon>frm_VaiTro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
     </EmbeddedResource>
@@ -187,17 +312,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="uctr_PhucHoi.resx">
-      <DependentUpon>uctr_PhucHoi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="uctr_SaoLuu.resx">
-      <DependentUpon>uctr_SaoLuu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl2.resx">
-      <DependentUpon>UserControl2.cs</DependentUpon>
+    <EmbeddedResource Include="SplashScreen1.resx">
+      <DependentUpon>SplashScreen1.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="DoAnModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -291,6 +407,14 @@
     <None Include="Asset\register.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Asset\Application.png" />
+    <Content Include="Asset\erro.png" />
+    <Content Include="Asset\lock.png" />
+    <Content Include="Asset\Nexus-5-Background.jpg" />
+    <Content Include="Asset\Show Password .png" />
+    <Content Include="Asset\true.png" />
+    <Content Include="Asset\Untitled.jpg" />
+    <Content Include="Asset\wannacry.jpg" />
     <Content Include="DoAnModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>DoAnModel.Context.cs</LastGenOutput>
@@ -301,6 +425,8 @@
       <DependentUpon>DoAnModel.edmx</DependentUpon>
       <LastGenOutput>DoAnModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\Untitled.jpg" />
+    <None Include="Resources\Nexus-5-Background.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

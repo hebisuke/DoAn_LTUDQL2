@@ -64,9 +64,9 @@ namespace DoAn_LTUDQL2
 
         private void btn_DoiMatKhau_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var frmDoiMatKhau = new frm_DoiMK();
-            if (ExistForm(frmDoiMatKhau)) return;
-            frmDoiMatKhau.Show();
+            var frm_DoiMK = new frm_DoiMK();
+            if (ExistForm(frm_DoiMK)) return;
+            frm_DoiMK.ShowDialog();
         }
 
         private void btn_ThongTin_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -126,6 +126,22 @@ namespace DoAn_LTUDQL2
             if (ExistForm(frmChuyenKho)) return;
             frmChuyenKho.MdiParent = this;
             frmChuyenKho.Show();
+        }
+
+        private void btn_VaiTroQuyenHan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var frm_VaiTro = new frm_VaiTro();
+            if (ExistForm(frm_VaiTro)) return;
+            frm_VaiTro.MdiParent = this;
+            frm_VaiTro.Show();
+        }
+
+        private void btn_NhatKyHeThong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var frm_NhatKiHeThong = new frm_NhatKiHeThong();
+            if (ExistForm(frm_NhatKiHeThong)) return;
+            frm_NhatKiHeThong.MdiParent = this;
+            frm_NhatKiHeThong.Show();
         }
 
         //------------- Hàm kiểm tra form đã mở chưa, nếu mở thì k mởi nữa, nếu chưa thì mở lên-------
