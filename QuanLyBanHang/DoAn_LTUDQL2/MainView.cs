@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Threading;
 using DevExpress.XtraEditors;
+using DevExpress.XtraBars.Helpers;
 
 namespace DoAn_LTUDQL2
 {
@@ -87,6 +88,44 @@ namespace DoAn_LTUDQL2
             var frmPhucHoi = new frm_PhucHoi();
             if (ExistForm(frmPhucHoi)) return;
             frmPhucHoi.ShowDialog();
+        }
+
+        private void MainView_Load(object sender, EventArgs e)
+        {
+            SkinHelper.InitSkinPopupMenu(SkinsLink);
+            
+        }
+
+        private void btn_MuaHang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var frmMuaHang = new frm_MuaHang();
+            if (ExistForm(frmMuaHang)) return;
+            frmMuaHang.MdiParent = this;
+            frmMuaHang.Show();
+        }
+
+        private void btn_BanHang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var frmBanHang = new frm_BanHang();
+            if (ExistForm(frmBanHang)) return;
+            frmBanHang.MdiParent = this;
+            frmBanHang.Show();
+        }
+
+        private void btn_TonKho_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var frmTonKho = new frm_TonKho();
+            if (ExistForm(frmTonKho)) return;
+            frmTonKho.MdiParent = this;
+            frmTonKho.Show();
+        }
+
+        private void btn_ChuyenKho_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var frmChuyenKho = new frm_ChuyenKho();
+            if (ExistForm(frmChuyenKho)) return;
+            frmChuyenKho.MdiParent = this;
+            frmChuyenKho.Show();
         }
 
         //------------- Hàm kiểm tra form đã mở chưa, nếu mở thì k mởi nữa, nếu chưa thì mở lên-------

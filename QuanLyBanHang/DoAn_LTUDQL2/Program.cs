@@ -15,12 +15,13 @@ namespace DoAn_LTUDQL2
         [STAThread]
         static void Main()
         {
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
-            BonusSkins.Register();
-            SkinManager.EnableFormSkins();
-            Application.Run(new frm_Login());
+            
+            DevExpress.UserSkins.BonusSkins.Register();
+            DevExpress.Skins.SkinManager.EnableFormSkins();
+            Application.Run(new MainView());
         }
     }
 }

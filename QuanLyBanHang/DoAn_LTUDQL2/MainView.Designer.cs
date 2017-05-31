@@ -55,7 +55,7 @@
             this.btn_MuaHang = new DevExpress.XtraBars.BarButtonItem();
             this.btn_BanHang = new DevExpress.XtraBars.BarButtonItem();
             this.btn_TonKho = new DevExpress.XtraBars.BarButtonItem();
-            this.btn_HanSuDung = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_ChuyenKho = new DevExpress.XtraBars.BarButtonItem();
             this.btn_ThuTien = new DevExpress.XtraBars.BarButtonItem();
             this.btn_TraTien = new DevExpress.XtraBars.BarButtonItem();
             this.btn_QuanLyChungTu = new DevExpress.XtraBars.BarButtonItem();
@@ -70,6 +70,7 @@
             this.btn_ThongTinTroGiup = new DevExpress.XtraBars.BarButtonItem();
             this.btn_Demo1 = new DevExpress.XtraBars.BarButtonItem();
             this.btn_Demo2 = new DevExpress.XtraBars.BarButtonItem();
+            this.SkinsLink = new DevExpress.XtraBars.BarLinkContainerItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -124,7 +125,7 @@
             this.btn_MuaHang,
             this.btn_BanHang,
             this.btn_TonKho,
-            this.btn_HanSuDung,
+            this.btn_ChuyenKho,
             this.btn_ThuTien,
             this.btn_TraTien,
             this.btn_QuanLyChungTu,
@@ -138,9 +139,10 @@
             this.btn_CapNhat,
             this.btn_ThongTinTroGiup,
             this.btn_Demo1,
-            this.btn_Demo2});
+            this.btn_Demo2,
+            this.SkinsLink});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 46;
+            this.ribbonControl1.MaxItemId = 47;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -148,9 +150,9 @@
             this.ribbonPage3,
             this.ribbonPage4,
             this.ribbonPage5});
-            this.ribbonControl1.QuickToolbarItemLinks.Add(this.barButtonItem11);
+            this.ribbonControl1.QuickToolbarItemLinks.Add(this.SkinsLink);
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbonControl1.Size = new System.Drawing.Size(1270, 143);
+            this.ribbonControl1.Size = new System.Drawing.Size(1262, 145);
             // 
             // btn_KetThuc
             // 
@@ -332,6 +334,7 @@
             this.btn_MuaHang.ImageOptions.Image = global::DoAn_LTUDQL2.Properties.Resources.shopping_cart;
             this.btn_MuaHang.Name = "btn_MuaHang";
             this.btn_MuaHang.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_MuaHang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_MuaHang_ItemClick);
             // 
             // btn_BanHang
             // 
@@ -340,6 +343,7 @@
             this.btn_BanHang.ImageOptions.Image = global::DoAn_LTUDQL2.Properties.Resources.Businessman;
             this.btn_BanHang.Name = "btn_BanHang";
             this.btn_BanHang.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_BanHang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_BanHang_ItemClick);
             // 
             // btn_TonKho
             // 
@@ -348,14 +352,16 @@
             this.btn_TonKho.ImageOptions.Image = global::DoAn_LTUDQL2.Properties.Resources.box;
             this.btn_TonKho.Name = "btn_TonKho";
             this.btn_TonKho.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_TonKho.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_TonKho_ItemClick);
             // 
-            // btn_HanSuDung
+            // btn_ChuyenKho
             // 
-            this.btn_HanSuDung.Caption = "Hạn Sử Dụng";
-            this.btn_HanSuDung.Id = 29;
-            this.btn_HanSuDung.ImageOptions.Image = global::DoAn_LTUDQL2.Properties.Resources.Calendar;
-            this.btn_HanSuDung.Name = "btn_HanSuDung";
-            this.btn_HanSuDung.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_ChuyenKho.Caption = "Chuyển Kho";
+            this.btn_ChuyenKho.Id = 29;
+            this.btn_ChuyenKho.ImageOptions.Image = global::DoAn_LTUDQL2.Properties.Resources.Calendar;
+            this.btn_ChuyenKho.Name = "btn_ChuyenKho";
+            this.btn_ChuyenKho.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_ChuyenKho.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_ChuyenKho_ItemClick);
             // 
             // btn_ThuTien
             // 
@@ -469,6 +475,12 @@
             this.btn_Demo2.Name = "btn_Demo2";
             this.btn_Demo2.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
+            // SkinsLink
+            // 
+            this.SkinsLink.Caption = "barLinkContainerItem1";
+            this.SkinsLink.Id = 46;
+            this.SkinsLink.Name = "SkinsLink";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -552,7 +564,7 @@
             this.ribbonPageGroup7.ItemLinks.Add(this.btn_MuaHang);
             this.ribbonPageGroup7.ItemLinks.Add(this.btn_BanHang);
             this.ribbonPageGroup7.ItemLinks.Add(this.btn_TonKho);
-            this.ribbonPageGroup7.ItemLinks.Add(this.btn_HanSuDung);
+            this.ribbonPageGroup7.ItemLinks.Add(this.btn_ChuyenKho);
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
             this.ribbonPageGroup7.Text = "Quản Lý Bán Hàng";
             // 
@@ -630,7 +642,7 @@
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1270, 715);
+            this.ClientSize = new System.Drawing.Size(1262, 711);
             this.Controls.Add(this.ribbonControl1);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
             this.IsMdiContainer = true;
@@ -639,6 +651,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainView";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.MainView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
@@ -685,7 +698,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
         private DevExpress.XtraBars.BarButtonItem btn_BanHang;
         private DevExpress.XtraBars.BarButtonItem btn_TonKho;
-        private DevExpress.XtraBars.BarButtonItem btn_HanSuDung;
+        private DevExpress.XtraBars.BarButtonItem btn_ChuyenKho;
         private DevExpress.XtraBars.BarButtonItem btn_ThuTien;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
         private DevExpress.XtraBars.BarButtonItem btn_TraTien;
@@ -709,6 +722,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage5;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup13;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
+        private DevExpress.XtraBars.BarLinkContainerItem SkinsLink;
     }
 }
 
