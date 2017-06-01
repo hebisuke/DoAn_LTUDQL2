@@ -264,6 +264,7 @@
             this.btn_NhaPhanPhoi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_NhaPhanPhoi.ImageOptions.Image")));
             this.btn_NhaPhanPhoi.Name = "btn_NhaPhanPhoi";
             this.btn_NhaPhanPhoi.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_NhaPhanPhoi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_NhaPhanPhoi_ItemClick);
             // 
             // btn_KhoHang
             // 
@@ -272,6 +273,7 @@
             this.btn_KhoHang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_KhoHang.ImageOptions.Image")));
             this.btn_KhoHang.Name = "btn_KhoHang";
             this.btn_KhoHang.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_KhoHang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_KhoHang_ItemClick);
             // 
             // btn_DonViTinh
             // 
@@ -280,6 +282,7 @@
             this.btn_DonViTinh.ImageOptions.Image = global::DoAn_LTUDQL2.Properties.Resources.unit_money;
             this.btn_DonViTinh.Name = "btn_DonViTinh";
             this.btn_DonViTinh.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_DonViTinh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_DonViTinh_ItemClick);
             // 
             // btn_NhomHang
             // 
@@ -288,6 +291,7 @@
             this.btn_NhomHang.ImageOptions.Image = global::DoAn_LTUDQL2.Properties.Resources.product;
             this.btn_NhomHang.Name = "btn_NhomHang";
             this.btn_NhomHang.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_NhomHang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_NhomHang_ItemClick);
             // 
             // btn_HangHoa
             // 
@@ -296,6 +300,7 @@
             this.btn_HangHoa.ImageOptions.Image = global::DoAn_LTUDQL2.Properties.Resources.one_product;
             this.btn_HangHoa.Name = "btn_HangHoa";
             this.btn_HangHoa.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_HangHoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_HangHoa_ItemClick);
             // 
             // btn_InMaVach
             // 
@@ -304,6 +309,7 @@
             this.btn_InMaVach.ImageOptions.Image = global::DoAn_LTUDQL2.Properties.Resources.Barcode_Reader;
             this.btn_InMaVach.Name = "btn_InMaVach";
             this.btn_InMaVach.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_InMaVach.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_InMaVach_ItemClick);
             // 
             // btn_TyGia
             // 
@@ -312,6 +318,7 @@
             this.btn_TyGia.ImageOptions.Image = global::DoAn_LTUDQL2.Properties.Resources.aiga_currency_exchange;
             this.btn_TyGia.Name = "btn_TyGia";
             this.btn_TyGia.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_TyGia.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_TyGia_ItemClick);
             // 
             // btn_BoPhan
             // 

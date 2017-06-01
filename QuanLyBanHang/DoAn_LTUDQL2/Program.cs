@@ -21,7 +21,7 @@ namespace DoAn_LTUDQL2
             
             DevExpress.UserSkins.BonusSkins.Register();
             DevExpress.Skins.SkinManager.EnableFormSkins();
-            Application.Run(new frm_NhanVien1());
+            Application.Run(new MainView());
         }
     }
 }

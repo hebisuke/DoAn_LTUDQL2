@@ -165,6 +165,62 @@ namespace DoAn_LTUDQL2
             frm_NV.Show();
         }
 
+        private void btn_KhoHang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var frm_KhoHang = new frm_KhoHang();
+            if (ExistForm(frm_KhoHang)) return;
+            frm_KhoHang.MdiParent = this;
+            frm_KhoHang.Show();
+        }
+
+        private void btn_DonViTinh_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var frm_DonViTinh = new frm_DonViTinh();
+            if (ExistForm(frm_DonViTinh)) return;
+            frm_DonViTinh.MdiParent = this;
+            frm_DonViTinh.Show();
+        }
+
+        private void btn_NhomHang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var frm_NhomHang = new frm_NhomHang();
+            if (ExistForm(frm_NhomHang)) return;
+            frm_NhomHang.MdiParent = this;
+            frm_NhomHang.Show();
+        }
+
+        private void btn_HangHoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var frm_HangHoa = new frm_HangHoa();
+            if (ExistForm(frm_HangHoa)) return;
+            frm_HangHoa.MdiParent = this;
+            frm_HangHoa.Show();
+        }
+
+        private void btn_InMaVach_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var frm_InMaVach = new frm_InMaVach();
+            if (ExistForm(frm_InMaVach)) return;
+            frm_InMaVach.MdiParent = this;
+            frm_InMaVach.Show();
+        }
+
+        private void btn_TyGia_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var frm_TyGia = new frm_TyGia();
+            if (ExistForm(frm_TyGia)) return;
+            frm_TyGia.MdiParent = this;
+            frm_TyGia.Show();
+        }
+
+        private void btn_NhaPhanPhoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var frm_NhaPhanPhoi = new frm_NhaPhanPhoi();
+            if (ExistForm(frm_NhaPhanPhoi)) return;
+            frm_NhaPhanPhoi.MdiParent = this;
+            frm_NhaPhanPhoi.Show();
+        }
+
         //------------- Hàm kiểm tra form đã mở chưa, nếu mở thì k mởi nữa, nếu chưa thì mở lên-------
 
 
