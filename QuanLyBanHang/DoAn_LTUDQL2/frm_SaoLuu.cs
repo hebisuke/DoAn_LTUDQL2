@@ -80,7 +80,7 @@ namespace DoAn_LTUDQL2
 
                     progressBar_Loading.Value = e.Percent;
                     progressBar_Loading.Update();
-                    label_Loading.Text = "Loading..." + $"{e.Percent}%";
+                    //label_Loading.Text = "Loading..." + $"{e.Percent}%";
 
                 });
         }

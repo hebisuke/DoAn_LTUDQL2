@@ -15,6 +15,7 @@ namespace DoAn_LTUDQL2
 {
     public partial class frm_KhachHang : DevExpress.XtraEditors.XtraForm
     {
+        QLBanHangEntities en = new QLBanHangEntities();
         public frm_KhachHang()
         {
             InitializeComponent();
@@ -84,6 +85,34 @@ namespace DoAn_LTUDQL2
                 }
             }
 
+        }
+
+        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmThemKH kh = new frmThemKH(); kh.Show();
+        }
+
+        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frm_SuaKH kh = new frm_SuaKH(); kh.Show();
+        }
+
+        private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frm_XoaKH kh = new frm_XoaKH(); kh.Show();
+        }
+        void load()
+        {
+            gridControl1.RefreshDataSource();
+            List<KhachHang> kh = new List<KhachHang>();
+
+            kh = en.KhachHangs.ToList();
+            gridControl1.DataSource = kh;
+
+        }
+        private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            load();
         }
     }
 }

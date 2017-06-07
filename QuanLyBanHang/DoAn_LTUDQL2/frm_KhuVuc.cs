@@ -34,5 +34,32 @@ namespace DoAn_LTUDQL2
         {
             dbContext.SaveChanges();
         }
+
+        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frm_ThemKV kv = new frm_ThemKV(); kv.Show();
+        }
+
+        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frm_SuaKV kv = new frm_SuaKV(); kv.Show();
+        }
+
+        private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frm_XoaKV kv = new frm_XoaKV(); kv.Show();
+        }
+        public void load()
+        {
+            gridControl1.RefreshDataSource();
+            List<KhuVuc> kv = new List<KhuVuc>();
+            kv = dbContext.KhuVucs.ToList();
+
+            gridControl1.DataSource = kv;
+        }
+        private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            load();
+        }
     }
 }

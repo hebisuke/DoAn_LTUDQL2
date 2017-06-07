@@ -100,7 +100,7 @@ namespace DoAn_LTUDQL2
 
                 progressBar_PhucHoi.Value = e.Percent;
                 progressBar_PhucHoi.Update();
-                lb_Loading.Text = "Loading..." + $"{e.Percent}%";
+                //lb_Loading.Text = "Loading..." + $"{e.Percent}%";
 
             });
         }

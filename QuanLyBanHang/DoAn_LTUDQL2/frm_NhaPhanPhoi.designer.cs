@@ -30,10 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.nhaPhanPhoiBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nhaPhanPhoiBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMaNPP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTenNPP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMaKhuVuc = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -56,41 +58,72 @@
             this.colHangHoas = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colKhuVuc = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMuaHangs = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.nhaPhanPhoiBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhaPhanPhoiBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhaPhanPhoiBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.button3);
+            this.groupControl1.Controls.Add(this.button2);
+            this.groupControl1.Controls.Add(this.button1);
             this.groupControl1.Controls.Add(this.gridControl1);
-            this.groupControl1.CustomHeaderButtons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
-            new DevExpress.XtraEditors.ButtonsPanelControl.GroupBoxButton("Thêm", null, "Add"),
-            new DevExpress.XtraEditors.ButtonsPanelControl.GroupBoxButton("Xóa", null, "Delete"),
-            new DevExpress.XtraEditors.ButtonsPanelControl.GroupBoxButton("Sữa", null, "Customization"),
-            new DevExpress.XtraEditors.ButtonsPanelControl.GroupBoxButton("Nạp Lại", null, "Refresh"),
-            new DevExpress.XtraEditors.ButtonsPanelControl.GroupBoxButton("Xuất", null, "IndentIncrease"),
-            new DevExpress.XtraEditors.ButtonsPanelControl.GroupBoxButton("Nhập", null, "IndentDecrease"),
-            new DevExpress.XtraEditors.ButtonsPanelControl.GroupBoxButton("Đóng", null, "Cancel")});
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(1192, 524);
             this.groupControl1.TabIndex = 0;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(143, 0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Xóa";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(72, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Sửa";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Thêm";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // gridControl1
             // 
+            this.gridControl1.DataSource = this.nhaPhanPhoiBindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(2, 45);
+            this.gridControl1.Location = new System.Drawing.Point(2, 20);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1188, 477);
+            this.gridControl1.Size = new System.Drawing.Size(1188, 502);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            // 
+            // nhaPhanPhoiBindingSource
+            // 
+            this.nhaPhanPhoiBindingSource.DataSource = typeof(DoAn_LTUDQL2.NhaPhanPhoi);
             // 
             // gridView1
             // 
@@ -119,14 +152,6 @@
             this.colMuaHangs});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
-            // 
-            // nhaPhanPhoiBindingSource
-            // 
-            this.nhaPhanPhoiBindingSource.DataSource = typeof(DoAn_LTUDQL2.NhaPhanPhoi);
-            // 
-            // nhaPhanPhoiBindingSource1
-            // 
-            this.nhaPhanPhoiBindingSource1.DataSource = typeof(DoAn_LTUDQL2.NhaPhanPhoi);
             // 
             // colMaNPP
             // 
@@ -282,6 +307,10 @@
             this.colMuaHangs.Visible = true;
             this.colMuaHangs.VisibleIndex = 21;
             // 
+            // nhaPhanPhoiBindingSource1
+            // 
+            this.nhaPhanPhoiBindingSource1.DataSource = typeof(DoAn_LTUDQL2.NhaPhanPhoi);
+            // 
             // frm_NhaPhanPhoi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -290,11 +319,12 @@
             this.Controls.Add(this.groupControl1);
             this.Name = "frm_NhaPhanPhoi";
             this.Text = "frm_NhaPhanPhoi";
+            this.Load += new System.EventHandler(this.frm_NhaPhanPhoi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhaPhanPhoiBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhaPhanPhoiBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
@@ -329,5 +359,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn colMuaHangs;
         private System.Windows.Forms.BindingSource nhaPhanPhoiBindingSource;
         private System.Windows.Forms.BindingSource nhaPhanPhoiBindingSource1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }

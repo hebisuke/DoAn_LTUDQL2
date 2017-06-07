@@ -10,8 +10,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DoAn_LTUDQL2</RootNamespace>
     <AssemblyName>DoAn_LTUDQL2</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -62,6 +63,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.SqlServer.Smo, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.SqlServer.SmoExtended, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualBasic" />
@@ -116,6 +118,10 @@
     <Compile Include="DonViTinh.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="frmThemKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThemKH.designer.cs" />
     <Compile Include="frm_BanHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -224,6 +230,30 @@
     <Compile Include="frm_SaoLuu.designer.cs">
       <DependentUpon>frm_SaoLuu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_SuaKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SuaKH.Designer.cs" />
+    <Compile Include="frm_SuaKV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SuaKV.Designer.cs" />
+    <Compile Include="frm_SuaNPP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SuaNPP.Designer.cs">
+      <DependentUpon>frm_SuaNPP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ThemKV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ThemKV.Designer.cs" />
+    <Compile Include="frm_ThemNPP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ThemNPP.Designer.cs">
+      <DependentUpon>frm_ThemNPP.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_ThemTKND.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -253,6 +283,20 @@
     </Compile>
     <Compile Include="frm_VaiTro.Designer.cs">
       <DependentUpon>frm_VaiTro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_XoaKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_XoaKH.Designer.cs" />
+    <Compile Include="frm_XoaKV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_XoaKV.Designer.cs" />
+    <Compile Include="frm_XoaNPP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_XoaNPP.Designer.cs">
+      <DependentUpon>frm_XoaNPP.cs</DependentUpon>
     </Compile>
     <Compile Include="HangHoa.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
@@ -311,6 +355,7 @@
     <Compile Include="ThuTien.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmThemKH.resx" />
     <EmbeddedResource Include="frm_BanHang.resx">
       <DependentUpon>frm_BanHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -365,6 +410,15 @@
     <EmbeddedResource Include="frm_SaoLuu.resx">
       <DependentUpon>frm_SaoLuu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_SuaKH.resx" />
+    <EmbeddedResource Include="frm_SuaKV.resx" />
+    <EmbeddedResource Include="frm_SuaNPP.resx">
+      <DependentUpon>frm_SuaNPP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ThemKV.resx" />
+    <EmbeddedResource Include="frm_ThemNPP.resx">
+      <DependentUpon>frm_ThemNPP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_ThemTKND.resx">
       <DependentUpon>frm_ThemTKND.cs</DependentUpon>
     </EmbeddedResource>
@@ -379,6 +433,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_VaiTro.resx">
       <DependentUpon>frm_VaiTro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_XoaKH.resx" />
+    <EmbeddedResource Include="frm_XoaKV.resx" />
+    <EmbeddedResource Include="frm_XoaNPP.resx">
+      <DependentUpon>frm_XoaNPP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
@@ -401,7 +460,9 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>DoAnModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="App.Config" />
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="DoAnModel.edmx.diagram">
       <DependentUpon>DoAnModel.edmx</DependentUpon>
     </None>
@@ -509,6 +570,13 @@
       <DependentUpon>DoAnModel.edmx</DependentUpon>
       <LastGenOutput>DoAnModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\delete_user.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\addthis_other.png" />
+    <None Include="Resources\add_user.png" />
+    <None Include="Resources\save.png" />
+    <None Include="Resources\reload.png" />
+    <None Include="Resources\exit.png" />
     <None Include="Resources\Untitled.jpg" />
     <None Include="Resources\Nexus-5-Background.jpg" />
   </ItemGroup>
