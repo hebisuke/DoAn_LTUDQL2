@@ -237,7 +237,9 @@
     <Compile Include="frm_SuaKV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_SuaKV.Designer.cs" />
+    <Compile Include="frm_SuaKV.Designer.cs">
+      <DependentUpon>frm_SuaKV.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_SuaNPP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -247,7 +249,9 @@
     <Compile Include="frm_ThemKV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_ThemKV.Designer.cs" />
+    <Compile Include="frm_ThemKV.Designer.cs">
+      <DependentUpon>frm_ThemKV.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_ThemNPP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -291,7 +295,9 @@
     <Compile Include="frm_XoaKV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_XoaKV.Designer.cs" />
+    <Compile Include="frm_XoaKV.Designer.cs">
+      <DependentUpon>frm_XoaKV.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_XoaNPP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -411,11 +417,15 @@
       <DependentUpon>frm_SaoLuu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_SuaKH.resx" />
-    <EmbeddedResource Include="frm_SuaKV.resx" />
+    <EmbeddedResource Include="frm_SuaKV.resx">
+      <DependentUpon>frm_SuaKV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_SuaNPP.resx">
       <DependentUpon>frm_SuaNPP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_ThemKV.resx" />
+    <EmbeddedResource Include="frm_ThemKV.resx">
+      <DependentUpon>frm_ThemKV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_ThemNPP.resx">
       <DependentUpon>frm_ThemNPP.cs</DependentUpon>
     </EmbeddedResource>
@@ -435,7 +445,9 @@
       <DependentUpon>frm_VaiTro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_XoaKH.resx" />
-    <EmbeddedResource Include="frm_XoaKV.resx" />
+    <EmbeddedResource Include="frm_XoaKV.resx">
+      <DependentUpon>frm_XoaKV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_XoaNPP.resx">
       <DependentUpon>frm_XoaNPP.cs</DependentUpon>
     </EmbeddedResource>
