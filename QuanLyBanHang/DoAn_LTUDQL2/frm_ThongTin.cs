@@ -1,4 +1,5 @@
 ﻿using DevExpress.SpreadsheetSource.Implementation;
+using DoAn_LTUDQL2.BUS;
 using DoAn_LTUDQL2.DTO;
 using System;
 using System.Collections.Generic;
@@ -44,7 +45,7 @@ namespace DoAn_LTUDQL2
 
         public void LoadThongTin()
         {
-            var tt = ql.ThongTinToChucCaNhans.FirstOrDefault();
+            var tt = ThongTinBUS.LoadDanhSach();
             txt_Tendonvi.Text = tt.TenDonVi;
             txt_DiaChi.Text = tt.DiaCHi;
             txtDienThoai.Text = tt.DTBan;
