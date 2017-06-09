@@ -120,11 +120,11 @@
             // 
             // hangHoaBindingSource
             // 
-            this.hangHoaBindingSource.DataSource = typeof(DoAn_LTUDQL2.HangHoa);
+            this.hangHoaBindingSource.DataSource = typeof(DoAn_LTUDQL2.DTO.HangHoa);
             // 
             // hangHoaBindingSource1
             // 
-            this.hangHoaBindingSource1.DataSource = typeof(DoAn_LTUDQL2.HangHoa);
+            this.hangHoaBindingSource1.DataSource = typeof(DoAn_LTUDQL2.DTO.HangHoa);
             // 
             // clMaHang
             // 

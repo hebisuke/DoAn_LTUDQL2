@@ -7,23 +7,25 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DoAn_LTUDQL2
+namespace DoAn_LTUDQL2.DTO
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class LoaiTien
+    public partial class DonViTinh
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public LoaiTien()
+        public DonViTinh()
         {
-            this.ThuTiens = new HashSet<ThuTien>();
+            this.HangHoas = new HashSet<HangHoa>();
         }
     
-        public int id { get; set; }
-        public string TenLoaiTien { get; set; }
+        public string MaDV { get; set; }
+        public string TenDV { get; set; }
+        public string GhiChu { get; set; }
+        public Nullable<int> TinhTrangQL { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ThuTien> ThuTiens { get; set; }
+        public virtual ICollection<HangHoa> HangHoas { get; set; }
     }
 }

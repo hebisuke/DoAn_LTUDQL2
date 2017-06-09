@@ -7,21 +7,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DoAn_LTUDQL2
+namespace DoAn_LTUDQL2.DTO
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class TaiKhoanNguoiDung
+    public partial class ChiTietMuaHang
     {
-        public int id { get; set; }
-        public string MaNV { get; set; }
-        public string MatKhau { get; set; }
-        public Nullable<int> MaVaiTro { get; set; }
-        public string DienGiai { get; set; }
-        public Nullable<int> TinhTrangQL { get; set; }
-        public string TenTaiKhoan { get; set; }
+        public int MaPhieuCT { get; set; }
+        public string MaMuaHang { get; set; }
+        public string MaHang { get; set; }
+        public Nullable<int> SoLuong { get; set; }
+        public Nullable<int> TienThue { get; set; }
+        public string ThanhToan { get; set; }
     
-        public virtual NhanVien NhanVien { get; set; }
+        public virtual HangHoa HangHoa { get; set; }
+        public virtual MuaHang MuaHang { get; set; }
     }
 }

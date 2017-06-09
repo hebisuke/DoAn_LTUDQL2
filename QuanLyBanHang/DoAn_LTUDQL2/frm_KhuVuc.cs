@@ -9,12 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Data.Entity;
+using DoAn_LTUDQL2.DTO;
 
 namespace DoAn_LTUDQL2
 {
     public partial class frm_KhuVuc : DevExpress.XtraEditors.XtraForm
     {
-        DoAn_LTUDQL2.QLBanHangEntities dbContext = new DoAn_LTUDQL2.QLBanHangEntities();
+        DoAn_LTUDQL2.DTO.QLBanHangEntities dbContext = new DoAn_LTUDQL2.DTO.QLBanHangEntities();
         public frm_KhuVuc()
         {
             InitializeComponent();

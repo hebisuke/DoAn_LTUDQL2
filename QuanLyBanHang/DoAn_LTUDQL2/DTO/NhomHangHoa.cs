@@ -7,21 +7,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DoAn_LTUDQL2
+namespace DoAn_LTUDQL2.DTO
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class DonViTinh
+    public partial class NhomHangHoa
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public DonViTinh()
+        public NhomHangHoa()
         {
             this.HangHoas = new HashSet<HangHoa>();
         }
     
-        public string MaDV { get; set; }
-        public string TenDV { get; set; }
+        public string MaNhom { get; set; }
+        public string TenNhom { get; set; }
         public string GhiChu { get; set; }
         public Nullable<int> TinhTrangQL { get; set; }
     

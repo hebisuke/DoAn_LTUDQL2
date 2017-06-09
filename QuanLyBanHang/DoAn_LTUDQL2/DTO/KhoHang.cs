@@ -7,31 +7,32 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DoAn_LTUDQL2
+namespace DoAn_LTUDQL2.DTO
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class MuaHang
+    public partial class KhoHang
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public MuaHang()
+        public KhoHang()
         {
-            this.ChiTietMuaHangs = new HashSet<ChiTietMuaHang>();
+            this.HangHoas = new HashSet<HangHoa>();
         }
     
-        public string MaPhieuMuaHang { get; set; }
-        public string MaNPP { get; set; }
-        public Nullable<System.DateTime> NgayLap { get; set; }
-        public string NoCu { get; set; }
-        public string NoMoi { get; set; }
-        public Nullable<int> MaLoaiTien { get; set; }
-        public string DieuKhoanThanhToan { get; set; }
-        public Nullable<System.DateTime> HanThanhToan { get; set; }
-        public string TongTien { get; set; }
+        public string MaKho { get; set; }
+        public string TenKho { get; set; }
+        public string NguoiLienHe { get; set; }
+        public string DiaChi { get; set; }
+        public string DTBan { get; set; }
+        public string DTDD { get; set; }
+        public string Fax { get; set; }
+        public string Email { get; set; }
+        public string NguoiQuanLy { get; set; }
+        public string DienGiai { get; set; }
+        public Nullable<int> TinhTrangQuanLy { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ChiTietMuaHang> ChiTietMuaHangs { get; set; }
-        public virtual NhaPhanPhoi NhaPhanPhoi { get; set; }
+        public virtual ICollection<HangHoa> HangHoas { get; set; }
     }
 }

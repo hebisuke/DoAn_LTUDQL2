@@ -123,7 +123,7 @@
             // 
             // nhaPhanPhoiBindingSource
             // 
-            this.nhaPhanPhoiBindingSource.DataSource = typeof(DoAn_LTUDQL2.NhaPhanPhoi);
+            this.nhaPhanPhoiBindingSource.DataSource = typeof(DoAn_LTUDQL2.DTO.NhaPhanPhoi);
             // 
             // gridView1
             // 
@@ -309,7 +309,7 @@
             // 
             // nhaPhanPhoiBindingSource1
             // 
-            this.nhaPhanPhoiBindingSource1.DataSource = typeof(DoAn_LTUDQL2.NhaPhanPhoi);
+            this.nhaPhanPhoiBindingSource1.DataSource = typeof(DoAn_LTUDQL2.DTO.NhaPhanPhoi);
             // 
             // frm_NhaPhanPhoi
             // 

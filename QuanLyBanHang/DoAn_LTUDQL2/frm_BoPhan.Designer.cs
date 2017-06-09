@@ -128,11 +128,11 @@
             // 
             // khachHangsBindingSource
             // 
-            this.khachHangsBindingSource.DataSource = typeof(DoAn_LTUDQL2.KhachHang);
+            this.khachHangsBindingSource.DataSource = typeof(DoAn_LTUDQL2.DTO.KhachHang);
             // 
             // boPhanBindingSource
             // 
-            this.boPhanBindingSource.DataSource = typeof(DoAn_LTUDQL2.BoPhan);
+            this.boPhanBindingSource.DataSource = typeof(DoAn_LTUDQL2.DTO.BoPhan);
             // 
             // barManager1
             // 
@@ -267,7 +267,7 @@
             // 
             // khuVucsBindingSource
             // 
-            this.khuVucsBindingSource.DataSource = typeof(DoAn_LTUDQL2.KhuVuc);
+            this.khuVucsBindingSource.DataSource = typeof(DoAn_LTUDQL2.DTO.KhuVuc);
             // 
             // gridControl1
             // 

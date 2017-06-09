@@ -295,7 +295,7 @@
             // 
             // thongTinToChucCaNhanBindingSource
             // 
-            this.thongTinToChucCaNhanBindingSource.DataSource = typeof(DoAn_LTUDQL2.ThongTinToChucCaNhan);
+            this.thongTinToChucCaNhanBindingSource.DataSource = typeof(DoAn_LTUDQL2.DTO.ThongTinToChucCaNhan);
             // 
             // frm_ThongTin
             // 

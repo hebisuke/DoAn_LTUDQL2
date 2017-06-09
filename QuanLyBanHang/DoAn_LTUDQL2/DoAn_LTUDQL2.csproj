@@ -88,34 +88,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BanHang.cs">
+    <Compile Include="DTO\BanHang.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="BoPhan.cs">
+    <Compile Include="DTO\BoPhan.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="CHiTietBanHang.cs">
+    <Compile Include="DTO\CHiTietBanHang.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="ChiTietMuaHang.cs">
+    <Compile Include="DTO\ChiTietMuaHang.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DoAnModel.Context.cs">
+    <Compile Include="DTO\DoAnModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DoAnModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="DoAnModel.cs">
+    <Compile Include="DTO\DoAnModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DoAnModel.Designer.cs">
+    <Compile Include="DTO\DoAnModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DoAnModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="DonViTinh.cs">
+    <Compile Include="DTO\DonViTinh.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
     <Compile Include="frmThemKH.cs">
@@ -304,22 +304,22 @@
     <Compile Include="frm_XoaNPP.Designer.cs">
       <DependentUpon>frm_XoaNPP.cs</DependentUpon>
     </Compile>
-    <Compile Include="HangHoa.cs">
+    <Compile Include="DTO\HangHoa.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="KhachHang.cs">
+    <Compile Include="DTO\KhachHang.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="KhoHang.cs">
+    <Compile Include="DTO\KhoHang.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="KhuVuc.cs">
+    <Compile Include="DTO\KhuVuc.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="LoaiKH.cs">
+    <Compile Include="DTO\LoaiKH.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="LoaiTien.cs">
+    <Compile Include="DTO\LoaiTien.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
     <Compile Include="MainView.cs">
@@ -329,19 +329,19 @@
       <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
     <Compile Include="MainViewModel.cs" />
-    <Compile Include="MuaHang.cs">
+    <Compile Include="DTO\MuaHang.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="NhanVien.cs">
+    <Compile Include="DTO\NhanVien.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="NhaPhanPhoi.cs">
+    <Compile Include="DTO\NhaPhanPhoi.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="NhatKiHeThong.cs">
+    <Compile Include="DTO\NhatKiHeThong.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="NhomHangHoa.cs">
+    <Compile Include="DTO\NhomHangHoa.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -352,13 +352,13 @@
     <Compile Include="SplashScreen1.designer.cs">
       <DependentUpon>SplashScreen1.cs</DependentUpon>
     </Compile>
-    <Compile Include="TaiKhoanNguoiDung.cs">
+    <Compile Include="DTO\TaiKhoanNguoiDung.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="ThongTinToChucCaNhan.cs">
+    <Compile Include="DTO\ThongTinToChucCaNhan.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="ThuTien.cs">
+    <Compile Include="DTO\ThuTien.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="frmThemKH.resx" />
@@ -468,14 +468,14 @@
     <EmbeddedResource Include="SplashScreen1.resx">
       <DependentUpon>SplashScreen1.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="DoAnModel.edmx">
+    <EntityDeploy Include="DTO\DoAnModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>DoAnModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
     <None Include="App.Config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="DoAnModel.edmx.diagram">
+    <None Include="DTO\DoAnModel.edmx.diagram">
       <DependentUpon>DoAnModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
@@ -572,12 +572,12 @@
     <Content Include="Asset\true.png" />
     <Content Include="Asset\Untitled.jpg" />
     <Content Include="Asset\wannacry.jpg" />
-    <Content Include="DoAnModel.Context.tt">
+    <Content Include="DTO\DoAnModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>DoAnModel.Context.cs</LastGenOutput>
       <DependentUpon>DoAnModel.edmx</DependentUpon>
     </Content>
-    <Content Include="DoAnModel.tt">
+    <Content Include="DTO\DoAnModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>DoAnModel.edmx</DependentUpon>
       <LastGenOutput>DoAnModel.cs</LastGenOutput>
@@ -594,6 +594,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BUS\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
