@@ -10,8 +10,24 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DoAn_LTUDQL2</RootNamespace>
     <AssemblyName>DoAn_LTUDQL2</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,6 +48,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Accessibility" />
     <Reference Include="DevExpress.BonusSkins.v16.2" />
@@ -49,6 +69,7 @@
     <Reference Include="DevExpress.XtraNavBar.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v16.2.Reporting.Extensions, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraScheduler.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraScheduler.v16.2.Core, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraTreeList.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -61,6 +82,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.SqlServer.Smo, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.SqlServer.SmoExtended, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualBasic" />
@@ -85,41 +107,53 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BanHang.cs">
+    <Compile Include="BUS\ThongTinBUS.cs" />
+    <Compile Include="DAO\ThongTinDAO.cs" />
+    <Compile Include="DTO\BanHang.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="BoPhan.cs">
+    <Compile Include="DTO\BoPhan.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="CHiTietBanHang.cs">
+    <Compile Include="DTO\CHiTietBanHang.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="ChiTietMuaHang.cs">
+    <Compile Include="DTO\ChiTietMuaHang.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DoAnModel.Context.cs">
+    <Compile Include="DTO\DoAnModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DoAnModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="DoAnModel.cs">
+    <Compile Include="DTO\DoAnModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DoAnModel.Designer.cs">
+    <Compile Include="DTO\DoAnModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DoAnModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="DonViTinh.cs">
+    <Compile Include="DTO\DonViTinh.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="frmThemKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThemKH.designer.cs" />
     <Compile Include="frm_BanHang.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_BanHang.Designer.cs">
       <DependentUpon>frm_BanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_BoPhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_BoPhan.Designer.cs">
+      <DependentUpon>frm_BoPhan.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_ChuyenKho.cs">
       <SubType>Form</SubType>
@@ -133,11 +167,35 @@
     <Compile Include="frm_DoiMK.Designer.cs">
       <DependentUpon>frm_DoiMK.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_DonViTinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_DonViTinh.designer.cs">
+      <DependentUpon>frm_DonViTinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_HangHoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_HangHoa.designer.cs">
+      <DependentUpon>frm_HangHoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_InMaVach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_InMaVach.designer.cs">
+      <DependentUpon>frm_InMaVach.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_KhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_KhachHang.Designer.cs">
       <DependentUpon>frm_KhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_KhoHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_KhoHang.designer.cs">
+      <DependentUpon>frm_KhoHang.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_KhuVuc.cs">
       <SubType>Form</SubType>
@@ -157,11 +215,29 @@
     <Compile Include="frm_MuaHang.Designer.cs">
       <DependentUpon>frm_MuaHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_NhanVien1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_NhanVien1.Designer.cs">
+      <DependentUpon>frm_NhanVien1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_NhaPhanPhoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_NhaPhanPhoi.designer.cs">
+      <DependentUpon>frm_NhaPhanPhoi.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_NhatKiHeThong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_NhatKiHeThong.Designer.cs">
       <DependentUpon>frm_NhatKiHeThong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_NhomHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_NhomHang.designer.cs">
+      <DependentUpon>frm_NhomHang.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_PhucHoi.cs">
       <SubType>Form</SubType>
@@ -174,6 +250,34 @@
     </Compile>
     <Compile Include="frm_SaoLuu.designer.cs">
       <DependentUpon>frm_SaoLuu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SuaKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SuaKH.Designer.cs" />
+    <Compile Include="frm_SuaKV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SuaKV.Designer.cs">
+      <DependentUpon>frm_SuaKV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SuaNPP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SuaNPP.Designer.cs">
+      <DependentUpon>frm_SuaNPP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ThemKV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ThemKV.Designer.cs">
+      <DependentUpon>frm_ThemKV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ThemNPP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ThemNPP.Designer.cs">
+      <DependentUpon>frm_ThemNPP.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_ThemTKND.cs">
       <SubType>Form</SubType>
@@ -193,28 +297,50 @@
     <Compile Include="frm_TonKho.Designer.cs">
       <DependentUpon>frm_TonKho.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_TyGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_TyGia.designer.cs">
+      <DependentUpon>frm_TyGia.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_VaiTro.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_VaiTro.Designer.cs">
       <DependentUpon>frm_VaiTro.cs</DependentUpon>
     </Compile>
-    <Compile Include="HangHoa.cs">
+    <Compile Include="frm_XoaKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_XoaKH.Designer.cs" />
+    <Compile Include="frm_XoaKV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_XoaKV.Designer.cs">
+      <DependentUpon>frm_XoaKV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_XoaNPP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_XoaNPP.Designer.cs">
+      <DependentUpon>frm_XoaNPP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\HangHoa.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="KhachHang.cs">
+    <Compile Include="DTO\KhachHang.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="KhoHang.cs">
+    <Compile Include="DTO\KhoHang.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="KhuVuc.cs">
+    <Compile Include="DTO\KhuVuc.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="LoaiKH.cs">
+    <Compile Include="DTO\LoaiKH.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="LoaiTien.cs">
+    <Compile Include="DTO\LoaiTien.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
     <Compile Include="MainView.cs">
@@ -224,19 +350,19 @@
       <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
     <Compile Include="MainViewModel.cs" />
-    <Compile Include="MuaHang.cs">
+    <Compile Include="DTO\MuaHang.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="NhanVien.cs">
+    <Compile Include="DTO\NhanVien.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="NhaPhanPhoi.cs">
+    <Compile Include="DTO\NhaPhanPhoi.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="NhatKiHeThong.cs">
+    <Compile Include="DTO\NhatKiHeThong.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="NhomHangHoa.cs">
+    <Compile Include="DTO\NhomHangHoa.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -247,17 +373,21 @@
     <Compile Include="SplashScreen1.designer.cs">
       <DependentUpon>SplashScreen1.cs</DependentUpon>
     </Compile>
-    <Compile Include="TaiKhoanNguoiDung.cs">
+    <Compile Include="DTO\TaiKhoanNguoiDung.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="ThongTinToChucCaNhan.cs">
+    <Compile Include="DTO\ThongTinToChucCaNhan.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="ThuTien.cs">
+    <Compile Include="DTO\ThuTien.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmThemKH.resx" />
     <EmbeddedResource Include="frm_BanHang.resx">
       <DependentUpon>frm_BanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_BoPhan.resx">
+      <DependentUpon>frm_BoPhan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_ChuyenKho.resx">
       <DependentUpon>frm_ChuyenKho.cs</DependentUpon>
@@ -265,8 +395,20 @@
     <EmbeddedResource Include="frm_DoiMK.resx">
       <DependentUpon>frm_DoiMK.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_DonViTinh.resx">
+      <DependentUpon>frm_DonViTinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_HangHoa.resx">
+      <DependentUpon>frm_HangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_InMaVach.resx">
+      <DependentUpon>frm_InMaVach.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_KhachHang.resx">
       <DependentUpon>frm_KhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_KhoHang.resx">
+      <DependentUpon>frm_KhoHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_KhuVuc.resx">
       <DependentUpon>frm_KhuVuc.cs</DependentUpon>
@@ -277,14 +419,36 @@
     <EmbeddedResource Include="frm_MuaHang.resx">
       <DependentUpon>frm_MuaHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_NhanVien1.resx">
+      <DependentUpon>frm_NhanVien1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_NhaPhanPhoi.resx">
+      <DependentUpon>frm_NhaPhanPhoi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_NhatKiHeThong.resx">
       <DependentUpon>frm_NhatKiHeThong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_NhomHang.resx">
+      <DependentUpon>frm_NhomHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_PhucHoi.resx">
       <DependentUpon>frm_PhucHoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_SaoLuu.resx">
       <DependentUpon>frm_SaoLuu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SuaKH.resx" />
+    <EmbeddedResource Include="frm_SuaKV.resx">
+      <DependentUpon>frm_SuaKV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SuaNPP.resx">
+      <DependentUpon>frm_SuaNPP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ThemKV.resx">
+      <DependentUpon>frm_ThemKV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ThemNPP.resx">
+      <DependentUpon>frm_ThemNPP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_ThemTKND.resx">
       <DependentUpon>frm_ThemTKND.cs</DependentUpon>
@@ -295,8 +459,18 @@
     <EmbeddedResource Include="frm_TonKho.resx">
       <DependentUpon>frm_TonKho.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_TyGia.resx">
+      <DependentUpon>frm_TyGia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_VaiTro.resx">
       <DependentUpon>frm_VaiTro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_XoaKH.resx" />
+    <EmbeddedResource Include="frm_XoaKV.resx">
+      <DependentUpon>frm_XoaKV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_XoaNPP.resx">
+      <DependentUpon>frm_XoaNPP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
@@ -315,15 +489,19 @@
     <EmbeddedResource Include="SplashScreen1.resx">
       <DependentUpon>SplashScreen1.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="DoAnModel.edmx">
+    <EntityDeploy Include="DTO\DoAnModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>DoAnModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="App.Config" />
-    <None Include="DoAnModel.edmx.diagram">
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DTO\DoAnModel.edmx.diagram">
       <DependentUpon>DoAnModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\BoPhan.datasource" />
+    <None Include="Properties\DataSources\NhanVien.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -415,21 +593,40 @@
     <Content Include="Asset\true.png" />
     <Content Include="Asset\Untitled.jpg" />
     <Content Include="Asset\wannacry.jpg" />
-    <Content Include="DoAnModel.Context.tt">
+    <Content Include="DTO\DoAnModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>DoAnModel.Context.cs</LastGenOutput>
       <DependentUpon>DoAnModel.edmx</DependentUpon>
     </Content>
-    <Content Include="DoAnModel.tt">
+    <Content Include="DTO\DoAnModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>DoAnModel.edmx</DependentUpon>
       <LastGenOutput>DoAnModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\delete_user.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\addthis_other.png" />
+    <None Include="Resources\add_user.png" />
+    <None Include="Resources\save.png" />
+    <None Include="Resources\reload.png" />
+    <None Include="Resources\exit.png" />
     <None Include="Resources\Untitled.jpg" />
     <None Include="Resources\Nexus-5-Background.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
