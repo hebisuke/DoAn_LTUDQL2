@@ -79,12 +79,12 @@ namespace DoAn_LTUDQL2
 
         private void btn_Login_Click(object sender, EventArgs e)
         {
-            if (tbx_User.Text == "")
+            if (tbx_User.Text.Trim() == "")
             {
                 lbx_ThongBao.Text = "Vui lòng không để trống Username";
                 return;
             }
-            if (tbx_Pass.Text == "")
+            if (tbx_Pass.Text.Trim() == "")
             {
                 lbx_ThongBao.Text = "Vui lòng không để trống password";
                 return;
@@ -95,7 +95,7 @@ namespace DoAn_LTUDQL2
             if (TK != null)
             {
                 //------------  đăng nhập thành công ---------------\\
-                LoginBUS.MaNV = TK.MaNV;
+                LoginBUS.Working = TK;
                 this.Hide();
 
                 var myQuery = from Q in ql.ThongTinToChucCaNhans select Q.Ma;

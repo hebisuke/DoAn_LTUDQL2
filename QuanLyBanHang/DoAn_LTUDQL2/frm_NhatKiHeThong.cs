@@ -8,6 +8,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using System.Data.Entity;
+using DoAn_LTUDQL2.BUS;
 
 namespace DoAn_LTUDQL2
 {
@@ -21,6 +23,11 @@ namespace DoAn_LTUDQL2
         private void barButtonItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             this.Close();
+        }
+
+        private void frm_NhatKiHeThong_Load(object sender, EventArgs e)
+        {
+            gridControl_DSNhatKy.DataSource = NhatKiHeThongBUS.DSNhatKyHeThong();
         }
     }
 }

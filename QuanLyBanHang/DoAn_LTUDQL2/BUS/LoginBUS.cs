@@ -10,7 +10,7 @@ namespace DoAn_LTUDQL2.BUS
 {
     class LoginBUS
     {
-        public static string MaNV;
+        public static V_ThongTinLogin Working;
         public static string MD5Hash(string input)
         {
             return LoginDAO.MD5Hash(input);
