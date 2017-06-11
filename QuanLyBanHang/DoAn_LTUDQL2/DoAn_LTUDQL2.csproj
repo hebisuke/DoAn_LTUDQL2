@@ -109,8 +109,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS\LoginBUS.cs" />
+    <Compile Include="BUS\NhatKiHeThongBUS.cs" />
     <Compile Include="BUS\ThongTinBUS.cs" />
     <Compile Include="DAO\LoginDAO.cs" />
+    <Compile Include="DAO\NhatKiHeThongDAO.cs" />
     <Compile Include="DAO\ThongTinDAO.cs" />
     <Compile Include="DTO\BanHang.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
@@ -140,6 +142,9 @@
       <DependentUpon>DoAnModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="DTO\DonViTinh.cs">
+      <DependentUpon>DoAnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\V_ThongTinLogin.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>
     </Compile>
     <Compile Include="frmThemKH.cs">

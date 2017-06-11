@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using System.Threading;
 using DevExpress.XtraEditors;
 using DevExpress.XtraBars.Helpers;
+using DoAn_LTUDQL2.BUS;
 
 namespace DoAn_LTUDQL2
 {
@@ -219,6 +220,11 @@ namespace DoAn_LTUDQL2
             if (ExistForm(frm_NhaPhanPhoi)) return;
             frm_NhaPhanPhoi.MdiParent = this;
             frm_NhaPhanPhoi.Show();
+        }
+
+        private void btn_DangXuat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            
         }
 
         //------------- Hàm kiểm tra form đã mở chưa, nếu mở thì k mởi nữa, nếu chưa thì mở lên-------

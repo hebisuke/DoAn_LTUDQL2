@@ -169,6 +169,7 @@
             this.btn_DangXuat.ImageOptions.Image = global::DoAn_LTUDQL2.Properties.Resources.Logout;
             this.btn_DangXuat.Name = "btn_DangXuat";
             this.btn_DangXuat.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_DangXuat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_DangXuat_ItemClick);
             // 
             // btn_ThongTin
             // 

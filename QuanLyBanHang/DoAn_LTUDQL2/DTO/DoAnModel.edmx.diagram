@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="7c560e6ae96d4ba292263b3cf991388b" Name="Diagram1" ZoomLevel="45">
+      <Diagram DiagramId="7c560e6ae96d4ba292263b3cf991388b" Name="Diagram1" ZoomLevel="128">
         <EntityTypeShape EntityType="QLBanHangModel.BanHang" Width="1.5" PointX="8.25" PointY="8.875" />
         <EntityTypeShape EntityType="QLBanHangModel.BoPhan" Width="1.5" PointX="0.75" PointY="9.75" />
         <EntityTypeShape EntityType="QLBanHangModel.CHiTietBanHang" Width="1.5" PointX="10.5" PointY="9.125" />
@@ -45,6 +45,7 @@
         <AssociationConnector Association="QLBanHangModel.FK_NhanVien_NhanVien" />
         <AssociationConnector Association="QLBanHangModel.FK_NhatKiHeThong_NhanVien" />
         <AssociationConnector Association="QLBanHangModel.FK_TaiKhoanNguoiDung_NhanVien" />
+        <EntityTypeShape EntityType="QLBanHangModel.V_ThongTinLogin" Width="1.5" PointX="9.625" PointY="1.5" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -89,23 +89,30 @@ namespace DoAn_LTUDQL2
                 lbx_ThongBao.Text = "Vui lòng không để trống password";
                 return;
             }
-
-            //------------  đăng nhập thành công---------------
-            this.Hide();
-
-            var myQuery = from Q in ql.ThongTinToChucCaNhans select Q.Ma;
-            if (myQuery != null && myQuery.Count() > 0)
+            var user = tbx_User.Text;
+            var pass = tbx_Pass.Text;
+            var TK = LoginBUS.DangNhap(user, pass);
+            if (TK != null)
             {
-                MainView mn = new MainView();
-                mn.ShowDialog();
+                //------------  đăng nhập thành công ---------------\\
+                LoginBUS.MaNV = TK.MaNV;
+                this.Hide();
+
+                var myQuery = from Q in ql.ThongTinToChucCaNhans select Q.Ma;
+                if (myQuery != null && myQuery.Count() > 0)
+                {
+                    MainView mn = new MainView();
+                    mn.ShowDialog();
+                }
+                else
+                {
+                    frm_ThongTin tt = new frm_ThongTin();
+                    tt.ShowDialog();
+                }
+                this.Close();
+                Application.Exit();
             }
-               else
-            {
-                frm_ThongTin tt = new frm_ThongTin();
-                tt.ShowDialog();
-            }
-            this.Close();
-            Application.Exit();
+            else MessageBox.Show("Vui lòng kiểm tra lại Username hoặc Password!", "Đăng nhập thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void lb_QuenMK_Click(object sender, EventArgs e)

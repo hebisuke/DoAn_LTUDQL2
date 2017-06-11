@@ -23,13 +23,13 @@ namespace DoAn_LTUDQL2.DAO
             }
             return hash.ToString();
         }
-        public static Boolean DangNhap(string user, string pass)
+        public static V_ThongTinLogin DangNhap(string user, string pass)
         {
             pass = MD5Hash(pass);
-            var TK = from p in ql.TaiKhoanNguoiDungs
+            var TK = from p in ql.V_ThongTinLogin
                          where p.TenTaiKhoan == user && p.MatKhau == pass
                          select p;
-            return (TK.Count() == 0) ? false : true;
+            return (TK.Count() == 0) ? null : TK.FirstOrDefault();
         }
     }
 }
