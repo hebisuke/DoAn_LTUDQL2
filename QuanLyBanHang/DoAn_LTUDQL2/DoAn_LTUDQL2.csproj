@@ -108,7 +108,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\LoginBUS.cs" />
     <Compile Include="BUS\ThongTinBUS.cs" />
+    <Compile Include="DAO\LoginDAO.cs" />
     <Compile Include="DAO\ThongTinDAO.cs" />
     <Compile Include="DTO\BanHang.cs">
       <DependentUpon>DoAnModel.tt</DependentUpon>

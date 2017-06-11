@@ -34,7 +34,7 @@
             this.lbx_Thoat = new System.Windows.Forms.Label();
             this.pictureEdit_ShowPass = new DevExpress.XtraEditors.PictureEdit();
             this.lbx_ThongBao = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lb_QuenMK = new System.Windows.Forms.Label();
             this.btn_Login = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -43,6 +43,7 @@
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.rectangleShape2 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.check_NhoMK = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit_ShowPass.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -56,21 +57,22 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Lime;
             this.label1.Location = new System.Drawing.Point(17, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(185, 31);
+            this.label1.Size = new System.Drawing.Size(224, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "MEMBER LOGIN";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.check_NhoMK);
             this.panel1.Controls.Add(this.lbx_Thoat);
             this.panel1.Controls.Add(this.pictureEdit_ShowPass);
             this.panel1.Controls.Add(this.lbx_ThongBao);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.lb_QuenMK);
             this.panel1.Controls.Add(this.btn_Login);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -132,20 +134,21 @@
             this.lbx_ThongBao.Size = new System.Drawing.Size(0, 18);
             this.lbx_ThongBao.TabIndex = 0;
             // 
-            // label2
+            // lb_QuenMK
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lb_QuenMK.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(33, 372);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(133, 18);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Forgot password ?";
+            this.lb_QuenMK.AutoSize = true;
+            this.lb_QuenMK.BackColor = System.Drawing.Color.Transparent;
+            this.lb_QuenMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_QuenMK.ForeColor = System.Drawing.Color.Gray;
+            this.lb_QuenMK.Location = new System.Drawing.Point(33, 372);
+            this.lb_QuenMK.Name = "lb_QuenMK";
+            this.lb_QuenMK.Size = new System.Drawing.Size(133, 18);
+            this.lb_QuenMK.TabIndex = 5;
+            this.lb_QuenMK.Text = "Forgot password ?";
+            this.lb_QuenMK.Click += new System.EventHandler(this.lb_QuenMK_Click);
             // 
             // btn_Login
             // 
@@ -256,6 +259,17 @@
             this.rectangleShape1.Name = "rectangleShape1";
             this.rectangleShape1.Size = new System.Drawing.Size(277, 99);
             // 
+            // check_NhoMK
+            // 
+            this.check_NhoMK.AutoSize = true;
+            this.check_NhoMK.Location = new System.Drawing.Point(66, 251);
+            this.check_NhoMK.Name = "check_NhoMK";
+            this.check_NhoMK.Size = new System.Drawing.Size(91, 17);
+            this.check_NhoMK.TabIndex = 7;
+            this.check_NhoMK.Text = "Lưu mật khẩu";
+            this.check_NhoMK.UseVisualStyleBackColor = true;
+            this.check_NhoMK.CheckedChanged += new System.EventHandler(this.check_NhoMK_CheckedChanged);
+            // 
             // frm_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -284,7 +298,7 @@
         private System.Windows.Forms.TextBox tbx_Pass;
         private System.Windows.Forms.TextBox tbx_User;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lb_QuenMK;
         private System.Windows.Forms.Button btn_Login;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape2;
@@ -292,5 +306,6 @@
         private System.Windows.Forms.Label lbx_ThongBao;
         private DevExpress.XtraEditors.PictureEdit pictureEdit_ShowPass;
         private System.Windows.Forms.Label lbx_Thoat;
+        private System.Windows.Forms.CheckBox check_NhoMK;
     }
 }

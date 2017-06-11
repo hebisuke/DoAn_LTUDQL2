@@ -1,4 +1,5 @@
-﻿using DoAn_LTUDQL2.DTO;
+﻿using DoAn_LTUDQL2.BUS;
+using DoAn_LTUDQL2.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -105,6 +106,16 @@ namespace DoAn_LTUDQL2
             }
             this.Close();
             Application.Exit();
+        }
+
+        private void lb_QuenMK_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Vui Lòng Liên Hệ Người Quản Lý Của Bạn Để Lấy Lại Mật Khẩu!", "Thông Báo");
+        }
+
+        private void check_NhoMK_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

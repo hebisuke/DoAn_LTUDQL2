@@ -182,7 +182,7 @@
             // 
             // btn_VaiTroQuyenHan
             // 
-            this.btn_VaiTroQuyenHan.Caption = "Vai Trò Quyền Hạn";
+            this.btn_VaiTroQuyenHan.Caption = "Phân Quyền";
             this.btn_VaiTroQuyenHan.Id = 6;
             this.btn_VaiTroQuyenHan.ImageOptions.Image = global::DoAn_LTUDQL2.Properties.Resources.user_secret;
             this.btn_VaiTroQuyenHan.Name = "btn_VaiTroQuyenHan";
