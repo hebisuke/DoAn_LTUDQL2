@@ -145,6 +145,18 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TenLoaiTien" Type="nvarchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="Mua_BanTam">
+          <Key>
+            <PropertyRef Name="MaPhieuCT" />
+          </Key>
+          <Property Name="MaPhieuCT" Type="int" Nullable="false" />
+          <Property Name="MaBan_Mua" Type="nchar" MaxLength="10" />
+          <Property Name="MaHang" Type="nchar" MaxLength="10" />
+          <Property Name="SoLuong" Type="int" />
+          <Property Name="Gia" Type="int" />
+          <Property Name="ThanhTien" Type="int" />
+          <Property Name="GhiChu" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="MuaHang">
           <Key>
             <PropertyRef Name="MaPhieuMuaHang" />
@@ -152,12 +164,17 @@
           <Property Name="MaPhieuMuaHang" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="MaNPP" Type="nchar" MaxLength="10" />
           <Property Name="NgayLap" Type="datetime" />
-          <Property Name="NoCu" Type="nchar" MaxLength="15" />
-          <Property Name="NoMoi" Type="nchar" MaxLength="15" />
           <Property Name="MaLoaiTien" Type="int" />
           <Property Name="DieuKhoanThanhToan" Type="nvarchar" MaxLength="50" />
           <Property Name="HanThanhToan" Type="datetime" />
           <Property Name="TongTien" Type="nchar" MaxLength="15" />
+          <Property Name="MaNV" Type="nchar" MaxLength="10" />
+          <Property Name="DiaChi" Type="nvarchar" MaxLength="50" />
+          <Property Name="SoDienThoai" Type="varchar" MaxLength="12" />
+          <Property Name="SoHoaDonVAT" Type="varchar" MaxLength="50" />
+          <Property Name="SoPhieuVietTay" Type="varchar" MaxLength="50" />
+          <Property Name="MaNhapKho" Type="nchar" MaxLength="10" />
+          <Property Name="HinhThucThanhToan" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="NhanVien">
           <Key>
@@ -219,6 +236,16 @@
           <Property Name="TenNhom" Type="nvarchar" MaxLength="50" />
           <Property Name="GhiChu" Type="nvarchar" MaxLength="50" />
           <Property Name="TinhTrangQL" Type="int" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
         <EntityType Name="TaiKhoanNguoiDung">
           <Key>
@@ -419,6 +446,30 @@ warning 6002: The table/view 'QLBanHang.dbo.V_ThongTinLogin' does not have a pri
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_MuaHang_KhoHang">
+          <End Role="KhoHang" Type="Self.KhoHang" Multiplicity="0..1" />
+          <End Role="MuaHang" Type="Self.MuaHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KhoHang">
+              <PropertyRef Name="MaKho" />
+            </Principal>
+            <Dependent Role="MuaHang">
+              <PropertyRef Name="MaNhapKho" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MuaHang_NhanVien">
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
+          <End Role="MuaHang" Type="Self.MuaHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="MaNV" />
+            </Principal>
+            <Dependent Role="MuaHang">
+              <PropertyRef Name="MaNV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_MuaHang_NhaPhanPhoi">
           <End Role="NhaPhanPhoi" Type="Self.NhaPhanPhoi" Multiplicity="0..1" />
           <End Role="MuaHang" Type="Self.MuaHang" Multiplicity="*" />
@@ -539,11 +590,13 @@ warning 6002: The table/view 'QLBanHang.dbo.V_ThongTinLogin' does not have a pri
           <EntitySet Name="KhuVuc" EntityType="Self.KhuVuc" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LoaiKH" EntityType="Self.LoaiKH" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LoaiTien" EntityType="Self.LoaiTien" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Mua_BanTam" EntityType="Self.Mua_BanTam" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MuaHang" EntityType="Self.MuaHang" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="NhanVien" EntityType="Self.NhanVien" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="NhaPhanPhoi" EntityType="Self.NhaPhanPhoi" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="NhatKiHeThong" EntityType="Self.NhatKiHeThong" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="NhomHangHoa" EntityType="Self.NhomHangHoa" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TaiKhoanNguoiDung" EntityType="Self.TaiKhoanNguoiDung" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ThongTinToChucCaNhan" EntityType="Self.ThongTinToChucCaNhan" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ThuTien" EntityType="Self.ThuTien" Schema="dbo" store:Type="Tables" />
@@ -606,6 +659,14 @@ warning 6002: The table/view 'QLBanHang.dbo.V_ThongTinLogin' does not have a pri
             <End Role="LoaiKH" EntitySet="LoaiKH" />
             <End Role="KhachHang" EntitySet="KhachHang" />
           </AssociationSet>
+          <AssociationSet Name="FK_MuaHang_KhoHang" Association="Self.FK_MuaHang_KhoHang">
+            <End Role="KhoHang" EntitySet="KhoHang" />
+            <End Role="MuaHang" EntitySet="MuaHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MuaHang_NhanVien" Association="Self.FK_MuaHang_NhanVien">
+            <End Role="NhanVien" EntitySet="NhanVien" />
+            <End Role="MuaHang" EntitySet="MuaHang" />
+          </AssociationSet>
           <AssociationSet Name="FK_MuaHang_NhaPhanPhoi" Association="Self.FK_MuaHang_NhaPhanPhoi">
             <End Role="NhaPhanPhoi" EntitySet="NhaPhanPhoi" />
             <End Role="MuaHang" EntitySet="MuaHang" />
@@ -659,7 +720,6 @@ warning 6002: The table/view 'QLBanHang.dbo.V_ThongTinLogin' does not have a pri
           <EntitySet Name="KhuVucs" EntityType="QLBanHangModel.KhuVuc" />
           <EntitySet Name="LoaiKHs" EntityType="QLBanHangModel.LoaiKH" />
           <EntitySet Name="LoaiTiens" EntityType="QLBanHangModel.LoaiTien" />
-          <EntitySet Name="MuaHangs" EntityType="QLBanHangModel.MuaHang" />
           <EntitySet Name="NhanViens" EntityType="QLBanHangModel.NhanVien" />
           <EntitySet Name="NhaPhanPhois" EntityType="QLBanHangModel.NhaPhanPhoi" />
           <EntitySet Name="NhatKiHeThongs" EntityType="QLBanHangModel.NhatKiHeThong" />
@@ -693,10 +753,6 @@ warning 6002: The table/view 'QLBanHang.dbo.V_ThongTinLogin' does not have a pri
           </AssociationSet>
           <AssociationSet Name="FK_ChiTietMuaHang_HangHoa" Association="QLBanHangModel.FK_ChiTietMuaHang_HangHoa">
             <End Role="HangHoa" EntitySet="HangHoas" />
-            <End Role="ChiTietMuaHang" EntitySet="ChiTietMuaHangs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ChiTietMuaHang_MuaHang" Association="QLBanHangModel.FK_ChiTietMuaHang_MuaHang">
-            <End Role="MuaHang" EntitySet="MuaHangs" />
             <End Role="ChiTietMuaHang" EntitySet="ChiTietMuaHangs" />
           </AssociationSet>
           <AssociationSet Name="FK_HangHoa_DonViTinh" Association="QLBanHangModel.FK_HangHoa_DonViTinh">
@@ -735,10 +791,6 @@ warning 6002: The table/view 'QLBanHang.dbo.V_ThongTinLogin' does not have a pri
             <End Role="LoaiTien" EntitySet="LoaiTiens" />
             <End Role="ThuTien" EntitySet="ThuTiens" />
           </AssociationSet>
-          <AssociationSet Name="FK_MuaHang_NhaPhanPhoi" Association="QLBanHangModel.FK_MuaHang_NhaPhanPhoi">
-            <End Role="NhaPhanPhoi" EntitySet="NhaPhanPhois" />
-            <End Role="MuaHang" EntitySet="MuaHangs" />
-          </AssociationSet>
           <AssociationSet Name="FK_NhanVien_NhanVien" Association="QLBanHangModel.FK_NhanVien_NhanVien">
             <End Role="NhanVien" EntitySet="NhanViens" />
             <End Role="NhanVien1" EntitySet="NhanViens" />
@@ -752,6 +804,25 @@ warning 6002: The table/view 'QLBanHang.dbo.V_ThongTinLogin' does not have a pri
             <End Role="TaiKhoanNguoiDung" EntitySet="TaiKhoanNguoiDungs" />
           </AssociationSet>
           <EntitySet Name="V_ThongTinLogin" EntityType="QLBanHangModel.V_ThongTinLogin" />
+          <EntitySet Name="Mua_BanTam" EntityType="QLBanHangModel.Mua_BanTam" />
+          <EntitySet Name="MuaHangs" EntityType="QLBanHangModel.MuaHang" />
+          <EntitySet Name="sysdiagrams" EntityType="QLBanHangModel.sysdiagram" />
+          <AssociationSet Name="FK_ChiTietMuaHang_MuaHang" Association="QLBanHangModel.FK_ChiTietMuaHang_MuaHang">
+            <End Role="MuaHang" EntitySet="MuaHangs" />
+            <End Role="ChiTietMuaHang" EntitySet="ChiTietMuaHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MuaHang_KhoHang" Association="QLBanHangModel.FK_MuaHang_KhoHang">
+            <End Role="KhoHang" EntitySet="KhoHangs" />
+            <End Role="MuaHang" EntitySet="MuaHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MuaHang_NhanVien" Association="QLBanHangModel.FK_MuaHang_NhanVien">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="MuaHang" EntitySet="MuaHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MuaHang_NhaPhanPhoi" Association="QLBanHangModel.FK_MuaHang_NhaPhanPhoi">
+            <End Role="NhaPhanPhoi" EntitySet="NhaPhanPhois" />
+            <End Role="MuaHang" EntitySet="MuaHangs" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="BanHang">
           <Key>
@@ -891,6 +962,7 @@ warning 6002: The table/view 'QLBanHang.dbo.V_ThongTinLogin' does not have a pri
           <Property Name="DienGiai" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="TinhTrangQuanLy" Type="Int32" />
           <NavigationProperty Name="HangHoas" Relationship="QLBanHangModel.FK_HangHoa_KhoHang" FromRole="KhoHang" ToRole="HangHoa" />
+          <NavigationProperty Name="MuaHangs" Relationship="QLBanHangModel.FK_MuaHang_KhoHang" FromRole="KhoHang" ToRole="MuaHang" />
         </EntityType>
         <EntityType Name="KhuVuc">
           <Key>
@@ -918,22 +990,6 @@ warning 6002: The table/view 'QLBanHang.dbo.V_ThongTinLogin' does not have a pri
           <Property Name="TenLoaiTien" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="ThuTiens" Relationship="QLBanHangModel.FK_ThuTien_LoaiTien" FromRole="LoaiTien" ToRole="ThuTien" />
         </EntityType>
-        <EntityType Name="MuaHang">
-          <Key>
-            <PropertyRef Name="MaPhieuMuaHang" />
-          </Key>
-          <Property Name="MaPhieuMuaHang" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="MaNPP" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="NgayLap" Type="DateTime" Precision="3" />
-          <Property Name="NoCu" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
-          <Property Name="NoMoi" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
-          <Property Name="MaLoaiTien" Type="Int32" />
-          <Property Name="DieuKhoanThanhToan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="HanThanhToan" Type="DateTime" Precision="3" />
-          <Property Name="TongTien" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
-          <NavigationProperty Name="ChiTietMuaHangs" Relationship="QLBanHangModel.FK_ChiTietMuaHang_MuaHang" FromRole="MuaHang" ToRole="ChiTietMuaHang" />
-          <NavigationProperty Name="NhaPhanPhoi" Relationship="QLBanHangModel.FK_MuaHang_NhaPhanPhoi" FromRole="MuaHang" ToRole="NhaPhanPhoi" />
-        </EntityType>
         <EntityType Name="NhanVien">
           <Key>
             <PropertyRef Name="MaNV" />
@@ -956,6 +1012,7 @@ warning 6002: The table/view 'QLBanHang.dbo.V_ThongTinLogin' does not have a pri
           <NavigationProperty Name="NhanVien2" Relationship="QLBanHangModel.FK_NhanVien_NhanVien" FromRole="NhanVien1" ToRole="NhanVien" />
           <NavigationProperty Name="NhatKiHeThongs" Relationship="QLBanHangModel.FK_NhatKiHeThong_NhanVien" FromRole="NhanVien" ToRole="NhatKiHeThong" />
           <NavigationProperty Name="TaiKhoanNguoiDungs" Relationship="QLBanHangModel.FK_TaiKhoanNguoiDung_NhanVien" FromRole="NhanVien" ToRole="TaiKhoanNguoiDung" />
+          <NavigationProperty Name="MuaHangs" Relationship="QLBanHangModel.FK_MuaHang_NhanVien" FromRole="NhanVien" ToRole="MuaHang" />
         </EntityType>
         <EntityType Name="NhaPhanPhoi">
           <Key>
@@ -1134,18 +1191,6 @@ warning 6002: The table/view 'QLBanHang.dbo.V_ThongTinLogin' does not have a pri
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_ChiTietMuaHang_MuaHang">
-          <End Type="QLBanHangModel.MuaHang" Role="MuaHang" Multiplicity="0..1" />
-          <End Type="QLBanHangModel.ChiTietMuaHang" Role="ChiTietMuaHang" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="MuaHang">
-              <PropertyRef Name="MaPhieuMuaHang" />
-            </Principal>
-            <Dependent Role="ChiTietMuaHang">
-              <PropertyRef Name="MaMuaHang" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_HangHoa_DonViTinh">
           <End Type="QLBanHangModel.DonViTinh" Role="DonViTinh" Multiplicity="0..1" />
           <End Type="QLBanHangModel.HangHoa" Role="HangHoa" Multiplicity="*" />
@@ -1254,18 +1299,6 @@ warning 6002: The table/view 'QLBanHang.dbo.V_ThongTinLogin' does not have a pri
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_MuaHang_NhaPhanPhoi">
-          <End Type="QLBanHangModel.NhaPhanPhoi" Role="NhaPhanPhoi" Multiplicity="0..1" />
-          <End Type="QLBanHangModel.MuaHang" Role="MuaHang" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NhaPhanPhoi">
-              <PropertyRef Name="MaNPP" />
-            </Principal>
-            <Dependent Role="MuaHang">
-              <PropertyRef Name="MaNPP" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_NhanVien_NhanVien">
           <End Type="QLBanHangModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
           <End Type="QLBanHangModel.NhanVien" Role="NhanVien1" Multiplicity="*" />
@@ -1315,6 +1348,99 @@ warning 6002: The table/view 'QLBanHang.dbo.V_ThongTinLogin' does not have a pri
           <Property Name="id" Type="Int32" Nullable="false" />
           <Property Name="MaBP" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
         </EntityType>
+        <EntityType Name="Mua_BanTam">
+          <Key>
+            <PropertyRef Name="MaPhieuCT" />
+          </Key>
+          <Property Name="MaPhieuCT" Type="Int32" Nullable="false" />
+          <Property Name="MaBan_Mua" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="MaHang" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="SoLuong" Type="Int32" />
+          <Property Name="Gia" Type="Int32" />
+          <Property Name="ThanhTien" Type="Int32" />
+          <Property Name="GhiChu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="MuaHang">
+          <Key>
+            <PropertyRef Name="MaPhieuMuaHang" />
+          </Key>
+          <Property Name="MaPhieuMuaHang" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="MaNPP" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="NgayLap" Type="DateTime" Precision="3" />
+          <Property Name="MaLoaiTien" Type="Int32" />
+          <Property Name="DieuKhoanThanhToan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HanThanhToan" Type="DateTime" Precision="3" />
+          <Property Name="TongTien" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+          <Property Name="MaNV" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="DiaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SoDienThoai" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="SoHoaDonVAT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SoPhieuVietTay" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MaNhapKho" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="HinhThucThanhToan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="ChiTietMuaHangs" Relationship="QLBanHangModel.FK_ChiTietMuaHang_MuaHang" FromRole="MuaHang" ToRole="ChiTietMuaHang" />
+          <NavigationProperty Name="KhoHang" Relationship="QLBanHangModel.FK_MuaHang_KhoHang" FromRole="MuaHang" ToRole="KhoHang" />
+          <NavigationProperty Name="NhanVien" Relationship="QLBanHangModel.FK_MuaHang_NhanVien" FromRole="MuaHang" ToRole="NhanVien" />
+          <NavigationProperty Name="NhaPhanPhoi" Relationship="QLBanHangModel.FK_MuaHang_NhaPhanPhoi" FromRole="MuaHang" ToRole="NhaPhanPhoi" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_ChiTietMuaHang_MuaHang">
+          <End Type="QLBanHangModel.MuaHang" Role="MuaHang" Multiplicity="0..1" />
+          <End Type="QLBanHangModel.ChiTietMuaHang" Role="ChiTietMuaHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MuaHang">
+              <PropertyRef Name="MaPhieuMuaHang" />
+            </Principal>
+            <Dependent Role="ChiTietMuaHang">
+              <PropertyRef Name="MaMuaHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MuaHang_KhoHang">
+          <End Type="QLBanHangModel.KhoHang" Role="KhoHang" Multiplicity="0..1" />
+          <End Type="QLBanHangModel.MuaHang" Role="MuaHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KhoHang">
+              <PropertyRef Name="MaKho" />
+            </Principal>
+            <Dependent Role="MuaHang">
+              <PropertyRef Name="MaNhapKho" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MuaHang_NhanVien">
+          <End Type="QLBanHangModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
+          <End Type="QLBanHangModel.MuaHang" Role="MuaHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="MaNV" />
+            </Principal>
+            <Dependent Role="MuaHang">
+              <PropertyRef Name="MaNV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MuaHang_NhaPhanPhoi">
+          <End Type="QLBanHangModel.NhaPhanPhoi" Role="NhaPhanPhoi" Multiplicity="0..1" />
+          <End Type="QLBanHangModel.MuaHang" Role="MuaHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhaPhanPhoi">
+              <PropertyRef Name="MaNPP" />
+            </Principal>
+            <Dependent Role="MuaHang">
+              <PropertyRef Name="MaNPP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1472,21 +1598,6 @@ warning 6002: The table/view 'QLBanHang.dbo.V_ThongTinLogin' does not have a pri
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="MuaHangs">
-            <EntityTypeMapping TypeName="QLBanHangModel.MuaHang">
-              <MappingFragment StoreEntitySet="MuaHang">
-                <ScalarProperty Name="TongTien" ColumnName="TongTien" />
-                <ScalarProperty Name="HanThanhToan" ColumnName="HanThanhToan" />
-                <ScalarProperty Name="DieuKhoanThanhToan" ColumnName="DieuKhoanThanhToan" />
-                <ScalarProperty Name="MaLoaiTien" ColumnName="MaLoaiTien" />
-                <ScalarProperty Name="NoMoi" ColumnName="NoMoi" />
-                <ScalarProperty Name="NoCu" ColumnName="NoCu" />
-                <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
-                <ScalarProperty Name="MaNPP" ColumnName="MaNPP" />
-                <ScalarProperty Name="MaPhieuMuaHang" ColumnName="MaPhieuMuaHang" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="NhanViens">
             <EntityTypeMapping TypeName="QLBanHangModel.NhanVien">
               <MappingFragment StoreEntitySet="NhanVien">
@@ -1605,6 +1716,50 @@ warning 6002: The table/view 'QLBanHang.dbo.V_ThongTinLogin' does not have a pri
                 <ScalarProperty Name="TenNV" ColumnName="TenNV" />
                 <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
                 <ScalarProperty Name="TenTaiKhoan" ColumnName="TenTaiKhoan" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Mua_BanTam">
+            <EntityTypeMapping TypeName="QLBanHangModel.Mua_BanTam">
+              <MappingFragment StoreEntitySet="Mua_BanTam">
+                <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+                <ScalarProperty Name="ThanhTien" ColumnName="ThanhTien" />
+                <ScalarProperty Name="Gia" ColumnName="Gia" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+                <ScalarProperty Name="MaHang" ColumnName="MaHang" />
+                <ScalarProperty Name="MaBan_Mua" ColumnName="MaBan_Mua" />
+                <ScalarProperty Name="MaPhieuCT" ColumnName="MaPhieuCT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MuaHangs">
+            <EntityTypeMapping TypeName="QLBanHangModel.MuaHang">
+              <MappingFragment StoreEntitySet="MuaHang">
+                <ScalarProperty Name="HinhThucThanhToan" ColumnName="HinhThucThanhToan" />
+                <ScalarProperty Name="MaNhapKho" ColumnName="MaNhapKho" />
+                <ScalarProperty Name="SoPhieuVietTay" ColumnName="SoPhieuVietTay" />
+                <ScalarProperty Name="SoHoaDonVAT" ColumnName="SoHoaDonVAT" />
+                <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+                <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+                <ScalarProperty Name="HanThanhToan" ColumnName="HanThanhToan" />
+                <ScalarProperty Name="DieuKhoanThanhToan" ColumnName="DieuKhoanThanhToan" />
+                <ScalarProperty Name="MaLoaiTien" ColumnName="MaLoaiTien" />
+                <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
+                <ScalarProperty Name="MaNPP" ColumnName="MaNPP" />
+                <ScalarProperty Name="MaPhieuMuaHang" ColumnName="MaPhieuMuaHang" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="QLBanHangModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

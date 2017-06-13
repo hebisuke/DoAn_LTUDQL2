@@ -36,7 +36,6 @@ namespace DoAn_LTUDQL2.DTO
         public virtual DbSet<KhuVuc> KhuVucs { get; set; }
         public virtual DbSet<LoaiKH> LoaiKHs { get; set; }
         public virtual DbSet<LoaiTien> LoaiTiens { get; set; }
-        public virtual DbSet<MuaHang> MuaHangs { get; set; }
         public virtual DbSet<NhanVien> NhanViens { get; set; }
         public virtual DbSet<NhaPhanPhoi> NhaPhanPhois { get; set; }
         public virtual DbSet<NhatKiHeThong> NhatKiHeThongs { get; set; }
@@ -45,5 +44,8 @@ namespace DoAn_LTUDQL2.DTO
         public virtual DbSet<ThongTinToChucCaNhan> ThongTinToChucCaNhans { get; set; }
         public virtual DbSet<ThuTien> ThuTiens { get; set; }
         public virtual DbSet<V_ThongTinLogin> V_ThongTinLogin { get; set; }
+        public virtual DbSet<Mua_BanTam> Mua_BanTam { get; set; }
+        public virtual DbSet<MuaHang> MuaHangs { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
     }
 }

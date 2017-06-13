@@ -23,15 +23,22 @@ namespace DoAn_LTUDQL2.DTO
         public string MaPhieuMuaHang { get; set; }
         public string MaNPP { get; set; }
         public Nullable<System.DateTime> NgayLap { get; set; }
-        public string NoCu { get; set; }
-        public string NoMoi { get; set; }
         public Nullable<int> MaLoaiTien { get; set; }
         public string DieuKhoanThanhToan { get; set; }
         public Nullable<System.DateTime> HanThanhToan { get; set; }
         public string TongTien { get; set; }
+        public string MaNV { get; set; }
+        public string DiaChi { get; set; }
+        public string SoDienThoai { get; set; }
+        public string SoHoaDonVAT { get; set; }
+        public string SoPhieuVietTay { get; set; }
+        public string MaNhapKho { get; set; }
+        public string HinhThucThanhToan { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietMuaHang> ChiTietMuaHangs { get; set; }
+        public virtual KhoHang KhoHang { get; set; }
+        public virtual NhanVien NhanVien { get; set; }
         public virtual NhaPhanPhoi NhaPhanPhoi { get; set; }
     }
 }
