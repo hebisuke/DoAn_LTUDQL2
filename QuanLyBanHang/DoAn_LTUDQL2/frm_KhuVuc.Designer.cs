@@ -211,7 +211,7 @@
             // 
             // khuVucsBindingSource
             // 
-            this.khuVucsBindingSource.DataSource = typeof(DoAn_LTUDQL2.DTO.KhuVuc);
+            this.khuVucsBindingSource.DataSource = typeof(BUS.DTO.KhuVuc);
             // 
             // gridView1
             // 

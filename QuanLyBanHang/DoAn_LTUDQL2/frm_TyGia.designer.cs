@@ -84,11 +84,11 @@
             // 
             // loaiTienBindingSource
             // 
-            this.loaiTienBindingSource.DataSource = typeof(DoAn_LTUDQL2.DTO.LoaiTien);
+            this.loaiTienBindingSource.DataSource = typeof(BUS.DTO.LoaiTien);
             // 
             // loaiTienBindingSource1
             // 
-            this.loaiTienBindingSource1.DataSource = typeof(DoAn_LTUDQL2.DTO.LoaiTien);
+            this.loaiTienBindingSource1.DataSource = typeof(BUS.DTO.LoaiTien);
             // 
             // colid
             // 

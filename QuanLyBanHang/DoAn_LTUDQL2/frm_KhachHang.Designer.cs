@@ -193,7 +193,7 @@
             // 
             // khachHangsBindingSource
             // 
-            this.khachHangsBindingSource.DataSource = typeof(DoAn_LTUDQL2.DTO.KhachHang);
+            this.khachHangsBindingSource.DataSource = typeof(BUS.DTO.KhachHang);
             // 
             // gridControl1
             // 

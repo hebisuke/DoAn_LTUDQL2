@@ -17,5 +17,10 @@ namespace DoAn_LTUDQL2
         {
             InitializeComponent();
         }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

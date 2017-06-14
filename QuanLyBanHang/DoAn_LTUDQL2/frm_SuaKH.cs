@@ -1,4 +1,4 @@
-﻿using DoAn_LTUDQL2.DTO;
+﻿using BUS.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,7 +29,7 @@ namespace DoAn_LTUDQL2
         }
         void load()
         {
-            List<KhachHang> kh = new List<KhachHang>(); kh = en.KhachHangs.ToList();
+            List<KhachHang> kh = new List<KhachHang>(); kh = en.KhachHang.ToList();
             comboBox1.DataSource = kh;
             comboBox1.ValueMember = "MaKH";
             comboBox1.DisplayMember = "MaKH";
@@ -39,7 +39,7 @@ namespace DoAn_LTUDQL2
             if (comboBox1.SelectedItem == null) return;
             string ma = comboBox1.SelectedValue.ToString();
            
-            KhachHang kh = en.KhachHangs.FirstOrDefault(x => x.MaKH == ma.ToString());
+            KhachHang kh = en.KhachHang.FirstOrDefault(x => x.MaKH == ma.ToString());
             if (kh != null)
             {
                 txtMa.Text = kh.MaKH;
@@ -86,7 +86,7 @@ namespace DoAn_LTUDQL2
         private void button1_Click(object sender, EventArgs e)
         {
             int ma = int.Parse(comboBox1.Text);
-            KhachHang kh = en.KhachHangs.FirstOrDefault(x => x.MaKH == ma.ToString());
+            KhachHang kh = en.KhachHang.FirstOrDefault(x => x.MaKH == ma.ToString());
             if (kh != null)
             {
                

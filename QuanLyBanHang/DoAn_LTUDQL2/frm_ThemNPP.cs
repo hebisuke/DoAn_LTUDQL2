@@ -1,4 +1,4 @@
-﻿using DoAn_LTUDQL2.DTO;
+﻿using BUS.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -48,7 +48,7 @@ namespace DoAn_LTUDQL2
                 npp.ChucVu = textBox17.Text;
                 npp.TinhTrangQuanLy = int.Parse(textBox18.Text);
                 npp.GhiChu = textBox19.Text;
-                en.NhaPhanPhois.Add(npp);
+                en.NhaPhanPhoi.Add(npp);
                 en.SaveChanges();
                 MessageBox.Show("save Thanh cong");
                 this.Close();

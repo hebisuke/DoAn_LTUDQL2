@@ -1,4 +1,4 @@
-﻿using DoAn_LTUDQL2.DTO;
+﻿using BUS.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,7 +28,7 @@ namespace DoAn_LTUDQL2
         {
 
             string ma = comboBox1.Text;
-            NhaPhanPhoi npp = en.NhaPhanPhois.FirstOrDefault(x => x.MaNPP == ma);
+            NhaPhanPhoi npp = en.NhaPhanPhoi.FirstOrDefault(x => x.MaNPP == ma);
 
             if (npp != null)
             {
@@ -59,7 +59,7 @@ namespace DoAn_LTUDQL2
         }
         void load()
         {
-            List<NhaPhanPhoi> npp = new List<NhaPhanPhoi>(); npp = en.NhaPhanPhois.ToList();
+            List<NhaPhanPhoi> npp = new List<NhaPhanPhoi>(); npp = en.NhaPhanPhoi.ToList();
             comboBox1.DataSource = npp;
             comboBox1.ValueMember = "MaNPP";
             comboBox1.DisplayMember = "MaNPP";
@@ -69,7 +69,7 @@ namespace DoAn_LTUDQL2
             if (comboBox1.SelectedItem == null) return;
             string ma = comboBox1.SelectedValue.ToString();
 
-            NhaPhanPhoi npp = en.NhaPhanPhois.FirstOrDefault(x => x.MaNPP == ma.ToString());
+            NhaPhanPhoi npp = en.NhaPhanPhoi.FirstOrDefault(x => x.MaNPP == ma.ToString());
             if (npp != null)
             {
                 textBox1.Text = npp.MaNPP;

@@ -1,5 +1,5 @@
-﻿using DoAn_LTUDQL2.BUS;
-using DoAn_LTUDQL2.DTO;
+﻿using BUS;
+using BUS.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -98,7 +98,7 @@ namespace DoAn_LTUDQL2
                 LoginBUS.Working = TK;
                 this.Hide();
 
-                var myQuery = from Q in ql.ThongTinToChucCaNhans select Q.Ma;
+                var myQuery = from Q in ql.ThongTinToChucCaNhan select Q.Ma;
                 if (myQuery != null && myQuery.Count() > 0)
                 {
                     MainView mn = new MainView();

@@ -104,15 +104,15 @@
             // 
             // donViTinhBindingSource
             // 
-            this.donViTinhBindingSource.DataSource = typeof(DoAn_LTUDQL2.DTO.DonViTinh);
+            this.donViTinhBindingSource.DataSource = typeof(BUS.DTO.DonViTinh);
             // 
             // donViTinhBindingSource1
             // 
-            this.donViTinhBindingSource1.DataSource = typeof(DoAn_LTUDQL2.DTO.DonViTinh);
+            this.donViTinhBindingSource1.DataSource = typeof(BUS.DTO.DonViTinh);
             // 
             // donViTinhBindingSource2
             // 
-            this.donViTinhBindingSource2.DataSource = typeof(DoAn_LTUDQL2.DTO.DonViTinh);
+            this.donViTinhBindingSource2.DataSource = typeof(BUS.DTO.DonViTinh);
             // 
             // clGhiChu
             // 

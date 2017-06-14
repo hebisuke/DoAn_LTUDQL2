@@ -1,4 +1,4 @@
-﻿using DoAn_LTUDQL2.DTO;
+﻿using BUS.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,7 +21,7 @@ namespace DoAn_LTUDQL2
         }
         void HienThi()
         {
-            List<KhachHang> kh = en.KhachHangs.ToList();
+            List<KhachHang> kh = en.KhachHang.ToList();
 
             listBox1.DataSource = kh;
             listBox1.ValueMember = "MaKH";
@@ -31,12 +31,12 @@ namespace DoAn_LTUDQL2
         {
             if ((listBox1.SelectedItem == null)) return;
             string ma = listBox1.SelectedValue.ToString();
-            KhachHang kh = en.KhachHangs.FirstOrDefault(x => x.MaKH == ma);
+            KhachHang kh = en.KhachHang.FirstOrDefault(x => x.MaKH == ma);
             if (kh != null)
             {
                
                 
-                en.KhachHangs.Remove(kh);
+                en.KhachHang.Remove(kh);
                 en.SaveChanges();
             }
             HienThi();

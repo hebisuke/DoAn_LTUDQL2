@@ -1,4 +1,4 @@
-﻿using DoAn_LTUDQL2.DTO;
+﻿using BUS.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,7 +22,7 @@ namespace DoAn_LTUDQL2
 
         private void label13_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void textBox13_TextChanged(object sender, EventArgs e)
@@ -46,7 +46,7 @@ namespace DoAn_LTUDQL2
         void KhuVucCB()
         {
 
-            List<KhuVuc> kv = en.KhuVucs.ToList();
+            List<KhuVuc> kv = en.KhuVuc.ToList();
             cbKV.Items.Clear();
             foreach (KhuVuc a in kv)
             {
@@ -99,7 +99,7 @@ namespace DoAn_LTUDQL2
                     kh.LoaiKH = 1;
                 }
                 if (rdKL.Checked) { kh.LoaiKH = 2; }
-                en.KhachHangs.Add(kh);
+                en.KhachHang.Add(kh);
                 en.SaveChanges();
                 MessageBox.Show("Lưu Thành Công ^^ ");               
                 this.Close();

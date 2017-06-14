@@ -1,4 +1,4 @@
-﻿using DoAn_LTUDQL2.DTO;
+﻿using BUS.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,7 +25,7 @@ namespace DoAn_LTUDQL2
         }
         void HienThi()
         {
-            List<NhaPhanPhoi> npp = en.NhaPhanPhois.ToList();
+            List<NhaPhanPhoi> npp = en.NhaPhanPhoi.ToList();
             listBox1.DataSource = npp;
             listBox1.ValueMember = "MaNPP";
             listBox1.DisplayMember = "MaNPP";
@@ -40,15 +40,15 @@ namespace DoAn_LTUDQL2
         {
             if ((listBox1.SelectedItem == null)) return;
             string ma = listBox1.SelectedValue.ToString();
-            NhaPhanPhoi npp = en.NhaPhanPhois.FirstOrDefault(x => x.MaNPP == ma);
+            NhaPhanPhoi npp = en.NhaPhanPhoi.FirstOrDefault(x => x.MaNPP == ma);
             if (npp != null)
             {
-                if (npp.HangHoas.Count>0 || npp.MuaHangs.Count>0)
+                if (npp.HangHoa.Count>0 || npp.MuaHang.Count>0)
                 {
                     MessageBox.Show("Không thể xóa vì nó có dữ liệu con");
                     return;
                 }
-                en.NhaPhanPhois.Remove(npp);
+                en.NhaPhanPhoi.Remove(npp);
                 en.SaveChanges();
             }
             HienThi();

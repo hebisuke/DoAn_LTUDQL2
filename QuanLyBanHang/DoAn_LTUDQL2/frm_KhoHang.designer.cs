@@ -277,11 +277,11 @@
             // 
             // khoHangBindingSource
             // 
-            this.khoHangBindingSource.DataSource = typeof(DoAn_LTUDQL2.DTO.KhoHang);
+            this.khoHangBindingSource.DataSource = typeof(BUS.DTO.KhoHang);
             // 
             // khoHangBindingSource1
             // 
-            this.khoHangBindingSource1.DataSource = typeof(DoAn_LTUDQL2.DTO.KhoHang);
+            this.khoHangBindingSource1.DataSource = typeof(BUS.DTO.KhoHang);
             // 
             // clNguoiQuanLy
             // 

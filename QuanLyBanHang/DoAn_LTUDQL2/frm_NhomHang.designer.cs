@@ -78,7 +78,7 @@
             // 
             // nhomHangHoaBindingSource1
             // 
-            this.nhomHangHoaBindingSource1.DataSource = typeof(DoAn_LTUDQL2.DTO.NhomHangHoa);
+            this.nhomHangHoaBindingSource1.DataSource = typeof(BUS.DTO.NhomHangHoa);
             // 
             // gridView1
             // 
@@ -133,7 +133,7 @@
             // 
             // nhomHangHoaBindingSource
             // 
-            this.nhomHangHoaBindingSource.DataSource = typeof(DoAn_LTUDQL2.DTO.NhomHangHoa);
+            this.nhomHangHoaBindingSource.DataSource = typeof(BUS.DTO.NhomHangHoa);
             // 
             // frm_NhomHang
             // 

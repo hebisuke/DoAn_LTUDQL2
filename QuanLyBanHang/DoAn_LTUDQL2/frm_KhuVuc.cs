@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Data.Entity;
-using DoAn_LTUDQL2.DTO;
+using BUS.DTO;
 
 namespace DoAn_LTUDQL2
 {
     public partial class frm_KhuVuc : DevExpress.XtraEditors.XtraForm
     {
-        DoAn_LTUDQL2.DTO.QLBanHangEntities dbContext = new DoAn_LTUDQL2.DTO.QLBanHangEntities();
+        QLBanHangEntities dbContext = new QLBanHangEntities();
         public frm_KhuVuc()
         {
             InitializeComponent();
@@ -24,10 +24,10 @@ namespace DoAn_LTUDQL2
             // Instantiate a new DBContext
             
             // Call the LoadAsync method to asynchronously get the data for the given DbSet from the database.
-            dbContext.KhuVucs.LoadAsync().ContinueWith(loadTask =>
+            dbContext.KhuVuc.LoadAsync().ContinueWith(loadTask =>
             {
     // Bind data to control when loading complete
-    khuVucsBindingSource.DataSource = dbContext.KhuVucs.Local.ToBindingList();
+    khuVucsBindingSource.DataSource = dbContext.KhuVuc.Local.ToBindingList();
             }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
         }
 
@@ -54,7 +54,7 @@ namespace DoAn_LTUDQL2
         {
             gridControl1.RefreshDataSource();
             List<KhuVuc> kv = new List<KhuVuc>();
-            kv = dbContext.KhuVucs.ToList();
+            kv = dbContext.KhuVuc.ToList();
 
             gridControl1.DataSource = kv;
         }

@@ -1,4 +1,4 @@
-﻿using DoAn_LTUDQL2.DTO;
+﻿using BUS.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,7 +30,7 @@ namespace DoAn_LTUDQL2
             {
                 if (txt_MKMoi.Text == txt_ReMKMoi.Text)
                 {
-                    TaiKhoanNguoiDung TK = (from x in db.TaiKhoanNguoiDungs
+                    TaiKhoanNguoiDung TK = (from x in db.TaiKhoanNguoiDung
                                             where x.MatKhau == txt_MKCu.Text
                                             select x).First();
                     if (TK.MatKhau == null)

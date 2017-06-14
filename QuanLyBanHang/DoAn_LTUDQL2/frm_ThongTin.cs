@@ -1,6 +1,6 @@
 ﻿using DevExpress.SpreadsheetSource.Implementation;
-using DoAn_LTUDQL2.BUS;
-using DoAn_LTUDQL2.DTO;
+using BUS;
+using BUS.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -74,13 +74,13 @@ namespace DoAn_LTUDQL2
                 thongtintochuc.LinhVuc = cbLinhVuc.Text;
                 thongtintochuc.MST = txtMaSoThue.Text;
                 thongtintochuc.GPKD = txtGPKD.Text;
-                ql.ThongTinToChucCaNhans.Add(thongtintochuc);
+                ql.ThongTinToChucCaNhan.Add(thongtintochuc);
                 ql.SaveChanges();
             }
         }
         public void Sua()
         {
-            var thongtintochuc = ql.ThongTinToChucCaNhans.FirstOrDefault();
+            var thongtintochuc = ql.ThongTinToChucCaNhan.FirstOrDefault();
             thongtintochuc.TenDonVi = txt_Tendonvi.Text;
             thongtintochuc.DiaCHi = txt_DiaChi.Text;
             thongtintochuc.DTBan = txtDienThoai.Text;
@@ -96,7 +96,7 @@ namespace DoAn_LTUDQL2
 
         private void frm_ThongTin_Load(object sender, EventArgs e)
         {
-            var myQuery = from Q in ql.ThongTinToChucCaNhans select Q.Ma;
+            var myQuery = from Q in ql.ThongTinToChucCaNhan select Q.Ma;
             if (myQuery != null && myQuery.Count() > 0)
             {
                 LoadThongTin();
@@ -105,7 +105,7 @@ namespace DoAn_LTUDQL2
 
         private void btnDangKy_Click(object sender, EventArgs e)
         {
-            var myQuery = from Q in ql.ThongTinToChucCaNhans select Q.Ma;
+            var myQuery = from Q in ql.ThongTinToChucCaNhan select Q.Ma;
             if (myQuery != null && myQuery.Count() > 0)
             {
                 if (string.IsNullOrEmpty(txt_Tendonvi.Text) || string.IsNullOrEmpty(txt_DiaChi.Text) || string.IsNullOrEmpty(txtDienThoai.Text) || string.IsNullOrEmpty(txtdtdd.Text) || string.IsNullOrEmpty(txtEmail.Text) || string.IsNullOrEmpty(txtFax.Text) || string.IsNullOrEmpty(txtweb.Text) || string.IsNullOrEmpty(txtMaSoThue.Text) || string.IsNullOrEmpty(txtGPKD.Text))

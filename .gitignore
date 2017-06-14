@@ -2,3 +2,4 @@ packages
 .vs
 bin
 obj
+DoAn_LTUDQL2/myConnectionString.config

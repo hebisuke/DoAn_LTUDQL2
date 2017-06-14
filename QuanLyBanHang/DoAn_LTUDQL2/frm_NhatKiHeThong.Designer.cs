@@ -264,7 +264,7 @@
             // 
             // nhatKiHeThongsBindingSource
             // 
-            this.nhatKiHeThongsBindingSource.DataSource = typeof(DoAn_LTUDQL2.DTO.NhatKiHeThong);
+            this.nhatKiHeThongsBindingSource.DataSource = typeof(BUS.DTO.NhatKiHeThong);
             // 
             // frm_NhatKiHeThong
             // 
