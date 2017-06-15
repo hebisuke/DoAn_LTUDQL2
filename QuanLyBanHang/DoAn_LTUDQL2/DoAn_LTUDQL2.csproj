@@ -224,10 +224,8 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_SuaKH.Designer.cs" />
-    <Compile Include="frm_SuaKV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_SuaKV.Designer.cs">
+    <Compile Include="frm_SuaKV.cs" />
+    <Compile Include="frm_SuaKV.designer.cs">
       <DependentUpon>frm_SuaKV.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_SuaNPP.cs">
@@ -236,10 +234,8 @@
     <Compile Include="frm_SuaNPP.Designer.cs">
       <DependentUpon>frm_SuaNPP.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_ThemKV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_ThemKV.Designer.cs">
+    <Compile Include="frm_ThemKV.cs" />
+    <Compile Include="frm_ThemKV.designer.cs">
       <DependentUpon>frm_ThemKV.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_ThemNPP.cs">
@@ -281,11 +277,13 @@
     <Compile Include="frm_XoaKH.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_XoaKH.Designer.cs" />
+    <Compile Include="frm_XoaKH.Designer.cs">
+      <DependentUpon>frm_XoaKH.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_XoaKV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_XoaKV.Designer.cs">
+    <Compile Include="frm_XoaKV.designer.cs">
       <DependentUpon>frm_XoaKV.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_XoaNPP.cs">
@@ -392,7 +390,9 @@
     <EmbeddedResource Include="frm_VaiTro.resx">
       <DependentUpon>frm_VaiTro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_XoaKH.resx" />
+    <EmbeddedResource Include="frm_XoaKH.resx">
+      <DependentUpon>frm_XoaKH.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_XoaKV.resx">
       <DependentUpon>frm_XoaKV.cs</DependentUpon>
     </EmbeddedResource>

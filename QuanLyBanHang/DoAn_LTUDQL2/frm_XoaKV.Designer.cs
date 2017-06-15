@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBoxControl1 = new DevExpress.XtraEditors.ListBoxControl();
+            this.listBox1 = new DevExpress.XtraEditors.ListBoxControl();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            ((System.ComponentModel.ISupportInitialize)(this.listBoxControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // listBoxControl1
+            // listBox1
             // 
-            this.listBoxControl1.Location = new System.Drawing.Point(12, 12);
-            this.listBoxControl1.Name = "listBoxControl1";
-            this.listBoxControl1.Size = new System.Drawing.Size(599, 175);
-            this.listBoxControl1.TabIndex = 0;
+            this.listBox1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.listBox1.Location = new System.Drawing.Point(12, 12);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(599, 175);
+            this.listBox1.TabIndex = 0;
             // 
             // simpleButton1
             // 
@@ -48,6 +49,7 @@
             this.simpleButton1.Size = new System.Drawing.Size(149, 23);
             this.simpleButton1.TabIndex = 1;
             this.simpleButton1.Text = "Xác Nhận";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // simpleButton2
             // 
@@ -56,6 +58,7 @@
             this.simpleButton2.Size = new System.Drawing.Size(158, 23);
             this.simpleButton2.TabIndex = 2;
             this.simpleButton2.Text = "Thoát";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // frm_XoaKV
             // 
@@ -64,17 +67,18 @@
             this.ClientSize = new System.Drawing.Size(633, 254);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.simpleButton1);
-            this.Controls.Add(this.listBoxControl1);
+            this.Controls.Add(this.listBox1);
             this.Name = "frm_XoaKV";
             this.Text = "frm_XoaKV";
-            ((System.ComponentModel.ISupportInitialize)(this.listBoxControl1)).EndInit();
+            this.Load += new System.EventHandler(this.frm_XoaKV_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.listBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private DevExpress.XtraEditors.ListBoxControl listBoxControl1;
+        private DevExpress.XtraEditors.ListBoxControl listBox1;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
     }
