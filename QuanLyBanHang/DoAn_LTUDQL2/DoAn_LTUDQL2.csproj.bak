@@ -54,26 +54,26 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Accessibility" />
-    <Reference Include="DevExpress.BonusSkins.v17.1" />
-    <Reference Include="DevExpress.Data.v17.1" />
-    <Reference Include="DevExpress.Images.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+    <Reference Include="DevExpress.BonusSkins.v16.2" />
+    <Reference Include="DevExpress.Data.v16.2" />
+    <Reference Include="DevExpress.Images.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
       <Private>False</Private>
     </Reference>
-    <Reference Include="DevExpress.Mvvm.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.RichEdit.v17.1.Export" />
-    <Reference Include="DevExpress.Printing.v17.1.Core" />
-    <Reference Include="DevExpress.Utils.v17.1" />
-    <Reference Include="DevExpress.XtraBars.v17.1" />
-    <Reference Include="DevExpress.Sparkline.v17.1.Core" />
-    <Reference Include="DevExpress.XtraEditors.v17.1" />
-    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraNavBar.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraScheduler.v17.1.Reporting.Extensions, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraScheduler.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraScheduler.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraTreeList.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Mvvm.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v16.2.Export" />
+    <Reference Include="DevExpress.Printing.v16.2.Core" />
+    <Reference Include="DevExpress.Utils.v16.2" />
+    <Reference Include="DevExpress.XtraBars.v16.2" />
+    <Reference Include="DevExpress.Sparkline.v16.2.Core" />
+    <Reference Include="DevExpress.XtraEditors.v16.2" />
+    <Reference Include="DevExpress.XtraGrid.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v16.2.Reporting.Extensions, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v16.2.Core, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -220,13 +220,39 @@
     <Compile Include="frm_SaoLuu.designer.cs">
       <DependentUpon>frm_SaoLuu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_SuaDVT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SuaDVT.designer.cs">
+      <DependentUpon>frm_SuaDVT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SuaHangHoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SuaHangHoa.designer.cs">
+      <DependentUpon>frm_SuaHangHoa.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_SuaKH.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_SuaKH.Designer.cs" />
-    <Compile Include="frm_SuaKV.cs" />
+    <Compile Include="frm_SuaKhoHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SuaKhoHang.designer.cs">
+      <DependentUpon>frm_SuaKhoHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SuaKV.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frm_SuaKV.designer.cs">
       <DependentUpon>frm_SuaKV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SuaNhomHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SuaNhomHang.designer.cs">
+      <DependentUpon>frm_SuaNhomHang.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_SuaNPP.cs">
       <SubType>Form</SubType>
@@ -234,9 +260,41 @@
     <Compile Include="frm_SuaNPP.Designer.cs">
       <DependentUpon>frm_SuaNPP.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_ThemKV.cs" />
+    <Compile Include="frm_SuaTyGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SuaTyGia.designer.cs">
+      <DependentUpon>frm_SuaTyGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ThemDVT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ThemDVT.designer.cs">
+      <DependentUpon>frm_ThemDVT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ThemHangHoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ThemHangHoa.designer.cs">
+      <DependentUpon>frm_ThemHangHoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ThemKhoHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ThemKhoHang.designer.cs">
+      <DependentUpon>frm_ThemKhoHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ThemKV.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frm_ThemKV.designer.cs">
       <DependentUpon>frm_ThemKV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ThemNhomHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ThemNhomHang.designer.cs">
+      <DependentUpon>frm_ThemNhomHang.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_ThemNPP.cs">
       <SubType>Form</SubType>
@@ -249,6 +307,12 @@
     </Compile>
     <Compile Include="frm_ThemTKND.Designer.cs">
       <DependentUpon>frm_ThemTKND.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ThemTyGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ThemTyGia.designer.cs">
+      <DependentUpon>frm_ThemTyGia.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_ThongTin.cs">
       <SubType>Form</SubType>
@@ -280,11 +344,29 @@
     <Compile Include="frm_VaiTro.Designer.cs">
       <DependentUpon>frm_VaiTro.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_XoaDonViTinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_XoaDonViTinh.designer.cs">
+      <DependentUpon>frm_XoaDonViTinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_XoaHangHoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_XoaHangHoa.designer.cs">
+      <DependentUpon>frm_XoaHangHoa.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_XoaKH.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_XoaKH.Designer.cs">
       <DependentUpon>frm_XoaKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_XoaKhoHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_XoaKhoHang.designer.cs">
+      <DependentUpon>frm_XoaKhoHang.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_XoaKV.cs">
       <SubType>Form</SubType>
@@ -292,11 +374,23 @@
     <Compile Include="frm_XoaKV.designer.cs">
       <DependentUpon>frm_XoaKV.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_XoaNhomHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_XoaNhomHang.designer.cs">
+      <DependentUpon>frm_XoaNhomHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_XoaNPP.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_XoaNPP.Designer.cs">
       <DependentUpon>frm_XoaNPP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_XoaTyGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_XoaTyGia.designer.cs">
+      <DependentUpon>frm_XoaTyGia.cs</DependentUpon>
     </Compile>
     <Compile Include="MainView.cs">
       <SubType>Form</SubType>
@@ -368,21 +462,51 @@
     <EmbeddedResource Include="frm_SaoLuu.resx">
       <DependentUpon>frm_SaoLuu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_SuaDVT.resx">
+      <DependentUpon>frm_SuaDVT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SuaHangHoa.resx">
+      <DependentUpon>frm_SuaHangHoa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_SuaKH.resx" />
+    <EmbeddedResource Include="frm_SuaKhoHang.resx">
+      <DependentUpon>frm_SuaKhoHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_SuaKV.resx">
       <DependentUpon>frm_SuaKV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SuaNhomHang.resx">
+      <DependentUpon>frm_SuaNhomHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_SuaNPP.resx">
       <DependentUpon>frm_SuaNPP.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_SuaTyGia.resx">
+      <DependentUpon>frm_SuaTyGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ThemDVT.resx">
+      <DependentUpon>frm_ThemDVT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ThemHangHoa.resx">
+      <DependentUpon>frm_ThemHangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ThemKhoHang.resx">
+      <DependentUpon>frm_ThemKhoHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_ThemKV.resx">
       <DependentUpon>frm_ThemKV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ThemNhomHang.resx">
+      <DependentUpon>frm_ThemNhomHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_ThemNPP.resx">
       <DependentUpon>frm_ThemNPP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_ThemTKND.resx">
       <DependentUpon>frm_ThemTKND.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ThemTyGia.resx">
+      <DependentUpon>frm_ThemTyGia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_ThongTin.resx">
       <DependentUpon>frm_ThongTin.cs</DependentUpon>
@@ -399,14 +523,29 @@
     <EmbeddedResource Include="frm_VaiTro.resx">
       <DependentUpon>frm_VaiTro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_XoaDonViTinh.resx">
+      <DependentUpon>frm_XoaDonViTinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_XoaHangHoa.resx">
+      <DependentUpon>frm_XoaHangHoa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_XoaKH.resx">
       <DependentUpon>frm_XoaKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_XoaKhoHang.resx">
+      <DependentUpon>frm_XoaKhoHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_XoaKV.resx">
       <DependentUpon>frm_XoaKV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_XoaNhomHang.resx">
+      <DependentUpon>frm_XoaNhomHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_XoaNPP.resx">
       <DependentUpon>frm_XoaNPP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_XoaTyGia.resx">
+      <DependentUpon>frm_XoaTyGia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>

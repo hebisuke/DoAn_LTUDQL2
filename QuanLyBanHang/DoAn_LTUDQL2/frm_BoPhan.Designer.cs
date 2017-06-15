@@ -58,11 +58,10 @@
             this.khuVucsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colMaBo = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTenBo = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colGhiChu = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colNhanViens = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colQuanLys = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.MaBo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TenBo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.GhiChu = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TinhTrangQL = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.gridSplitContainer1 = new DevExpress.XtraGrid.GridSplitContainer();
             ((System.ComponentModel.ISupportInitialize)(this.khachHangsBindingSource)).BeginInit();
@@ -179,6 +178,7 @@
             this.barButtonItem1.Id = 0;
             this.barButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
             this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
             // barButtonItem2
             // 
@@ -186,6 +186,7 @@
             this.barButtonItem2.Id = 1;
             this.barButtonItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
             this.barButtonItem2.Name = "barButtonItem2";
+            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
             // 
             // barButtonItem3
             // 
@@ -193,6 +194,7 @@
             this.barButtonItem3.Id = 2;
             this.barButtonItem3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
             this.barButtonItem3.Name = "barButtonItem3";
+            this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
             // 
             // barButtonItem4
             // 
@@ -200,6 +202,7 @@
             this.barButtonItem4.Id = 4;
             this.barButtonItem4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.Image")));
             this.barButtonItem4.Name = "barButtonItem4";
+            this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
             // 
             // barButtonItem5
             // 
@@ -214,6 +217,7 @@
             this.barButtonItem6.Id = 6;
             this.barButtonItem6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.ImageOptions.Image")));
             this.barButtonItem6.Name = "barButtonItem6";
+            this.barButtonItem6.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem6_ItemClick);
             // 
             // bar3
             // 
@@ -286,54 +290,49 @@
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colMaBo,
-            this.colTenBo,
-            this.colGhiChu,
-            this.colNhanViens,
-            this.colQuanLys});
+            this.MaBo,
+            this.TenBo,
+            this.GhiChu,
+            this.TinhTrangQL});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView1_RowClick);
             // 
-            // colMaBo
+            // MaBo
             // 
-            this.colMaBo.FieldName = "Mã Bộ";
-            this.colMaBo.Name = "colMaBo";
-            this.colMaBo.Visible = true;
-            this.colMaBo.VisibleIndex = 0;
-            this.colMaBo.Width = 91;
+            this.MaBo.Caption = "Mã Bộ";
+            this.MaBo.FieldName = "MaBo";
+            this.MaBo.Name = "MaBo";
+            this.MaBo.Visible = true;
+            this.MaBo.VisibleIndex = 0;
+            this.MaBo.Width = 91;
             // 
-            // colTenBo
+            // TenBo
             // 
-            this.colTenBo.FieldName = "Tên Bộ";
-            this.colTenBo.Name = "colTenBo";
-            this.colTenBo.Visible = true;
-            this.colTenBo.VisibleIndex = 1;
-            this.colTenBo.Width = 240;
+            this.TenBo.Caption = "Tên Bộ";
+            this.TenBo.FieldName = "TenBo";
+            this.TenBo.Name = "TenBo";
+            this.TenBo.Visible = true;
+            this.TenBo.VisibleIndex = 1;
+            this.TenBo.Width = 240;
             // 
-            // colGhiChu
+            // GhiChu
             // 
-            this.colGhiChu.FieldName = "Ghi Chú ";
-            this.colGhiChu.Name = "colGhiChu";
-            this.colGhiChu.Visible = true;
-            this.colGhiChu.VisibleIndex = 2;
-            this.colGhiChu.Width = 139;
+            this.GhiChu.Caption = "Ghi Chú";
+            this.GhiChu.FieldName = "GhiChu";
+            this.GhiChu.Name = "GhiChu";
+            this.GhiChu.Visible = true;
+            this.GhiChu.VisibleIndex = 2;
+            this.GhiChu.Width = 139;
             // 
-            // colNhanViens
+            // TinhTrangQL
             // 
-            this.colNhanViens.FieldName = "Nhân Viên ";
-            this.colNhanViens.Name = "colNhanViens";
-            this.colNhanViens.Visible = true;
-            this.colNhanViens.VisibleIndex = 3;
-            this.colNhanViens.Width = 439;
-            // 
-            // colQuanLys
-            // 
-            this.colQuanLys.Caption = "Còn Quản Lý";
-            this.colQuanLys.ColumnEdit = this.repositoryItemCheckEdit1;
-            this.colQuanLys.Name = "colQuanLys";
-            this.colQuanLys.Visible = true;
-            this.colQuanLys.VisibleIndex = 4;
-            this.colQuanLys.Width = 337;
+            this.TinhTrangQL.Caption = "Còn Quản Lý";
+            this.TinhTrangQL.FieldName = "TinhTrangQL";
+            this.TinhTrangQL.Name = "TinhTrangQL";
+            this.TinhTrangQL.Visible = true;
+            this.TinhTrangQL.VisibleIndex = 3;
+            this.TinhTrangQL.Width = 337;
             // 
             // repositoryItemCheckEdit1
             // 
@@ -362,7 +361,9 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Name = "frm_BoPhan";
-            this.Text = "frm_BoPhan";
+            this.ShowIcon = false;
+            this.Text = "Bộ Phận";
+            this.Load += new System.EventHandler(this.frm_BoPhan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.khachHangsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.boPhanBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
@@ -407,11 +408,10 @@
         private DevExpress.XtraGrid.GridSplitContainer gridSplitContainer1;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn colMaBo;
-        private DevExpress.XtraGrid.Columns.GridColumn colTenBo;
-        private DevExpress.XtraGrid.Columns.GridColumn colGhiChu;
-        private DevExpress.XtraGrid.Columns.GridColumn colNhanViens;
+        private DevExpress.XtraGrid.Columns.GridColumn MaBo;
+        private DevExpress.XtraGrid.Columns.GridColumn TenBo;
+        private DevExpress.XtraGrid.Columns.GridColumn GhiChu;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
-        private DevExpress.XtraGrid.Columns.GridColumn colQuanLys;
+        private DevExpress.XtraGrid.Columns.GridColumn TinhTrangQL;
     }
 }
