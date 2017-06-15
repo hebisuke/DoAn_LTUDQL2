@@ -1,4 +1,5 @@
-﻿using BUS.DTO;
+﻿using BUS.BUS;
+using BUS.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,20 +22,21 @@ namespace DoAn_LTUDQL2
 
         private void btn_DongY_Click(object sender, EventArgs e)
         {
-            if(txt_MKCu.Text.Trim() != "" && txt_MKMoi.Text.Trim() != "" && txt_ReMKMoi.Text.Trim() != "")
+            if (txt_MKCu.Text.Trim() != "" && txt_MKMoi.Text.Trim() != "" && txt_ReMKMoi.Text.Trim() != "")
             {
                 if (txt_MKMoi.Text == txt_ReMKMoi.Text)
                 {
+
                     TaiKhoanNguoiDung TK = (from x in db.TaiKhoanNguoiDung
-                                            where x.MatKhau == txt_MKCu.Text
+                                            where x.MaNV == LoginBUS.Working.MaNV
                                             select x).First();
-                    if (TK.MatKhau == null)
+                    if (TK.MatKhau == LoginBUS.MD5Hash(txt_MKCu.Text))
                     {
-                        TK.MatKhau = txt_MKMoi.Text;
+                        TK.MatKhau = LoginBUS.MD5Hash(txt_MKMoi.Text);
                         db.SaveChanges();
                         MessageBox.Show("Đổi Mật Khẩu Thành Công", "Thành Công!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
-                    else 
+                    else
                         MessageBox.Show("Mật khẩu cũ chưa chính xác", "Báo lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     //update;
                 }

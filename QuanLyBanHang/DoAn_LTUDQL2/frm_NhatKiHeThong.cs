@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Data.Entity;
-using BUS;
+using BUS.BUS;
 
 namespace DoAn_LTUDQL2
 {

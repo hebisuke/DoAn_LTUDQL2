@@ -52,9 +52,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\DoiMKBUS.cs" />
     <Compile Include="BUS\LoginBUS.cs" />
     <Compile Include="BUS\NhatKiHeThongBUS.cs" />
     <Compile Include="BUS\ThongTinBUS.cs" />
+    <Compile Include="DAO\DoiMKDAO.cs" />
     <Compile Include="DAO\LoginDAO.cs" />
     <Compile Include="DAO\NhatKiHeThongDAO.cs" />
     <Compile Include="DAO\ThongTinDAO.cs" />

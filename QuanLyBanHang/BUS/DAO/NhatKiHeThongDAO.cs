@@ -1,5 +1,5 @@
 ﻿using BUS.DTO;
-using BUS;
+using BUS.BUS;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.ComponentModel;
 using System.Data.Entity;
 
-namespace DAO
+namespace BUS.DAO
 {
     class NhatKiHeThongDAO
     {

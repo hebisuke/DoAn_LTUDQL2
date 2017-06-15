@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DAO;
+using BUS.DAO;
 
-namespace BUS
+namespace BUS.BUS
 {
     public static class LoginBUS
     {
