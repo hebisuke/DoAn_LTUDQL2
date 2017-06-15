@@ -21,11 +21,6 @@ namespace DoAn_LTUDQL2
 
         private void btn_DongY_Click(object sender, EventArgs e)
         {
-            //var query = from TK in db.TaiKhoanNguoiDungs where TK.MatKhau = ;
-            //var result = db.TaiKhoanNguoiDungs.GroupBy(
-            //p => p.MaNV,
-            //p => p.car,
-            //(key, g) => new { PersonId = key, Cars = g.ToList() });
             if(txt_MKCu.Text.Trim() != "" && txt_MKMoi.Text.Trim() != "" && txt_ReMKMoi.Text.Trim() != "")
             {
                 if (txt_MKMoi.Text == txt_ReMKMoi.Text)
@@ -34,7 +29,8 @@ namespace DoAn_LTUDQL2
                                             where x.MatKhau == txt_MKCu.Text
                                             select x).First();
                     if (TK.MatKhau == null)
-                    { TK.MatKhau = txt_MKMoi.Text;
+                    {
+                        TK.MatKhau = txt_MKMoi.Text;
                         db.SaveChanges();
                         MessageBox.Show("Đổi Mật Khẩu Thành Công", "Thành Công!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }

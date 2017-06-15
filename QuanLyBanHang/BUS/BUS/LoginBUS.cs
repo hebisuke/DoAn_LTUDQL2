@@ -11,6 +11,7 @@ namespace BUS
     public static class LoginBUS
     {
         public static V_ThongTinLogin Working;
+        
         public static string MD5Hash(string input)
         {
             return LoginDAO.MD5Hash(input);

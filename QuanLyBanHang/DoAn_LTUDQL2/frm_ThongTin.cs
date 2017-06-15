@@ -18,12 +18,10 @@ namespace DoAn_LTUDQL2
 {
     public partial class frm_ThongTin : DevExpress.XtraEditors.XtraForm
     {
-
         QLBanHangEntities ql = new QLBanHangEntities();
         public frm_ThongTin()
         {
             InitializeComponent();
-
         }
 
         private void btnKetThuc_Click(object sender, EventArgs e)
