@@ -15,14 +15,11 @@ namespace BUS.DTO
     public partial class CHiTietBanHang
     {
         public int MaPhieuCT { get; set; }
-        public string MaBanHang { get; set; }
+        public Nullable<int> MaBanHang { get; set; }
         public string MaHang { get; set; }
+        public Nullable<int> Gia { get; set; }
         public Nullable<int> Soluong { get; set; }
-        public Nullable<int> VAT { get; set; }
-        public Nullable<int> TienThue { get; set; }
-        public Nullable<int> ChietKhau { get; set; }
-        public Nullable<int> TienChietKhau { get; set; }
-        public string ThanhToan { get; set; }
+        public Nullable<int> ThanhToan { get; set; }
     
         public virtual BanHang BanHang { get; set; }
         public virtual HangHoa HangHoa { get; set; }

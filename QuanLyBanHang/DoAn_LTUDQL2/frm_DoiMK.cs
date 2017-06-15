@@ -28,6 +28,7 @@ namespace DoAn_LTUDQL2
                     if (DoiMKBUS.DoiMatKhau(txt_MKCu.Text, txt_MKMoi.Text, LoginBUS.Working.MaNV) == 1)
                     {
                         MessageBox.Show("Đổi Mật Khẩu Thành Công", "Thành Công!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        NhatKiHeThongBUS.ThemNhatKi("Đổi mật khẩu","Thay đổi mật khẩu");
                         Close();
                     }
                     else

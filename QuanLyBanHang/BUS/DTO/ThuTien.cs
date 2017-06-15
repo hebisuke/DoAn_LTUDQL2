@@ -19,7 +19,7 @@ namespace BUS.DTO
         public string DuNo { get; set; }
         public string MaKH { get; set; }
         public string SoTienTra { get; set; }
-        public string MaBanHang { get; set; }
+        public Nullable<int> MaBanHang { get; set; }
         public Nullable<int> idLoaiTien { get; set; }
     
         public virtual BanHang BanHang { get; set; }

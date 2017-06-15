@@ -12,16 +12,9 @@ namespace BUS.DTO
     using System;
     using System.Collections.Generic;
     
-    public partial class ChiTietMuaHang
+    public partial class V_KhoHang
     {
-        public int MaPhieuCT { get; set; }
-        public Nullable<int> MaMuaHang { get; set; }
-        public string MaHang { get; set; }
-        public Nullable<int> Gia { get; set; }
-        public Nullable<int> SoLuong { get; set; }
-        public Nullable<int> ThanhToan { get; set; }
-    
-        public virtual HangHoa HangHoa { get; set; }
-        public virtual MuaHang MuaHang { get; set; }
+        public string MaKho { get; set; }
+        public string TenKho { get; set; }
     }
 }

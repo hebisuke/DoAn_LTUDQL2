@@ -21,7 +21,7 @@ namespace BUS.DTO
             this.ThuTien = new HashSet<ThuTien>();
         }
     
-        public string MaPhieuBanHang { get; set; }
+        public int MaPhieuBanHang { get; set; }
         public string MaKhachHang { get; set; }
         public Nullable<System.DateTime> NgayBan { get; set; }
         public string NoCu { get; set; }
@@ -30,8 +30,15 @@ namespace BUS.DTO
         public Nullable<System.DateTime> HanThanhToan { get; set; }
         public string MaNVBan { get; set; }
         public string TongTien { get; set; }
+        public string DiaChi { get; set; }
+        public string SoDienThoai { get; set; }
+        public string SoHoaDonVAT { get; set; }
+        public string SoPhieuVietTay { get; set; }
+        public string HinhThucThanhToan { get; set; }
+        public string MaKhoXuat { get; set; }
     
         public virtual KhachHang KhachHang { get; set; }
+        public virtual KhoHang KhoHang { get; set; }
         public virtual NhanVien NhanVien { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CHiTietBanHang> CHiTietBanHang { get; set; }

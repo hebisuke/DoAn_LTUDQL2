@@ -46,6 +46,10 @@ namespace BUS.DTO
         public virtual DbSet<TaiKhoanNguoiDung> TaiKhoanNguoiDung { get; set; }
         public virtual DbSet<ThongTinToChucCaNhan> ThongTinToChucCaNhan { get; set; }
         public virtual DbSet<ThuTien> ThuTien { get; set; }
+        public virtual DbSet<V_HangHoa> V_HangHoa { get; set; }
+        public virtual DbSet<V_KhoHang> V_KhoHang { get; set; }
+        public virtual DbSet<V_NhanVien> V_NhanVien { get; set; }
+        public virtual DbSet<V_NhaPhanPhoi> V_NhaPhanPhoi { get; set; }
         public virtual DbSet<V_ThongTinLogin> V_ThongTinLogin { get; set; }
     }
 }

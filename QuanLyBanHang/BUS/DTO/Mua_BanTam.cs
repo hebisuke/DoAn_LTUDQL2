@@ -15,11 +15,9 @@ namespace BUS.DTO
     public partial class Mua_BanTam
     {
         public int MaPhieuCT { get; set; }
-        public string MaBan_Mua { get; set; }
         public string MaHang { get; set; }
         public Nullable<int> SoLuong { get; set; }
         public Nullable<int> Gia { get; set; }
         public Nullable<int> ThanhTien { get; set; }
-        public string GhiChu { get; set; }
     }
 }

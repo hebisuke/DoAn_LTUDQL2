@@ -52,12 +52,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\BanHangBUS.cs" />
     <Compile Include="BUS\DoiMKBUS.cs" />
     <Compile Include="BUS\LoginBUS.cs" />
+    <Compile Include="BUS\MuaHangBUS.cs" />
     <Compile Include="BUS\NhatKiHeThongBUS.cs" />
     <Compile Include="BUS\ThongTinBUS.cs" />
+    <Compile Include="DAO\BanHangDAO.cs" />
     <Compile Include="DAO\DoiMKDAO.cs" />
     <Compile Include="DAO\LoginDAO.cs" />
+    <Compile Include="DAO\MuaHangDAO.cs" />
     <Compile Include="DAO\NhatKiHeThongDAO.cs" />
     <Compile Include="DAO\ThongTinDAO.cs" />
     <Compile Include="DTO\BanHang.cs">
@@ -136,6 +140,18 @@
       <DependentUpon>QLBanHang.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\ThuTien.cs">
+      <DependentUpon>QLBanHang.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\V_HangHoa.cs">
+      <DependentUpon>QLBanHang.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\V_KhoHang.cs">
+      <DependentUpon>QLBanHang.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\V_NhanVien.cs">
+      <DependentUpon>QLBanHang.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\V_NhaPhanPhoi.cs">
       <DependentUpon>QLBanHang.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\V_ThongTinLogin.cs">

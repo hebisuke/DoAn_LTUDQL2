@@ -17,6 +17,7 @@ namespace BUS.DTO
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public KhoHang()
         {
+            this.BanHang = new HashSet<BanHang>();
             this.HangHoa = new HashSet<HangHoa>();
             this.MuaHang = new HashSet<MuaHang>();
         }
@@ -33,6 +34,8 @@ namespace BUS.DTO
         public string DienGiai { get; set; }
         public Nullable<int> TinhTrangQuanLy { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<BanHang> BanHang { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HangHoa> HangHoa { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

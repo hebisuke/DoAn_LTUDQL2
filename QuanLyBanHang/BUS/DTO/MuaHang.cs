@@ -20,7 +20,7 @@ namespace BUS.DTO
             this.ChiTietMuaHang = new HashSet<ChiTietMuaHang>();
         }
     
-        public string MaPhieuMuaHang { get; set; }
+        public int MaPhieuMuaHang { get; set; }
         public string MaNPP { get; set; }
         public Nullable<System.DateTime> NgayLap { get; set; }
         public Nullable<int> MaLoaiTien { get; set; }

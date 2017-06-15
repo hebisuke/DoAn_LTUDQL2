@@ -23,6 +23,7 @@ namespace BUS.DTO
         public string MaBo { get; set; }
         public string TenBo { get; set; }
         public string GhiChu { get; set; }
+        public Nullable<bool> TinhTrangQL { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<NhanVien> NhanVien { get; set; }
