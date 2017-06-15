@@ -145,11 +145,6 @@ namespace DoAn_LTUDQL2
             frm_NhatKiHeThong.Show();
         }
 
-        private void btn_NhanVien_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-
-        }
-
         private void btn_BoPhan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             frm_BoPhan frm_BoPhan = new frm_BoPhan();
@@ -222,10 +217,44 @@ namespace DoAn_LTUDQL2
             frm_NhaPhanPhoi.Show();
         }
 
-        private void btn_DangXuat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void btn_KetThuc_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            
+            Application.Exit();
         }
+
+        private void btn_HoTro_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            System.Diagnostics.Process.Start("C:\\Program Files (x86)\\TeamViewer\\TeamViewer.exe");
+        }
+
+        private void btn_ThongTinTroGiup_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var frm = new frm_ThongTinNhom();
+            frm.ShowDialog();
+        }
+
+        private void btn_PhimHD_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://perfect.com.vn/video-huong-dan-su-dung-phan-mem-quan-ly-ban-hang.html");
+        }
+
+        private void btn_HinhAnhHD_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://perfect.com.vn/huong-dan-su-dung-phan-mem-quan-ly-ban-hang.html");
+        }
+
+        private void btn_CapNhat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            MessageBox.Show("Chức năng này chưa được phát triển", "Thông báo", MessageBoxButtons.OK);
+
+        }
+
+        private void btn_LienHe_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            MessageBox.Show("Chức năng này chưa được phát triển", "Thông báo", MessageBoxButtons.OK);
+        }
+
+
 
         //------------- Hàm kiểm tra form đã mở chưa, nếu mở thì k mởi nữa, nếu chưa thì mở lên-------
 
