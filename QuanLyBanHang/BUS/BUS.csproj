@@ -54,18 +54,30 @@
   <ItemGroup>
     <Compile Include="BUS\BanHangBUS.cs" />
     <Compile Include="BUS\DoiMKBUS.cs" />
+    <Compile Include="BUS\DonViTinhBUS.cs" />
+    <Compile Include="BUS\HangHoaBUS.cs" />
+    <Compile Include="BUS\InMaVachBUS.cs" />
+    <Compile Include="BUS\KhoHangBUS.cs" />
     <Compile Include="BUS\KvBLL.cs" />
     <Compile Include="BUS\LoginBUS.cs" />
     <Compile Include="BUS\MuaHangBUS.cs" />
     <Compile Include="BUS\NhatKiHeThongBUS.cs" />
+    <Compile Include="BUS\NhomHangBUS.cs" />
     <Compile Include="BUS\ThongTinBUS.cs" />
+    <Compile Include="BUS\TyGiaBUS.cs" />
     <Compile Include="DAO\BanHangDAO.cs" />
     <Compile Include="DAO\DoiMKDAO.cs" />
+    <Compile Include="DAO\DonViTinhDAO.cs" />
+    <Compile Include="DAO\HangHoaDAO.cs" />
+    <Compile Include="DAO\InMaVachDAO.cs" />
+    <Compile Include="DAO\KhoHangDAO.cs" />
     <Compile Include="DAO\KvDAL.cs" />
     <Compile Include="DAO\LoginDAO.cs" />
     <Compile Include="DAO\MuaHangDAO.cs" />
     <Compile Include="DAO\NhatKiHeThongDAO.cs" />
+    <Compile Include="DAO\NhomHangDAO.cs" />
     <Compile Include="DAO\ThongTinDAO.cs" />
+    <Compile Include="DAO\TyGiaDAO.cs" />
     <Compile Include="DTO\BanHang.cs">
       <DependentUpon>QLBanHang.tt</DependentUpon>
     </Compile>

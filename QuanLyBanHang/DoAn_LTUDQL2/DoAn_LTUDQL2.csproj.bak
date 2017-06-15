@@ -54,26 +54,26 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Accessibility" />
-    <Reference Include="DevExpress.BonusSkins.v16.2" />
-    <Reference Include="DevExpress.Data.v16.2" />
-    <Reference Include="DevExpress.Images.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+    <Reference Include="DevExpress.BonusSkins.v17.1" />
+    <Reference Include="DevExpress.Data.v17.1" />
+    <Reference Include="DevExpress.Images.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
       <Private>False</Private>
     </Reference>
-    <Reference Include="DevExpress.Mvvm.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.RichEdit.v16.2.Export" />
-    <Reference Include="DevExpress.Printing.v16.2.Core" />
-    <Reference Include="DevExpress.Utils.v16.2" />
-    <Reference Include="DevExpress.XtraBars.v16.2" />
-    <Reference Include="DevExpress.Sparkline.v16.2.Core" />
-    <Reference Include="DevExpress.XtraEditors.v16.2" />
-    <Reference Include="DevExpress.XtraGrid.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraNavBar.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraPrinting.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraLayout.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraScheduler.v16.2.Reporting.Extensions, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraScheduler.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraScheduler.v16.2.Core, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraTreeList.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Mvvm.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v17.1.Export" />
+    <Reference Include="DevExpress.Printing.v17.1.Core" />
+    <Reference Include="DevExpress.Utils.v17.1" />
+    <Reference Include="DevExpress.XtraBars.v17.1" />
+    <Reference Include="DevExpress.Sparkline.v17.1.Core" />
+    <Reference Include="DevExpress.XtraEditors.v17.1" />
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v17.1.Reporting.Extensions, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -224,10 +224,8 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_SuaKH.Designer.cs" />
-    <Compile Include="frm_SuaKV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_SuaKV.Designer.cs">
+    <Compile Include="frm_SuaKV.cs" />
+    <Compile Include="frm_SuaKV.designer.cs">
       <DependentUpon>frm_SuaKV.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_SuaNPP.cs">
@@ -236,10 +234,8 @@
     <Compile Include="frm_SuaNPP.Designer.cs">
       <DependentUpon>frm_SuaNPP.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_ThemKV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_ThemKV.Designer.cs">
+    <Compile Include="frm_ThemKV.cs" />
+    <Compile Include="frm_ThemKV.designer.cs">
       <DependentUpon>frm_ThemKV.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_ThemNPP.cs">
@@ -259,6 +255,12 @@
     </Compile>
     <Compile Include="frm_ThongTin.designer.cs">
       <DependentUpon>frm_ThongTin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ThongTinNhom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ThongTinNhom.Designer.cs">
+      <DependentUpon>frm_ThongTinNhom.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_TonKho.cs">
       <SubType>Form</SubType>
@@ -281,11 +283,13 @@
     <Compile Include="frm_XoaKH.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_XoaKH.Designer.cs" />
+    <Compile Include="frm_XoaKH.Designer.cs">
+      <DependentUpon>frm_XoaKH.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_XoaKV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_XoaKV.Designer.cs">
+    <Compile Include="frm_XoaKV.designer.cs">
       <DependentUpon>frm_XoaKV.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_XoaNPP.cs">
@@ -383,6 +387,9 @@
     <EmbeddedResource Include="frm_ThongTin.resx">
       <DependentUpon>frm_ThongTin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_ThongTinNhom.resx">
+      <DependentUpon>frm_ThongTinNhom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_TonKho.resx">
       <DependentUpon>frm_TonKho.cs</DependentUpon>
     </EmbeddedResource>
@@ -392,7 +399,9 @@
     <EmbeddedResource Include="frm_VaiTro.resx">
       <DependentUpon>frm_VaiTro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_XoaKH.resx" />
+    <EmbeddedResource Include="frm_XoaKH.resx">
+      <DependentUpon>frm_XoaKH.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_XoaKV.resx">
       <DependentUpon>frm_XoaKV.cs</DependentUpon>
     </EmbeddedResource>
