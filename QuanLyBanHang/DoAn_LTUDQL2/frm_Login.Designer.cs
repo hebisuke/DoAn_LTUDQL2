@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Login));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.check_NhoMK = new System.Windows.Forms.CheckBox();
             this.lbx_Thoat = new System.Windows.Forms.Label();
             this.pictureEdit_ShowPass = new DevExpress.XtraEditors.PictureEdit();
             this.lbx_ThongBao = new System.Windows.Forms.Label();
@@ -43,7 +44,6 @@
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.rectangleShape2 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.check_NhoMK = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit_ShowPass.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -84,6 +84,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(352, 485);
             this.panel1.TabIndex = 1;
+            // 
+            // check_NhoMK
+            // 
+            this.check_NhoMK.AutoSize = true;
+            this.check_NhoMK.Location = new System.Drawing.Point(66, 251);
+            this.check_NhoMK.Name = "check_NhoMK";
+            this.check_NhoMK.Size = new System.Drawing.Size(91, 17);
+            this.check_NhoMK.TabIndex = 7;
+            this.check_NhoMK.Text = "Lưu mật khẩu";
+            this.check_NhoMK.UseVisualStyleBackColor = true;
             // 
             // lbx_Thoat
             // 
@@ -211,7 +221,6 @@
             this.tbx_Pass.PasswordChar = '*';
             this.tbx_Pass.Size = new System.Drawing.Size(149, 26);
             this.tbx_Pass.TabIndex = 2;
-            this.tbx_Pass.Text = "Password";
             this.tbx_Pass.TextChanged += new System.EventHandler(this.tbx_Pass_TextChanged);
             this.tbx_Pass.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tbx_Pass_MouseDown);
             // 
@@ -228,7 +237,6 @@
             this.tbx_User.Name = "tbx_User";
             this.tbx_User.Size = new System.Drawing.Size(194, 26);
             this.tbx_User.TabIndex = 1;
-            this.tbx_User.Text = "Username";
             this.tbx_User.TextChanged += new System.EventHandler(this.tbx_User_TextChanged);
             this.tbx_User.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tbx_User_MouseDown);
             // 
@@ -259,17 +267,6 @@
             this.rectangleShape1.Name = "rectangleShape1";
             this.rectangleShape1.Size = new System.Drawing.Size(277, 99);
             // 
-            // check_NhoMK
-            // 
-            this.check_NhoMK.AutoSize = true;
-            this.check_NhoMK.Location = new System.Drawing.Point(66, 251);
-            this.check_NhoMK.Name = "check_NhoMK";
-            this.check_NhoMK.Size = new System.Drawing.Size(91, 17);
-            this.check_NhoMK.TabIndex = 7;
-            this.check_NhoMK.Text = "Lưu mật khẩu";
-            this.check_NhoMK.UseVisualStyleBackColor = true;
-            this.check_NhoMK.CheckedChanged += new System.EventHandler(this.check_NhoMK_CheckedChanged);
-            // 
             // frm_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -281,6 +278,8 @@
             this.MaximizeBox = false;
             this.Name = "frm_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_Login_FormClosing);
+            this.Load += new System.EventHandler(this.frm_Login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit_ShowPass.Properties)).EndInit();

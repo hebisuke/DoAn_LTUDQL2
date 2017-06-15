@@ -1,5 +1,6 @@
 ﻿using BUS.BUS;
 using BUS.DTO;
+using DoAn_LTUDQL2.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -120,9 +121,36 @@ namespace DoAn_LTUDQL2
             MessageBox.Show("Vui Lòng Liên Hệ Người Quản Lý Của Bạn Để Lấy Lại Mật Khẩu!", "Thông Báo");
         }
 
-        private void check_NhoMK_CheckedChanged(object sender, EventArgs e)
+        private void frm_Login_Load(object sender, EventArgs e)
         {
+            if (Settings.Default.isCheck)
+            {
+                check_NhoMK.Checked = true;
+                tbx_User.Text = Settings.Default.TenLogin;
+                tbx_Pass.Text = Settings.Default.MKLogin;
+            }
+            else
+            {
+                check_NhoMK.Checked = false;
+            }
+        }
 
+        private void frm_Login_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (check_NhoMK.Checked)
+            {
+                Settings.Default.isCheck = true;
+                Settings.Default.TenLogin = tbx_User.Text;
+                Settings.Default.MKLogin = tbx_Pass.Text;
+                Settings.Default.Save();
+            }
+            else
+            {
+                Settings.Default.isCheck = false;
+                Settings.Default.TenLogin = "";
+                Settings.Default.MKLogin = "";
+                Settings.Default.Save();
+            }
         }
     }
 }

@@ -32,5 +32,41 @@ namespace DoAn_LTUDQL2.Properties {
                 return ((string)(this["QLBanHangConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("\"\"")]
+        public string TenLogin {
+            get {
+                return ((string)(this["TenLogin"]));
+            }
+            set {
+                this["TenLogin"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("\"\"")]
+        public string MKLogin {
+            get {
+                return ((string)(this["MKLogin"]));
+            }
+            set {
+                this["MKLogin"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool isCheck {
+            get {
+                return ((bool)(this["isCheck"]));
+            }
+            set {
+                this["isCheck"] = value;
+            }
+        }
     }
 }
