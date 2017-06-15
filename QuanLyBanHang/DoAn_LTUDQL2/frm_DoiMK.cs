@@ -14,7 +14,6 @@ namespace DoAn_LTUDQL2
 {
     public partial class frm_DoiMK : DevExpress.XtraEditors.XtraForm
     {
-        QLBanHangEntities db = new QLBanHangEntities();
         public frm_DoiMK()
         {
             InitializeComponent();
@@ -26,19 +25,13 @@ namespace DoAn_LTUDQL2
             {
                 if (txt_MKMoi.Text == txt_ReMKMoi.Text)
                 {
-
-                    TaiKhoanNguoiDung TK = (from x in db.TaiKhoanNguoiDung
-                                            where x.MaNV == LoginBUS.Working.MaNV
-                                            select x).First();
-                    if (TK.MatKhau == LoginBUS.MD5Hash(txt_MKCu.Text))
+                    if (DoiMKBUS.DoiMatKhau(txt_MKCu.Text, txt_MKMoi.Text, LoginBUS.Working.MaNV) == 1)
                     {
-                        TK.MatKhau = LoginBUS.MD5Hash(txt_MKMoi.Text);
-                        db.SaveChanges();
                         MessageBox.Show("Đổi Mật Khẩu Thành Công", "Thành Công!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        Close();
                     }
                     else
                         MessageBox.Show("Mật khẩu cũ chưa chính xác", "Báo lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    //update;
                 }
                 else MessageBox.Show("Mật Khẩu nhập lại không giống với Mật Khẩu mới", "Báo lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
